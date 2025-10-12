@@ -1,10 +1,14 @@
 {
   "name": "antdv-next",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "test": "vitest run"
+  },
   "dependencies": {
     "@ant-design/colors": "^7.2.1",
-    "@ant-design/fast-color": "^3.0.0"
+    "@ant-design/fast-color": "^3.0.0",
+    "@v-c/util": "^0.0.7"
   }
 }

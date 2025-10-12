@@ -6,13 +6,19 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [
     vue(),
-    vueJsx(),
+    vueJsx({
+      resolveType: true,
+    }),
   ],
   server: {
     port: 3322,
   },
   resolve: {
     alias: [
+      {
+        find: '@antdv-next/cssinjs',
+        replacement: '../packages/cssinjs/src',
+      },
       {
         find: '@',
         replacement: '/src',
