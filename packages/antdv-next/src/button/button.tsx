@@ -8,7 +8,7 @@ import { filterEmpty } from '@v-c/util/dist/props-util'
 import { omit } from 'es-toolkit'
 import { toArray } from 'es-toolkit/compat'
 import { computed, defineComponent, nextTick, onBeforeUnmount, onMounted, shallowRef, watch } from 'vue'
-import { getSlotPropFn } from '../_util/tools.ts'
+import { getSlotPropFn, getSlotPropsFnRun } from '../_util/tools.ts'
 import Wave from '../_util/wave'
 import { useComponentConfig, useConfig } from '../config-provider/context.ts'
 import { useDisabledContext } from '../config-provider/DisabledContext.tsx'
@@ -239,8 +239,8 @@ const InternalCompoundedButton = defineComponent<
     return () => {
       const { loading } = props
       const sizeCls = sizeFullName.value ? (sizeClassNameMap?.[sizeFullName.value] ?? '') : ''
-      const iconChildren = filterEmpty(toArray(getSlotPropFn(slots, props, 'icon')?.()))
-      const hasIcon = iconChildren.length > 0
+      const iconChildren = getSlotPropsFnRun(slots, props, 'icon')
+      const hasIcon = iconChildren && iconChildren.length > 0
       const iconType = innerLoading.value ? 'loading' : hasIcon
       const children = filterEmpty(slots?.default?.())
       const needInserted = children.length === 1 && !hasIcon && !isUnBorderedButtonVariant(mergedVariant.value)
@@ -314,7 +314,6 @@ const InternalCompoundedButton = defineComponent<
                 />
               )
           )
-
       const mergedStyle = [componentCtx.value.style]
       const mergedHref = props.href
       const htmlType = props.htmlType ?? 'button'

@@ -1,6 +1,7 @@
 import type { DerivativeFunc } from '@antdv-next/cssinjs'
 import type { CSSProperties, InjectionKey, Ref } from 'vue'
 import type { ShowWaveEffect } from '../_util/wave/interface.ts'
+import type { AlertProps } from '../alert/Alert.tsx'
 import type { ButtonProps } from '../button'
 import type { FlexProps } from '../flex/interface.ts'
 import type { SpaceProps } from '../space'
@@ -149,11 +150,14 @@ export type ButtonConfig = ComponentStyleConfig
 
 export type FlexConfig = ComponentStyleConfig & Pick<FlexProps, 'vertical'>
 
+export type AlertConfig = ComponentStyleConfig & Pick<AlertProps, 'closable' | 'closeIcon'>
+
 export interface ConfigComponentProps {
   space?: SpaceConfig
   button?: ButtonConfig
   flex?: FlexConfig
   divider?: ComponentStyleConfig
+  alert?: AlertConfig
 }
 
 export interface ConfigConsumerProps extends ConfigComponentProps {
