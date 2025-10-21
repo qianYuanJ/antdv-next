@@ -1,11 +1,11 @@
 # Ant Design Vue 版本开发顺序规划
 
 > 本文档为将 Ant Design React 版本迁移到 Vue 版本的开发顺序规划
-> 
+>
 > **前置条件**:
 > - ✅ `rc-util` 的 Vue 版本已完成
 > - ✅ `rc-motion` 使用 Vue `<transition>` 组件代替
-> 
+>
 > 生成时间: 2025-10-17
 
 ## 目录
@@ -162,7 +162,7 @@
 1. **select** - 选择器 (核心组件)
 2. **auto-complete** - 自动完成
 
-**开发顺序**: 
+**开发顺序**:
 - Week 7-8: 开发 `rc-select` Vue 版本
 - Week 8-9: select → auto-complete
 

@@ -2,13 +2,13 @@
 
 ## 🧭 Core Objective
 
-1. **Faithful Implementation:**  
+1. **Faithful Implementation:**
    All components must match the original [Ant Design](https://github.com/ant-design/ant-design) API, interaction behavior, and visual semantics as closely as possible.
 
-2. **Vue-first Design:**  
+2. **Vue-first Design:**
    Adapt the React codebase to idiomatic **Vue 3 Composition API + TSX** patterns while keeping logical consistency.
 
-3. **Typed Contracts:**  
+3. **Typed Contracts:**
    Every component must define explicit `Props`, `Emits`, and `SlotsType` using the pattern:
    ```ts
    defineComponent<Props, Emits, string, SlotsType<Slots>>(...)
@@ -37,7 +37,7 @@
 | `on*` props | `emits` | All events defined in emits only |
 | render-type props | `RenderNodeFn` + slot dual-mode | Standardized render function contract |
 
-> ✅ **Attrs precedence:**  
+> ✅ **Attrs precedence:**
 > Always merge `attrs.class` and `attrs.style` last to preserve user overrides.
 
 ## 🎨 Render Function (RenderNodeFn) Convention
@@ -49,6 +49,7 @@
 - Generate a rendering function using:
   ```ts
   import { getSlotPropFn } from '../_util/tools.ts'
+
   const iconFn = getSlotPropFn(slots, props, 'icon')
   const iconVNode = filterEmpty(iconFn?.({ size: 16 }) ?? [])
   ```
@@ -64,15 +65,16 @@
 - No props beginning with `on` are allowed.
 - Example:
   ```ts
-  export type ButtonEmits = {
+  export interface ButtonEmits {
     (e: 'click', ev: MouseEvent): void
     (e: 'update:loading', v: boolean): void
   }
   ```
 - In `setup()`:
   ```ts
-  const handleClick = (e: MouseEvent) => {
-    if (!props.disabled) emit('click', e)
+  function handleClick(e: MouseEvent) {
+    if (!props.disabled)
+      emit('click', e)
   }
   ```
 
@@ -209,7 +211,6 @@ pnpm -r build
 pnpm -F antdv-next publish --access public
 ```
 
-
 ## 🤝 Agent Collaboration Guidelines
 
 ### Responsibilities
@@ -226,10 +227,8 @@ pnpm -F antdv-next publish --access public
 - **Test Runner:** `vitest --watch`
 - **Playground:** `pnpm dev`
 
-
 ## 📘 Reference Links
 
 - [Ant Design (React)](https://github.com/ant-design/ant-design)
 - [React-Component Libraries](https://github.com/react-component)
 - [Antdv-Next Project Docs](https://github.com/antdv-next)
-

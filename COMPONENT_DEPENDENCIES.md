@@ -1,7 +1,7 @@
 # Ant Design 组件 RC 依赖关系分析
 
 > 本文档分析了 Ant Design 组件库中各组件对 react-component (rc-*) 包的依赖关系
-> 
+>
 > 生成时间: 2025-10-17
 
 ## 目录
@@ -1107,9 +1107,9 @@ affix, avatar, splitter, typography
 对于包含大量国际化文件的组件，建议按需加载：
 
 ```javascript
+import DatePicker from 'antd/es/date-picker'
 // 仅加载需要的语言包
-import zhCN from 'antd/es/locale/zh_CN';
-import DatePicker from 'antd/es/date-picker';
+import zhCN from 'antd/es/locale/zh_CN'
 ```
 
 ### Tree Shaking
@@ -1118,10 +1118,10 @@ import DatePicker from 'antd/es/date-picker';
 
 ```javascript
 // ✅ 推荐：支持 Tree Shaking
-import { Button, Input } from 'antd';
+import { Button, Input } from 'antd'
 
 // ❌ 不推荐：不支持 Tree Shaking
-import antd from 'antd';
+import antd from 'antd'
 ```
 
 ### 组件选择

@@ -155,6 +155,8 @@ export type AlertConfig = ComponentStyleConfig & Pick<AlertProps, 'closable' | '
 
 export type BadgeConfig = ComponentStyleConfig & Pick<BadgeProps, 'classes' | 'styles'>
 
+export type TagConfig = ComponentStyleConfig & Pick<TagProps, 'closeIcon' | 'closable'>
+
 export interface ConfigComponentProps {
   space?: SpaceConfig
   button?: ButtonConfig
@@ -163,6 +165,7 @@ export interface ConfigComponentProps {
   alert?: AlertConfig
   anchor?: ComponentStyleConfig
   badge?: BadgeConfig
+  tag?: TagConfig
 
 }
 

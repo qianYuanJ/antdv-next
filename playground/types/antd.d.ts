@@ -19,5 +19,7 @@ declare module 'vue' {
         AConfigProvider: typeof import('antdv-next')['ConfigProvider'];
         ACol: typeof import('antdv-next')['Col'];
         ARow: typeof import('antdv-next')['Row'];
+        ABadge: typeof import('antdv-next')['Badge'];
+        ABadgeRibbon: typeof import('antdv-next')['Badge']['Ribbon'];
     }
 }
