@@ -28,7 +28,6 @@ export type CheckableTagEmits = EmitsType<{
 export interface CheckableTagSlots {
   default: () => any
   icon: () => any
-
 }
 
 const CheckableTag = defineComponent<
