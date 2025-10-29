@@ -156,5 +156,8 @@ Tag.CheckableTag = CheckableTag
   app.component(InternalTag.name, Tag)
   app.component(CheckableTag.name, CheckableTag)
 }
+export {
+  CheckableTag,
+}
 
 export default Tag
