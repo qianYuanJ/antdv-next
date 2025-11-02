@@ -14,6 +14,7 @@ import type { FlexProps } from '../flex'
 import type { Locale } from '../locale'
 import type { QRCodeProps } from '../qrcode'
 import type { ResultProps } from '../result'
+import type { SkeletonProps } from '../skeleton'
 import type { SpaceProps } from '../space'
 import type { SpinProps } from '../spin'
 import type { TagProps } from '../tag'
@@ -184,6 +185,8 @@ export type AnchorStyleConfig = ComponentStyleConfig & Pick<AnchorProps, 'classe
 
 export type DividerConfig = ComponentStyleConfig & Pick<DividerProps, 'classes' | 'styles'>
 
+export type SkeletonConfig = ComponentStyleConfig & Pick<SkeletonProps, 'styles' | 'classes'>
+
 export interface ConfigComponentProps {
   // input?: InputConfig;
   // textArea?: TextAreaConfig;
@@ -206,7 +209,7 @@ export interface ConfigComponentProps {
   // floatButton?: FloatButtonConfig;
   // floatButtonGroup?: FloatButtonGroupConfig;
   typography?: ComponentStyleConfig
-  skeleton?: ComponentStyleConfig
+  skeleton?: SkeletonConfig
   spin?: SpinConfig
   segmented?: ComponentStyleConfig
   steps?: ComponentStyleConfig

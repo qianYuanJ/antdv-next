@@ -1,4 +1,5 @@
 import type { App, SlotsType } from 'vue'
+import type { SemanticClassNamesType, SemanticStylesType } from '../_util/hooks'
 import type { EmptyEmit } from '../_util/type.ts'
 import type { ComponentBaseProps } from '../config-provider/context'
 import type { SkeletonAvatarProps as AvatarProps } from './Avatar'
@@ -6,8 +7,10 @@ import type { SkeletonParagraphProps } from './Paragraph'
 import type { SkeletonTitleProps } from './Title'
 import { classNames } from '@v-c/util'
 import { omit } from 'es-toolkit'
-import { defineComponent } from 'vue'
-import { useBaseConfig } from '../config-provider/context'
+import { computed, defineComponent } from 'vue'
+import { useMergeSemantic, useToArr, useToProps } from '../_util/hooks'
+import { toPropsRefs } from '../_util/tools.ts'
+import { useComponentBaseConfig } from '../config-provider/context'
 import SkeletonAvatar from './Avatar'
 import SkeletonButton from './Button'
 import Element from './Element'
@@ -20,6 +23,10 @@ import Title from './Title'
 
 /* This only for skeleton internal. */
 type SkeletonAvatarProps = Omit<AvatarProps, 'active'>
+export type SemanticName = 'root' | 'header' | 'section' | 'avatar' | 'title' | 'paragraph'
+
+export type SkeletonClassNamesType = SemanticClassNamesType<SkeletonProps, SemanticName>
+export type SkeletonStylesType = SemanticStylesType<SkeletonProps, SemanticName>
 
 export interface SkeletonProps extends ComponentBaseProps {
   active?: boolean
@@ -28,6 +35,8 @@ export interface SkeletonProps extends ComponentBaseProps {
   title?: SkeletonTitleProps | boolean
   paragraph?: SkeletonParagraphProps | boolean
   round?: boolean
+  classes?: SkeletonClassNamesType
+  styles?: SkeletonStylesType
 }
 
 export interface SkeletonSlots {
@@ -90,8 +99,29 @@ const defaults = {
 
 const Skeleton = defineComponent<SkeletonProps, EmptyEmit, string, SlotsType<SkeletonSlots>>(
   (props = defaults, { attrs, slots }) => {
-    const { prefixCls, direction } = useBaseConfig('skeleton', props)
+    const {
+      prefixCls,
+      direction,
+      class: contextClassName,
+      style: contextStyle,
+      classes: contextClassNames,
+      styles: contextStyles,
+    } = useComponentBaseConfig('skeleton', props)
     const [wrapCSSVar, hashId, cssVarCls] = useStyle(prefixCls)
+    const { classes, styles } = toPropsRefs(props, 'classes', 'styles')
+
+    // =========== Merged Props for Semantic ==========
+    const mergedProps = computed(() => props)
+
+    const [mergedClassNames, mergedStyles] = useMergeSemantic<
+      SkeletonClassNamesType,
+      SkeletonStylesType,
+      SkeletonProps
+    >(
+      useToArr(contextClassNames, classes),
+      useToArr(contextStyles, styles),
+      useToProps(mergedProps),
+    )
 
     return () => {
       const {
@@ -119,8 +149,15 @@ const Skeleton = defineComponent<SkeletonProps, EmptyEmit, string, SlotsType<Ske
           }
           // We direct use SkeletonElement as avatar in skeleton internal.
           avatarNode = (
-            <div class={`${prefixCls.value}-header`}>
-              <Element {...avatarProps} />
+            <div
+              class={[mergedClassNames.value.header, `${prefixCls.value}-header`]}
+              style={mergedStyles.value.header}
+            >
+              <Element
+                class={mergedClassNames.value.avatar}
+                {...avatarProps}
+                style={mergedStyles.value.header}
+              />
             </div>
           )
         }
@@ -136,7 +173,13 @@ const Skeleton = defineComponent<SkeletonProps, EmptyEmit, string, SlotsType<Ske
               ...getComponentProps(title),
             }
 
-            $title = <Title {...titleProps} />
+            $title = (
+              <Title
+                class={mergedClassNames.value.title}
+                {...titleProps}
+                style={mergedStyles.value.title}
+              />
+            )
           }
 
           // Paragraph
@@ -148,11 +191,20 @@ const Skeleton = defineComponent<SkeletonProps, EmptyEmit, string, SlotsType<Ske
               ...getComponentProps(paragraph),
             }
 
-            paragraphNode = <Paragraph {...paragraphProps} />
+            paragraphNode = (
+              <Paragraph
+                class={mergedClassNames.value.paragraph}
+                {...paragraphProps}
+                style={mergedStyles.value.paragraph}
+              />
+            )
           }
 
           contentNode = (
-            <div class={`${prefixCls.value}-content`}>
+            <div
+              class={[mergedClassNames.value.section, `${prefixCls.value}-section`]}
+              style={mergedStyles.value.section}
+            >
               {$title}
               {paragraphNode}
             </div>
@@ -167,6 +219,8 @@ const Skeleton = defineComponent<SkeletonProps, EmptyEmit, string, SlotsType<Ske
             [`${prefixCls.value}-rtl`]: direction.value === 'rtl',
             [`${prefixCls.value}-round`]: round,
           },
+          mergedClassNames.value.root,
+          contextClassName.value,
           (attrs as any)?.class,
           rootClass,
           hashId.value,
@@ -174,7 +228,11 @@ const Skeleton = defineComponent<SkeletonProps, EmptyEmit, string, SlotsType<Ske
         )
 
         return wrapCSSVar(
-          <div class={cls} {...omit(attrs, ['class'])}>
+          <div
+            class={cls}
+            {...omit(attrs, ['class', 'style'])}
+            style={[mergedStyles.value.root, contextStyle.value, (attrs as any)?.style]}
+          >
             {avatarNode}
             {contentNode}
           </div>,
