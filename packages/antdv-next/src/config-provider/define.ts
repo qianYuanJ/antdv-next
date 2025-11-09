@@ -8,6 +8,7 @@ import type {
   PopupOverflow,
   SpaceConfig,
   ThemeConfig,
+  TooltipConfig,
   Variant,
   WaveConfig,
 } from './context.ts'
@@ -109,7 +110,7 @@ export interface ConfigProviderProps {
   //  */
   wave?: WaveConfig
   // tour?: TourConfig;
-  // tooltip?: TooltipConfig;
+  tooltip?: TooltipConfig
   // popover?: PopoverConfig;
   // popconfirm?: PopconfirmConfig;
 }

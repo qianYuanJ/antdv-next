@@ -10,6 +10,7 @@ import { useWarningProvider } from '../_util/warning.ts'
 import { ANT_MARK, LocaleProvider, useLocaleContext } from '../locale'
 import { defaultTheme, DesignTokenProvider } from '../theme/context.ts'
 import defaultSeedToken from '../theme/themes/seed'
+import { UniqueProvider } from '../tooltip'
 import { defaultIconPrefixCls, defaultPrefixCls, useConfig, useConfigProvider } from './context'
 import { DisabledContextProvider } from './DisabledContext.tsx'
 import { useTheme } from './hooks/useTheme.ts'
@@ -208,6 +209,11 @@ const ProviderChildren = defineComponent<
       }
       if (props.componentSize) {
         childNode = <SizeProvider size={props.componentSize}>{childNode}</SizeProvider>
+      }
+
+      // ================================ Tooltip Unique ===============================
+      if (props?.tooltip?.unique) {
+        childNode = <UniqueProvider>{childNode}</UniqueProvider>
       }
 
       if (props.theme) {

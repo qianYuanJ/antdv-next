@@ -8,13 +8,12 @@ import type { AdjustOverflow } from '../_util/placements.ts'
 import type { VueNode } from '../_util/type.ts'
 import type { ComponentBaseProps } from '../config-provider/context.ts'
 import VcTooltip from '@v-c/tooltip'
-import { UniqueProvider } from '@v-c/trigger'
 import { clsx } from '@v-c/util'
 import { filterEmpty } from '@v-c/util/dist/props-util'
 import { getTransitionName } from '@v-c/util/dist/utils/transition'
 import { computed, createVNode, defineComponent, isVNode, shallowRef, watchEffect } from 'vue'
 import { ContextIsolator } from '../_util/ContextIsolator.tsx'
-import { useMergeSemantic, useToArr, useToProps } from '../_util/hooks'
+import { pureAttrs, useMergeSemantic, useToArr, useToProps } from '../_util/hooks'
 import { useZIndex } from '../_util/hooks/useZIndex.ts'
 import getPlacements from '../_util/placements.ts'
 import { getSlotPropsFnRun, toPropsRefs } from '../_util/tools.ts'
@@ -24,6 +23,7 @@ import useCSSVarCls from '../config-provider/hooks/useCSSVarCls.ts'
 import { useToken } from '../theme/internal.ts'
 import useMergedArrow from './hooks/useMergedArrow.ts'
 import useStyle from './style'
+import UniqueProvider from './UniqueProvider'
 import { parseColor } from './util.ts'
 
 export interface TooltipRef {
@@ -262,7 +262,8 @@ const InternalTooltip = defineComponent<
       }
       const content = (
         <VcTooltip
-          {...attrs}
+          unique
+          {...pureAttrs(attrs)}
           zIndex={zIndex.value}
           showArrow={mergedShowArrow.value}
           placement={placement}
@@ -293,14 +294,16 @@ const InternalTooltip = defineComponent<
           onVisibleChange={onInternalOpenChange}
           afterVisibleChange={afterOpenChange}
           arrowContent={<span class={`${prefixCls.value}-arrow-content`} />}
-          motion={{
-            name: getTransitionName(
-              rootPrefixCls.value,
-              'zoom-big-fast',
-              typeof motion?.name === 'string' ? motion?.name : undefined,
-            ),
-            duration: 1000,
-          }}
+          motion={
+            {
+              name: getTransitionName(
+                rootPrefixCls.value,
+                'zoom-big-fast',
+                typeof motion?.name === 'string' ? motion?.name : undefined,
+              ),
+              duration: 1000,
+            } as any
+          }
           destroyOnHidden={destroyOnHidden}
         >
           {tempOpen ? createVNode(child, { class: childCls }) : child}
