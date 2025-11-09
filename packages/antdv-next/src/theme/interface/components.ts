@@ -22,7 +22,7 @@ import type { ComponentToken as DividerComponentToken } from '../../divider/styl
 // import type { ComponentToken as DropdownComponentToken } from '../../dropdown/style';
 import type { ComponentToken as EmptyComponentToken } from '../../empty/style'
 import type { ComponentToken as FlexComponentToken } from '../../flex/style'
-// import type { ComponentToken as FloatButtonComponentToken } from '../../float-button/style';
+import type { ComponentToken as FloatButtonComponentToken } from '../../float-button/style'
 // import type { ComponentToken as FormComponentToken } from '../../form/style';
 import type { ComponentToken as GridComponentToken } from '../../grid/style'
 // import type { ComponentToken as ImageComponentToken } from '../../image/style';
@@ -87,7 +87,7 @@ export interface ComponentTokenMap {
   // Dropdown?: DropdownComponentToken;
   Empty?: EmptyComponentToken
   Flex?: FlexComponentToken
-  // FloatButton?: FloatButtonComponentToken;
+  FloatButton?: FloatButtonComponentToken
   // Form?: FormComponentToken;
   Grid?: GridComponentToken
   // Image?: ImageComponentToken;
