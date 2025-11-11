@@ -13,7 +13,7 @@ import { useSiderCtx } from '../layout/Sider.tsx'
 import Tooltip from '../tooltip'
 import { useMenuContext } from './MenuContext.tsx'
 
-export interface MenuItemProps extends MenuItemType {
+export interface MenuItemProps extends Omit<MenuItemType, 'key'> {
   icon?: VueNode
   danger?: boolean
   title?: VueNode

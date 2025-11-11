@@ -221,8 +221,8 @@ importers:
         specifier: 'catalog:'
         version: 1.0.0(vue@3.5.24(typescript@5.9.3))
       '@v-c/menu':
-        specifier: link:/Users/yanyu/workspace/github/antdv-next/vue-components/packages/menu
-        version: link:../../../../../github/antdv-next/vue-components/packages/menu
+        specifier: link:/Users/zhuzhengjian/workspace/gitea/antdv-next/vue-components/packages/menu
+        version: link:../../../vue-components/packages/menu
       '@v-c/mutate-observer':
         specifier: 'catalog:'
         version: 0.0.2(vue@3.5.24(typescript@5.9.3))

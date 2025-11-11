@@ -5,7 +5,6 @@ import type {
   SubMenuType as VcSubMenuType,
 } from '@v-c/menu'
 import type { Key } from '@v-c/util/dist/type'
-import type { VueNode } from '../_util/type.ts'
 
 export type DataAttributes = {
   [Key in `data-${string}`]: unknown;
@@ -13,13 +12,13 @@ export type DataAttributes = {
 
 export interface MenuItemType extends VcMenuItemType, DataAttributes {
   danger?: boolean
-  icon?: VueNode
+  icon?: any
   title?: string
 }
 
 export interface SubMenuType<T extends MenuItemType = MenuItemType>
   extends Omit<VcSubMenuType, 'children'> {
-  icon?: VueNode
+  icon?: any
   theme?: 'dark' | 'light'
   children: ItemType<T>[]
 }

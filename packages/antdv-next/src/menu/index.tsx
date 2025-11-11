@@ -1,5 +1,6 @@
 import type { MenuItemGroupProps, MenuRef as VcMenuRef } from '@v-c/menu'
 import type { App, SlotsType } from 'vue'
+import type { ItemType } from './interface.ts'
 import type { MenuEmits, MenuProps, MenuSlots } from './menu'
 import type { MenuItemProps } from './MenuItem'
 import type { SubMenuProps } from './SubMenu'
@@ -10,6 +11,7 @@ import MenuDivider from './MenuDivider'
 import Item from './MenuItem'
 import SubMenu from './SubMenu'
 
+export type MenuItemType = ItemType
 export type { MenuEmits, MenuItemGroupProps, MenuItemProps, MenuProps, MenuSlots, SubMenuProps }
 
 export interface MenuRef {
@@ -23,7 +25,7 @@ const Menu = defineComponent<
   string,
   SlotsType<MenuSlots>
 >(
-  (props, { slots, attrs, expose }) => {
+  (props, { slots, attrs, emit, expose }) => {
     const menuRef = shallowRef()
     const { siderCollapsed } = useSiderCtx()
     expose({
@@ -33,11 +35,19 @@ const Menu = defineComponent<
       },
     })
     return () => {
+      const events = {
+        onClick: (...args: any[]) => emit('click', ...args),
+        onSelect: (...args: any[]) => emit('select', ...args),
+        onDeselect: (...args: any[]) => emit('deselect', ...args),
+        onOpenChange: (...args: any[]) => emit('openChange', ...args),
+      }
+
       return (
         <InternalMenu
           ref={menuRef}
           {...attrs}
           {...props}
+          {...events}
           siderCollapsed={siderCollapsed?.value as any}
           v-slots={slots}
         />

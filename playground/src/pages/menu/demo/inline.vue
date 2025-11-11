@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import type { MenuItemType } from 'antdv-next'
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@antdv-next/icons'
 
 function handleClick(e: any) {
   console.log('click ', e)
 }
 
-const items = [
+const items: MenuItemType[] = [
   {
     key: 'sub1',
     label: 'Navigation One',
@@ -76,6 +77,7 @@ const items = [
 
 <template>
   <a-menu
+    style="width: 256px"
     :default-open-keys="['1']"
     :default-selected-keys="['sub1']"
     mode="inline"
