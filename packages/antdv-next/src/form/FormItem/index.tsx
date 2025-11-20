@@ -7,7 +7,7 @@ import type { InternalNamePath, Meta, Rule, RuleError, RuleObject, ValidateOptio
 import type { ItemHolderProps } from './ItemHolder.tsx'
 import { clsx } from '@v-c/util'
 import { filterEmpty } from '@v-c/util/dist/props-util'
-import { computed, createVNode, defineComponent, isVNode, onBeforeUnmount, shallowRef, watch } from 'vue'
+import { computed, defineComponent, onBeforeUnmount, shallowRef, watch } from 'vue'
 import { useComponentBaseConfig } from '../../config-provider/context'
 import useCSSVarCls from '../../config-provider/hooks/useCSSVarCls'
 import { useFormContext, useFormItemProvider, useNoStyleItemContext } from '../context.tsx'
@@ -384,10 +384,6 @@ const InternalFormItem = defineComponent<
       formContext.value?.removeField?.(eventKey)
     })
 
-    // const handleFocusout = (e: FocusEvent) => {
-    //   updateMeta({ touched: true })
-    //   triggerValidate('blur')
-    // }
     useFormItemProvider({
       fieldId,
       triggerBlur: onFieldBlur,
@@ -395,17 +391,7 @@ const InternalFormItem = defineComponent<
       clearValidate,
     })
     return () => {
-      let children: any = filterEmpty(slots.default?.() ?? [])
-      if (children.length > 0 && children.length === 1) {
-        children = children[0]
-        if (isVNode(children)) {
-          // 自动注入onBlur和change
-          children = createVNode(children, {
-            onBlur: onFieldBlur,
-            onChange: onFieldChange,
-          })
-        }
-      }
+      const children: any = filterEmpty(slots.default?.() ?? [])
       return renderLayout(
         children,
         fieldId.value,
