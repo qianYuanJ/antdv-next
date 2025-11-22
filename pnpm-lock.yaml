@@ -218,8 +218,8 @@ importers:
         specifier: ^0.0.1
         version: 0.0.1
       '@v-c/checkbox':
-        specifier: ^0.0.1
-        version: 0.0.1(vue@3.5.24(typescript@5.9.3))
+        specifier: ^0.0.2
+        version: 0.0.2(vue@3.5.24(typescript@5.9.3))
       '@v-c/collapse':
         specifier: 'catalog:'
         version: 0.0.5(vue@3.5.24(typescript@5.9.3))
@@ -1526,8 +1526,8 @@ packages:
   '@v-c/async-validator@0.0.1':
     resolution: {integrity: sha512-zVgjWy0+dbkuJI9SGum38j/Am5dJ4buza+DwxxLEl5jHqFGTl3JC/zTtydRxJMpLbNnPa1ID/2rnlqv4T6wzkg==}
 
-  '@v-c/checkbox@0.0.1':
-    resolution: {integrity: sha512-mfgPCDmfyIySZ8wewiJ/hshqV55OfXHirp3XPV68RbfNQIA2AQEaLrJ0LqWgOqXPOr9vzKTbvtGrOSnyIvpAsQ==}
+  '@v-c/checkbox@0.0.2':
+    resolution: {integrity: sha512-37ccaGaXtfrli372mVsEhw8ozKxRYpm1Q5Xc+fXZytOfeBXoILI0UghXSWzB5hheL8GogV1qe5xNBPpqI+7xfQ==}
     peerDependencies:
       vue: ^3.0.0
 
@@ -5022,7 +5022,7 @@ snapshots:
 
   '@v-c/async-validator@0.0.1': {}
 
-  '@v-c/checkbox@0.0.1(vue@3.5.24(typescript@5.9.3))':
+  '@v-c/checkbox@0.0.2(vue@3.5.24(typescript@5.9.3))':
     dependencies:
       '@v-c/util': 0.0.17(vue@3.5.24(typescript@5.9.3))
       vue: 3.5.24(typescript@5.9.3)
