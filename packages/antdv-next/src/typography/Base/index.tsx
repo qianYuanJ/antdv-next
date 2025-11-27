@@ -430,11 +430,13 @@ export default defineComponent<
       )
     }
 
-    const renderOperations = (canEllipsis: boolean) => [
-      canEllipsis && renderExpand(),
-      renderEdit(),
-      renderCopy(),
-    ]
+    const renderOperations = (canEllipsis: boolean) => {
+      return [
+        canEllipsis && renderExpand(),
+        renderEdit(),
+        renderCopy(),
+      ]
+    }
 
     const renderEllipsis = (canEllipsis: boolean) => [
       canEllipsis && !expanded.value && (
@@ -514,8 +516,8 @@ export default defineComponent<
                 ...DECORATION_PROPS.map(key => (props as any)[key]),
               ]}
             >
-              {(node: any, canEllipsis: any) =>
-                wrapperDecorations(
+              {(node: any, canEllipsis: any) => {
+                return wrapperDecorations(
                   props,
                   <>
                     {node.length > 0 && canEllipsis && !expanded.value && topAriaLabel.value
@@ -527,7 +529,8 @@ export default defineComponent<
                       : node}
                     {renderEllipsis(canEllipsis)}
                   </>,
-                )}
+                )
+              }}
             </Ellipsis>
           </Typography>
         </EllipsisTooltip>

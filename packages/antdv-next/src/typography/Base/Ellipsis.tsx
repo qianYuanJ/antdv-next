@@ -90,7 +90,6 @@ export interface EllipsisProps {
   text?: any
   width: number
   rows: number
-  children: (cutChildren: any[], canEllipsis: boolean) => any
   onEllipsis: (isEllipsis: boolean) => void
   expanded: boolean
   miscDeps: any[]
@@ -109,8 +108,15 @@ const lineClipStyle: CSSProperties = {
   WebkitBoxOrient: 'vertical',
 }
 
-const Ellipsis = defineComponent<EllipsisProps, EmptyEmit, string, SlotsType<Record<string, never>>>(
-  (props) => {
+const Ellipsis = defineComponent<
+  EllipsisProps,
+  EmptyEmit,
+  string,
+  SlotsType<{
+    default?: (nodeList: any[], canEllipsis: boolean) => any
+  }>
+>(
+  (props, { slots }) => {
     const nodeList = shallowRef<any[]>([])
     watchEffect(() => {
       nodeList.value = filterEmpty(toList(props.text as any, true))
@@ -118,11 +124,6 @@ const Ellipsis = defineComponent<EllipsisProps, EmptyEmit, string, SlotsType<Rec
     const nodeLen = shallowRef(0)
     watchEffect(() => {
       nodeLen.value = getNodesLen(nodeList.value)
-    })
-
-    const fullContent = shallowRef<any>()
-    watchEffect(() => {
-      fullContent.value = props.children(nodeList.value, false)
     })
 
     const ellipsisCutIndex = shallowRef<[number, number] | null>(null)
@@ -183,7 +184,7 @@ const Ellipsis = defineComponent<EllipsisProps, EmptyEmit, string, SlotsType<Rec
           props.onEllipsis?.(isOverflow)
         }
       },
-      { flush: 'post' },
+      { flush: 'post', immediate: true },
     )
 
     const cutMidIndex = shallowRef(0)
@@ -218,118 +219,113 @@ const Ellipsis = defineComponent<EllipsisProps, EmptyEmit, string, SlotsType<Rec
       { flush: 'post' },
     )
 
-    const finalContent = shallowRef<any>()
-    watchEffect(() => {
-      // Ensure deps reactive
-      props.miscDeps?.forEach(() => {})
+    return () => {
+      const fullContent = slots?.default?.(nodeList.value, false)
+      const finalContentFn = () => {
+        // Ensure deps reactive
+        props.miscDeps?.forEach(() => {})
 
-      if (!props.enableMeasure) {
-        finalContent.value = props.children(nodeList.value, false)
-        return
-      }
-
-      if (
-        needEllipsis.value !== STATUS_MEASURE_NEED_ELLIPSIS
-        || !ellipsisCutIndex.value
-        || ellipsisCutIndex.value[0] !== ellipsisCutIndex.value[1]
-      ) {
-        const content = props.children(nodeList.value, false)
-        if ([STATUS_MEASURE_NO_NEED_ELLIPSIS, STATUS_MEASURE_NONE].includes(needEllipsis.value)) {
-          finalContent.value = content
-          return
+        if (!props.enableMeasure) {
+          return slots?.default?.(nodeList.value, false)
         }
-        finalContent.value = (
-          <span
-            style={{
-              ...lineClipStyle,
-              WebkitLineClamp: props.rows,
-            }}
-          >
-            {content}
-          </span>
+
+        if (
+          needEllipsis.value !== STATUS_MEASURE_NEED_ELLIPSIS
+          || !ellipsisCutIndex.value
+          || ellipsisCutIndex.value[0] !== ellipsisCutIndex.value[1]
+        ) {
+          const content = slots?.default?.(nodeList.value, false)
+          if ([STATUS_MEASURE_NO_NEED_ELLIPSIS, STATUS_MEASURE_NONE].includes(needEllipsis.value)) {
+            return content
+          }
+          return (
+            <span
+              style={{
+                ...lineClipStyle,
+                WebkitLineClamp: props.rows,
+              }}
+            >
+              {content}
+            </span>
+          )
+        }
+
+        return slots?.default?.(
+          props.expanded ? nodeList.value : sliceNodes(nodeList.value, ellipsisCutIndex.value[0]),
+          canEllipsis.value,
         )
-        return
       }
-
-      finalContent.value = props.children(
-        props.expanded ? nodeList.value : sliceNodes(nodeList.value, ellipsisCutIndex.value[0]),
-        canEllipsis.value,
-      )
-    })
-
-    const measureStyle = shallowRef<CSSProperties>({})
-    watchEffect(() => {
-      measureStyle.value = {
-        width: props.width,
+      const finalContent = finalContentFn()
+      const measureStyle = {
+        width: `${props.width}px`,
         margin: 0,
         padding: 0,
         whiteSpace: parentWhiteSpace.value === 'nowrap' ? 'normal' : 'inherit',
       }
-    })
+      return (
+        <>
+          {finalContent}
 
-    return () => (
-      <>
-        {finalContent.value}
+          {needEllipsis.value === STATUS_MEASURE_START && (
+            <>
+              <MeasureText
+                style={{
+                  ...measureStyle,
+                  ...lineClipStyle,
+                  WebkitLineClamp: props.rows,
+                }}
+                ref={needEllipsisRef as any}
+              >
+                {fullContent}
+              </MeasureText>
 
-        {needEllipsis.value === STATUS_MEASURE_START && (
-          <>
-            <MeasureText
-              style={{
-                ...measureStyle.value,
-                ...lineClipStyle,
-                WebkitLineClamp: props.rows,
-              }}
-              ref={needEllipsisRef as any}
-            >
-              {fullContent.value}
-            </MeasureText>
+              <MeasureText
+                style={{
+                  ...measureStyle,
+                  ...lineClipStyle,
+                  WebkitLineClamp: props.rows - 1,
+                }}
+                ref={descRowsEllipsisRef as any}
+              >
+                {fullContent}
+              </MeasureText>
 
-            <MeasureText
-              style={{
-                ...measureStyle.value,
-                ...lineClipStyle,
-                WebkitLineClamp: props.rows - 1,
-              }}
-              ref={descRowsEllipsisRef as any}
-            >
-              {fullContent.value}
-            </MeasureText>
-
-            <MeasureText
-              style={{
-                ...measureStyle.value,
-                ...lineClipStyle,
-                WebkitLineClamp: 1,
-              }}
-              ref={symbolRowEllipsisRef as any}
-            >
-              {props.children([], true)}
-            </MeasureText>
-          </>
-        )}
-
-        {needEllipsis.value === STATUS_MEASURE_NEED_ELLIPSIS
-          && ellipsisCutIndex.value
-          && ellipsisCutIndex.value[0] !== ellipsisCutIndex.value[1]
-          && (
-            <MeasureText
-              style={{
-                ...measureStyle.value,
-                top: 400,
-              }}
-              ref={cutMidRef as any}
-            >
-              {props.children(sliceNodes(nodeList.value, cutMidIndex.value), true)}
-            </MeasureText>
+              <MeasureText
+                style={{
+                  ...measureStyle,
+                  ...lineClipStyle,
+                  WebkitLineClamp: 1,
+                }}
+                ref={symbolRowEllipsisRef as any}
+              >
+                {slots?.default?.([], true)}
+              </MeasureText>
+            </>
           )}
 
-        {needEllipsis.value === STATUS_MEASURE_PREPARE && (
-          <Fragment>
-            <span style={{ whiteSpace: 'inherit' }} ref={measureWhiteSpaceRef as any} />
-          </Fragment>
-        )}
-      </>
-    )
+          {needEllipsis.value === STATUS_MEASURE_NEED_ELLIPSIS
+            && ellipsisCutIndex.value
+            && ellipsisCutIndex.value[0] !== ellipsisCutIndex.value[1]
+            && (
+              <MeasureText
+                style={{
+                  ...measureStyle,
+                  top: 400,
+                }}
+                ref={cutMidRef as any}
+              >
+                {slots?.default?.(sliceNodes(nodeList.value, cutMidIndex.value), true)}
+              </MeasureText>
+            )}
+
+          {needEllipsis.value === STATUS_MEASURE_PREPARE && (
+            <Fragment>
+              <span style={{ whiteSpace: 'inherit' }} ref={measureWhiteSpaceRef as any} />
+            </Fragment>
+          )}
+        </>
+      )
+    }
   },
   {
     name: 'TypographyEllipsis',
