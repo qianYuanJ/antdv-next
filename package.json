@@ -13,6 +13,7 @@
     "@antfu/eslint-config": "catalog:",
     "@types/jsdom": "catalog:",
     "@types/node": "catalog:",
+    "@v-c/trigger": "^1.0.1",
     "@v-c/util": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
