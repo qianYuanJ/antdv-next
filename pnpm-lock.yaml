@@ -255,8 +255,8 @@ importers:
         specifier: ^0.0.8
         version: 0.0.8(vue@3.5.24(typescript@5.9.3))
       '@v-c/select':
-        specifier: ^0.0.3
-        version: 0.0.3(vue@3.5.24(typescript@5.9.3))
+        specifier: link:/Users/yanyu/workspace/github/antdv-next/vue-components/packages/select
+        version: link:../../../../../github/antdv-next/vue-components/packages/select
       '@v-c/slider':
         specifier: ^1.0.7
         version: 1.0.7(vue@3.5.24(typescript@5.9.3))
@@ -370,6 +370,9 @@ importers:
       antdv-next:
         specifier: workspace:^
         version: link:../packages/antdv-next
+      es-toolkit:
+        specifier: 'catalog:'
+        version: 1.41.0
       pinia:
         specifier: 'catalog:'
         version: 3.0.4(typescript@5.9.3)(vue@3.5.24(typescript@5.9.3))
@@ -1693,11 +1696,6 @@ packages:
 
   '@v-c/segmented@0.0.8':
     resolution: {integrity: sha512-ddf+M2Iv8EqbeLBrWAKrB74zpdimkSB6Ji9NPc11BkbuufctlDU/KNqcvNao6i/kE1/pJWVsIxFh2K2HnZtjgQ==}
-    peerDependencies:
-      vue: ^3.0.0
-
-  '@v-c/select@0.0.3':
-    resolution: {integrity: sha512-RFPs+vSIAMxnnKJpsGj21IuE40ejscyO4/yZ3POZlh5ytdmrp3Dz8hyX1yZc7eDS7dvg+PML7Fdi/l1w1K7HIA==}
     peerDependencies:
       vue: ^3.0.0
 
@@ -5433,14 +5431,6 @@ snapshots:
   '@v-c/segmented@0.0.8(vue@3.5.24(typescript@5.9.3))':
     dependencies:
       '@v-c/util': 1.0.2(vue@3.5.24(typescript@5.9.3))
-      vue: 3.5.24(typescript@5.9.3)
-
-  '@v-c/select@0.0.3(vue@3.5.24(typescript@5.9.3))':
-    dependencies:
-      '@v-c/overflow': 1.0.0(vue@3.5.24(typescript@5.9.3))
-      '@v-c/trigger': 1.0.1(vue@3.5.24(typescript@5.9.3))
-      '@v-c/util': 1.0.2(vue@3.5.24(typescript@5.9.3))
-      '@v-c/virtual-list': 1.0.3(vue@3.5.24(typescript@5.9.3))
       vue: 3.5.24(typescript@5.9.3)
 
   '@v-c/slider@1.0.7(vue@3.5.24(typescript@5.9.3))':

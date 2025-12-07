@@ -11,6 +11,7 @@
     "@antdv-next/cssinjs": "workspace:^",
     "@antdv-next/icons": "workspace:^",
     "antdv-next": "workspace:^",
+    "es-toolkit": "catalog:",
     "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"

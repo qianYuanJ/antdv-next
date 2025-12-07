@@ -9,5 +9,5 @@ import { getSlotPropsFnRun } from '../_util/tools.ts'
  */
 export default function useShowArrow(suffixIcon?: VueNode, showArrow?: boolean) {
   showArrow = getSlotPropsFnRun({}, { suffixIcon }, 'suffixIcon')
-  return showArrow !== undefined ? showArrow : suffixIcon !== null
+  return (showArrow !== undefined ? showArrow : suffixIcon !== null)
 }

@@ -101,6 +101,7 @@ type RcEventKeys
     | 'onPopupScroll'
     | 'onPopupVisibleChange'
     | 'onSelect'
+    | 'optionRender'
 
 export interface SelectProps
   extends Omit<InternalSelectProps, 'mode'
@@ -130,6 +131,7 @@ export interface SelectProps
   popupMatchSelectWidth?: boolean | number
   styles?: SelectStylesType
   classes?: SelectClassNamesType
+  optionRender?: (params: { option: OptionParams[0], info: OptionParams[1] }) => any
 }
 
 const omitKeys = [
@@ -151,6 +153,9 @@ const omitKeys = [
   'onSelect',
   'popupRender',
   'labelRender',
+  'optionRender',
+  'maxTagPlaceholder',
+  'notFoundContent',
 ]
 
 export interface SelectEmits {
@@ -175,12 +180,17 @@ export interface SelectEmits {
   [key: string]: (...args: any[]) => void
 }
 
+type OptionParams = Parameters<NonNullable<VcSelectProps['optionRender']>>
+
 export interface SelectSlots {
   suffixIcon?: () => any
   prefix?: () => any
   tagRender?: SelectProps['tagRender']
   labelRender?: SelectProps['labelRender']
   popupRender?: SelectProps['popupRender']
+  optionRender?: (params: { option: OptionParams[0], info: OptionParams[1] }) => any
+  maxTagPlaceholder?: (data: any[]) => any
+  notFoundContent?: () => any
 }
 
 const SECRET_COMBOBOX_MODE_DO_NOT_USE = 'SECRET_COMBOBOX_MODE_DO_NOT_USE'
@@ -355,7 +365,6 @@ const Select = defineComponent<
         showArrow,
         dropdownRender,
         status: customStatus,
-        notFoundContent,
         allowClear,
         popupClassName,
         dropdownClassName,
@@ -370,11 +379,13 @@ const Select = defineComponent<
         ...rest
       } = props
       const { className, style, restAttrs } = getAttrStyleAndClass(attrs)
-      const showSuffixIcon = useShowArrow(props.suffixIcon, showArrow)
+      const mergedSuffixIcon = getSlotPropsFnRun(slots, props, 'suffixIcon', false)
+      const showSuffixIcon = useShowArrow(mergedSuffixIcon, showArrow)
       const tagRender = slots?.tagRender ?? props?.tagRender
       const mergedPopupMatchSelectWidth = popupMatchSelectWidth ?? dropdownMatchSelectWidth ?? contextPopupMatchSelectWidth.value
       const popupRender = slots?.popupRender ?? props?.popupRender
       const mergedPopupRender = usePopupRender(popupRender || dropdownRender)
+      const notFoundContent = getSlotPropsFnRun(slots, props, 'notFoundContent')
       const {
         status: contextStatus,
         hasFeedback,
@@ -401,13 +412,14 @@ const Select = defineComponent<
         hasFeedback,
         feedbackIcon,
         showSuffixIcon,
+        suffixIcon: mergedSuffixIcon,
         prefixCls: prefixCls.value,
         componentName: 'Select',
       } as any)
 
       const mergedAllowClear = allowClear === true ? { clearIcon } : allowClear
 
-      const selectProps = omit(rest, ['suffixIcon', 'itemIcon', 'value', ...omitKeys])
+      const selectProps: Record<string, any> = omit(rest, ['suffixIcon', 'itemIcon', 'value', ...omitKeys])
       const mergedPopupClassName = clsx(
         mergedClassNames.value?.popup?.root,
         popupClassName,
@@ -490,6 +502,15 @@ const Select = defineComponent<
         },
       }
       const labelRender = slots?.labelRender ?? props?.labelRender
+      const optionRender = slots?.optionRender ?? props?.optionRender
+      if (optionRender) {
+        selectProps.optionRender = (option: OptionParams[0], info: OptionParams[1]) => {
+          return optionRender({ option, info })
+        }
+      }
+      if (notFoundContent) {
+        selectProps.notFoundContent = notFoundContent
+      }
       return (
         <VcSelect
           {...restAttrs}
@@ -499,6 +520,7 @@ const Select = defineComponent<
           styles={mergedStyles.value as any}
           showSearch={showSearch.value}
           {...selectProps}
+          maxTagPlaceholder={slots.maxTagPlaceholder}
           labelRender={labelRender}
           style={{ ...mergedStyles.value.root, ...contextStyle.value, ...style }}
           popupMatchSelectWidth={mergedPopupMatchSelectWidth}

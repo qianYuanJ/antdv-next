@@ -1,6 +1,13 @@
 import type { VueNode } from '../_util/type.ts'
 
-import { CheckOutlined, CloseCircleFilled, CloseOutlined, DownOutlined, LoadingOutlined, SearchOutlined } from '@antdv-next/icons'
+import {
+  CheckOutlined,
+  CloseCircleFilled,
+  CloseOutlined,
+  DownOutlined,
+  LoadingOutlined,
+  SearchOutlined,
+} from '@antdv-next/icons'
 import { getSlotPropsFnRun } from '../_util/tools.ts'
 import { devUseWarning, isDev } from '../_util/warning'
 
@@ -43,10 +50,10 @@ export default function useIcons({
 
   // Validation Feedback Icon
   const getSuffixIconNode = (arrowIcon?: VueNode) => {
-    arrowIcon = getSlotPropsFnRun({}, { arrowIcon }, 'arrowIcon')
     if (suffixIcon === null && !hasFeedback && !showArrow) {
       return null
     }
+    arrowIcon = getSlotPropsFnRun({}, { arrowIcon }, 'arrowIcon')
     return (
       <>
         {showSuffixIcon !== false && arrowIcon}
@@ -91,7 +98,6 @@ export default function useIcons({
   else {
     mergedRemoveIcon = <CloseOutlined />
   }
-
   return {
     // TODO: remove as when all the deps bumped
     clearIcon: mergedClearIcon as VueNode,

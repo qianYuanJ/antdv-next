@@ -38,6 +38,7 @@ export default defineConfig({
       '@v-c/input',
       '@v-c/input-number',
       '@v-c/textarea',
+      '@v-c/select',
     ],
   },
   resolve: {
