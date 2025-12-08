@@ -17,7 +17,7 @@ type VariantComponents = keyof Pick<
   // | 'datePicker'
   // | 'timePicker'
   // | 'rangePicker'
-  // | 'card'
+  | 'card'
 >
 
 export default function useVariant(

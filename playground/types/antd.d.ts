@@ -82,5 +82,8 @@ declare module 'vue' {
     ASelectOptGroup: typeof import('antdv-next')['SelectOptGroup']
     ASplitter: typeof import('antdv-next')['Splitter']
     ASplitterPanel: typeof import('antdv-next')['SplitterPanel']
+    ACard: typeof import('antdv-next')['Card']
+    ACardGrid: typeof import('antdv-next')['CardGrid']
+    ACardMeta: typeof import('antdv-next')['CardMeta']
   }
 }

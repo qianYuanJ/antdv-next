@@ -1,8 +1,10 @@
+import type { WarningContextProps } from '../_util/warning.ts'
 import type { Locale } from '../locale'
 import type {
   AlertConfig,
   BadgeConfig,
   ButtonConfig,
+  CardConfig,
   CollapseConfig,
   ComponentStyleConfig,
   CSPConfig,
@@ -73,7 +75,7 @@ export interface ConfigProviderProps {
   popupMatchSelectWidth?: boolean
   popupOverflow?: PopupOverflow
   theme?: ThemeConfig
-  // warning?: WarningContextProps;
+  warning?: WarningContextProps
   alert?: AlertConfig
   anchor?: ComponentStyleConfig
   button?: ButtonConfig
@@ -114,7 +116,7 @@ export interface ConfigProviderProps {
   message?: ComponentStyleConfig
   tag?: TagConfig
   // table?: TableConfig;
-  // card?: CardConfig;
+  card?: CardConfig
   tabs?: TabsConfig
   timeline?: ComponentStyleConfig
   // timePicker?: TimePickerConfig;

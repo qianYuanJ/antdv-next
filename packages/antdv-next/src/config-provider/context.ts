@@ -8,6 +8,8 @@ import type { AnchorProps } from '../anchor'
 import type { BadgeProps } from '../badge'
 import type { BreadcrumbProps } from '../breadcrumb/Breadcrumb.tsx'
 import type { ButtonProps } from '../button'
+import type { CardProps } from '../card/Card.tsx'
+import type { CardMetaProps } from '../card/Meta.tsx'
 import type { CheckboxProps } from '../checkbox'
 import type { CollapseProps } from '../collapse'
 import type { DescriptionsProps } from '../descriptions'
@@ -296,6 +298,11 @@ export type TabsConfig = ComponentStyleConfig
 
 export type SelectConfig = ComponentStyleConfig
   & Pick<SelectProps, 'showSearch' | 'variant' | 'classes' | 'styles'>
+
+export type CardMetaConfig = ComponentStyleConfig & Pick<CardMetaProps, 'classes' | 'styles'>
+
+export type CardConfig = ComponentStyleConfig
+  & Pick<CardProps, 'classes' | 'styles' | 'variant'>
 export interface ConfigComponentProps {
   input?: InputConfig
   inputNumber?: InputNumberConfig
@@ -348,7 +355,8 @@ export interface ConfigComponentProps {
   message?: ComponentStyleConfig
   tag?: TagConfig
   // table?: TableConfig;
-  // card?: CardConfig;
+  card?: CardConfig
+  cardMeta?: CardMetaConfig
   tabs?: TabsConfig
   timeline?: ComponentStyleConfig
   // timePicker?: TimePickerConfig;

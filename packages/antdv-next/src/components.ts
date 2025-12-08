@@ -13,6 +13,8 @@ export { default as Breadcrumb } from './breadcrumb'
 export type { BreadcrumbEmits, BreadcrumbItemProps, BreadcrumbItemType, BreadcrumbProps, BreadcrumbSlots } from './breadcrumb'
 export { default as Button } from './button'
 export type { ButtonColorType, ButtonHTMLType, ButtonProps, ButtonShape, ButtonSize, ButtonType, ButtonVariantType } from './button'
+export { default as Card, CardGrid, CardMeta } from './card'
+export type { CardEmits, CardGridProps, CardMetaProps, CardProps, CardSize, CardSlots, CardTabListType } from './card'
 export { default as Checkbox, CheckboxGroup } from './checkbox'
 export type { CheckboxEmits, CheckboxGroupEmits, CheckboxGroupProps, CheckboxGroupSlots, CheckboxOptionType, CheckboxProps, CheckboxSlots } from './checkbox'
 export { default as Collapse } from './collapse'
@@ -115,5 +117,6 @@ export type {
   TextProps as TypographyTextProps,
   TitleProps as TypographyTitleProps,
 } from './typography'
+
 export { default as Watermark } from './watermark'
 export type { WatermarkProps } from './watermark'
