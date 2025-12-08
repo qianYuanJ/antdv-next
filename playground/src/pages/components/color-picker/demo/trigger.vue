@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import type { ColorValueType } from 'antdv-next'
 import { computed, shallowRef } from 'vue'
 
-const color = shallowRef('#1677ff')
+type Color = Extract<ColorValueType, 'string' | { cleared: any }> | string
+
+const color = shallowRef<Color>('#1677ff')
 
 const bgColor = computed(() => {
   return typeof color.value === 'string'

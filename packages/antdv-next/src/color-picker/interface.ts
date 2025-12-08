@@ -94,7 +94,7 @@ export type ColorPickerProps
     presets?: PresetsItem[]
     arrow?: boolean | { pointAtCenter: boolean }
     panelRender?: (params: { panel: any, extra: { components: { Picker: any, Presets: any } } }) => any
-    showText?: boolean | ((color: AggregationColor) => any)
+    showText?: boolean | ((params: { color: AggregationColor }) => any)
     size?: SizeType
     classes?: ColorPickerClassNamesType
     styles?: ColorPickerStylesType
@@ -121,6 +121,6 @@ export interface ColorPickerEmits {
 
 export interface ColorPickerSlots {
   panelRender: (params: { panel: any, extra: { components: { Picker: any, Presets: any } } }) => any
-  showText: (color: AggregationColor) => any
+  showText: (params: { color: AggregationColor }) => any
   default: () => any
 }

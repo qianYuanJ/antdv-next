@@ -271,6 +271,7 @@ const ColorPicker = defineComponent<
         ...contextStyle.value,
         ...style,
       }
+      const mergedShowText = showText ? (typeof showText === 'function' ? (color: AggregationColor) => showText({ color }) : showText) : undefined
       const panelNode = (
         <ContextIsolator form>
           <ColorPickerPanel
@@ -315,7 +316,7 @@ const ColorPicker = defineComponent<
               style={mergedStyle}
               prefixCls={prefixCls.value}
               disabled={mergedDisabled.value}
-              showText={showText as any}
+              showText={mergedShowText as any}
               format={formatValue.value}
               color={mergedColor.value as any}
             />
