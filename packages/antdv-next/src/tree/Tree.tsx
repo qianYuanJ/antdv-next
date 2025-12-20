@@ -430,9 +430,9 @@ const Tree = defineComponent<
         <VcTree
           {...restAttrs}
           ref={treeRef}
-          itemHeight={itemHeight.value}
-          virtual={virtual.value}
           {...newProps as any}
+          virtual={props?.virtual ?? virtual.value}
+          itemHeight={props?.itemHeight ?? itemHeight.value}
           {...onAttrs}
           icon={icon}
           titleRender={titleRender}
