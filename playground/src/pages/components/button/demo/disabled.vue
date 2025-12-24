@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+添加 `disabled` 属性即可让按钮处于不可用状态，同时按钮样式也会改变。
+</docs>
+
+<docs lang="en-US">
+To mark a button as disabled, add the `disabled` property to the `Button`.
+</docs>
+
 <template>
   <a-flex gap="small" align="flex-start" vertical>
     <a-flex gap="small">

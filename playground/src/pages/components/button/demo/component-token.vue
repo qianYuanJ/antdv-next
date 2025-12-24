@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <a-flex gap="small" vertical>
     <a-config-provider

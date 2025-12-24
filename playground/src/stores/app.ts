@@ -5,6 +5,7 @@ export interface AppState {
   headerKey: string[]
   siderKey: string[]
   siderOpenKeys: string[]
+  locale: 'zh-CN' | 'en-US'
 }
 
 export const useAppStore = defineStore('app', {
@@ -13,6 +14,7 @@ export const useAppStore = defineStore('app', {
       headerKey: [],
       siderKey: [],
       siderOpenKeys: [],
+      locale: 'zh-CN',
     }
   },
   actions: {
@@ -24,6 +26,9 @@ export const useAppStore = defineStore('app', {
     },
     setSiderOpenKeys(keys: string[]) {
       this.siderOpenKeys = keys
+    },
+    setLocale(locale: AppState['locale']) {
+      this.locale = locale
     },
   },
   getters: {

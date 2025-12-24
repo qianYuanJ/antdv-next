@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+可以通过 `icon`属性/插槽添加图标。
+</docs>
+
+<docs lang="en-US">
+You can add an icon using the `icon`/`slot` property.
+</docs>
+
 <script setup lang="ts">
 import { SearchOutlined } from '@antdv-next/icons'
 </script>
