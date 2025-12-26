@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+使用 `popupRender` 对下拉菜单进行自由扩展。
+</docs>
+
+<docs lang="en-US">
+Customize the dropdown menu via `popupRender`.
+</docs>
+
 <script setup lang="ts">
 interface Option {
   value: string

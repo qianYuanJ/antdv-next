@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+这种交互允许只选中父级选项。
+</docs>
+
+<docs lang="en-US">
+Allows the selection of only parent options.
+</docs>
+
 <script setup lang="ts">
 import type { CascaderEmits } from 'antdv-next'
 import { shallowRef } from 'vue'

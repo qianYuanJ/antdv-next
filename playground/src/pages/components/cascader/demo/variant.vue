@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+Cascader 形态变体，可选 `outlined` `filled` `borderless` `underlined` 四种形态。
+</docs>
+
+<docs lang="en-US">
+Variants of Cascader, there are four variants: `outlined` `filled` `borderless` and `underlined`.
+</docs>
+
 <template>
   <a-flex vertical gap="middle">
     <a-cascader placeholder="Please select" variant="borderless" />

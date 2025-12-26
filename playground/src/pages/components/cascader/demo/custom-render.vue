@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+例如给最后一项加上邮编链接。
+</docs>
+
+<docs lang="en-US">
+For instance, add an external link after the selected value.
+</docs>
+
 <script setup lang="ts">
 interface Option {
   value: string

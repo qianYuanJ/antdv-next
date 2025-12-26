@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+通过移入展开下级菜单，点击完成选择。
+</docs>
+
+<docs lang="en-US">
+Hover to expand sub menu, click to select option.
+</docs>
+
 <script setup lang="ts">
 import type { CascaderEmits } from 'antdv-next'
 

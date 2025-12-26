@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+自定义字段名。
+</docs>
+
+<docs lang="en-US">
+Custom field names.
+</docs>
+
 <script setup lang="ts">
 import type { CascaderEmits } from 'antdv-next'
 

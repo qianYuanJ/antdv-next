@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+通过设置 `showCheckedStrategy` 选择回填方式。
+</docs>
+
+<docs lang="en-US">
+Shows a selected item in a box using `showCheckedStrategy`.
+</docs>
+
 <script setup lang="ts">
 import type { CascaderEmits } from 'antdv-next'
 import { Cascader } from 'antdv-next'

@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+不同大小的级联选择器。
+</docs>
+
+<docs lang="en-US">
+Cascade selection box of different sizes.
+</docs>
+
 <script setup lang="ts">
 import type { CascaderEmits } from 'antdv-next'
 

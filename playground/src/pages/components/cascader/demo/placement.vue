@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+可以通过 `placement` 手动指定弹出的位置。
+</docs>
+
+<docs lang="en-US">
+You can manually specify the position of the popup via `placement`.
+</docs>
+
 <script setup lang="ts">
 import { shallowRef } from 'vue'
 

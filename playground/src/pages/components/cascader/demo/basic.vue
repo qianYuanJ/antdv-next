@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+省市区级联。
+</docs>
+
+<docs lang="en-US">
+Cascade selection box for selecting province/city/district.
+</docs>
+
 <script setup lang="ts">
 import { ref } from 'vue'
 

@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+切换按钮和结果分开。
+</docs>
+
+<docs lang="en-US">
+Separate trigger button and result.
+</docs>
+
 <script setup lang="ts">
 import type { CascaderEmits } from 'antdv-next'
 import { ref } from 'vue'

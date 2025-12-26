@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+默认值通过数组的方式指定。
+</docs>
+
+<docs lang="en-US">
+Specifies default value by an array.
+</docs>
+
 <script setup lang="ts">
 import type { CascaderEmits } from 'antdv-next'
 

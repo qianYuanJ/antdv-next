@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+组件 Token
+</docs>
+
+<docs lang="en-US">
+Component Token
+</docs>
+
 <script setup lang="ts">
 import type { CascaderEmits } from 'antdv-next'
 

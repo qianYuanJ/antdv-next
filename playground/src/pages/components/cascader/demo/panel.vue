@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+适用于一些需要内嵌适用的场景。
+</docs>
+
+<docs lang="en-US">
+Used for inline view case.
+</docs>
+
 <script setup lang="ts">
 import type { CascaderEmits } from 'antdv-next'
 import { ref } from 'vue'

@@ -1,3 +1,15 @@
+<docs lang="zh-CN">
+使用 `loadData` 实现动态加载选项。
+
+> 注意：`loadData` 与 `showSearch` 无法一起使用。
+</docs>
+
+<docs lang="en-US">
+Load options lazily with `loadData`.
+
+> Note: `loadData` cannot work with `showSearch`.
+</docs>
+
 <script setup lang="ts">
 import type { CascaderEmits } from 'antdv-next'
 import { ref } from 'vue'
