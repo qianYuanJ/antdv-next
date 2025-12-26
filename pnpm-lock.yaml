@@ -221,6 +221,9 @@ importers:
       '@v-c/async-validator':
         specifier: ^0.0.1
         version: 0.0.1
+      '@v-c/cascader':
+        specifier: link:/Users/zhuzhengjian/workspace/gitea/antdv-next/vue-components/packages/cascader
+        version: link:../../../vue-components/packages/cascader
       '@v-c/checkbox':
         specifier: ^0.0.2
         version: 0.0.2(vue@3.5.25(typescript@5.9.3))
