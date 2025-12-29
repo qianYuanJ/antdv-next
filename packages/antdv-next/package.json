@@ -2,9 +2,38 @@
   "name": "antdv-next",
   "type": "module",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ant Design Vue3 Component Library",
+  "author": {
+    "email": "aibayanyu@gamil.com",
+    "name": "aibayanyu20"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./dist/*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js",
+      "default": "./dist/*.js"
+    },
+    "./dist/reset.css": "./dist/reset.css",
+    "./package.json": "./package.json"
+  },
+  "unpkg": "dist/antd.js",
+  "jsdelivr": "dist/antd.js",
+  "files": [
+    "dist",
+    "global.d.ts",
+    "package.json"
+  ],
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "build": "run-s build:esm build:umd",
+    "build:esm": "tsdown",
+    "build:umd": "vite build"
   },
   "dependencies": {
     "@ant-design/colors": "catalog:",

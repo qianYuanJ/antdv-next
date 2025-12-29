@@ -1,6 +1,9 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
+    "paths": {
+      "@antdv-next/icon": ["node_modules/@antdv-next/dist/index.d.ts"]
+    },
     "types": ["vite/client"],
 
     /* Linting */

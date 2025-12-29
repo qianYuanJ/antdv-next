@@ -19,7 +19,7 @@ import serverError from './serverError'
 import useStyle from './style'
 import unauthorized from './unauthorized'
 
-export const IconMap = {
+export const IconMap: Record<string, any> = {
   success: CheckCircleFilled,
   error: CloseCircleFilled,
   info: ExclamationCircleFilled,
