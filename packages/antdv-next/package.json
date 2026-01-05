@@ -24,6 +24,11 @@
       "import": "./dist/locale/*.js",
       "default": "./dist/locale/*.js"
     },
+    "./locale/*": {
+      "types": "./dist/locale/*.d.ts",
+      "import": "./dist/locale/*.js",
+      "default": "./dist/locale/*.js"
+    },
     "./global.d.ts": "./global.d.ts",
     "./global": "./dist/global.d.ts",
     "./dist/reset.css": "./dist/reset.css",
