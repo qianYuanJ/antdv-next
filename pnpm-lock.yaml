@@ -270,8 +270,8 @@ importers:
         specifier: ^0.0.1
         version: 0.0.1(vue@3.5.25(typescript@5.9.3))
       '@v-c/picker':
-        specifier: link:/Users/zhuzhengjian/workspace/gitea/antdv-next/vue-components/packages/picker
-        version: link:../../../vue-components/packages/picker
+        specifier: ^0.0.3
+        version: 0.0.3(dayjs@1.11.19)(vue@3.5.25(typescript@5.9.3))
       '@v-c/progress':
         specifier: ^0.0.2
         version: 0.0.2(vue@3.5.25(typescript@5.9.3))
@@ -439,6 +439,9 @@ importers:
       '@vueuse/core':
         specifier: 'catalog:'
         version: 13.9.0(vue@3.5.25(typescript@5.9.3))
+      dayjs:
+        specifier: ^1.11.19
+        version: 1.11.19
       es-toolkit:
         specifier: 'catalog:'
         version: 1.43.0
@@ -1907,6 +1910,24 @@ packages:
     resolution: {integrity: sha512-TLa28Ak5n8bJJpoDCRq6R9Dv9DImSlK5jjc/mp+i5/4xrAtbujE4Su037bPLQQyd1a8l4mSm2X8qxRCKiZBnWQ==}
     peerDependencies:
       vue: ^3.0.0
+
+  '@v-c/picker@0.0.3':
+    resolution: {integrity: sha512-C982m/HrULt074RI1Tke6+Stk9NgFHJPRba4ru6RMroqrx5dRe9Yiq6HM0PuU7bx7vmplajTXpsuQZF8lzva/g==}
+    peerDependencies:
+      date-fns: '>= 2.x'
+      dayjs: '>= 1.x'
+      luxon: '>= 3.x'
+      moment: '>= 2.x'
+      vue: ^3.0.0
+    peerDependenciesMeta:
+      date-fns:
+        optional: true
+      dayjs:
+        optional: true
+      luxon:
+        optional: true
+      moment:
+        optional: true
 
   '@v-c/portal@1.0.1':
     resolution: {integrity: sha512-XeFjEo8GF3e4GRDJbo5Loo62o1g+VwumZ4l/cnnmgtcLFPsPdxw0tLh0s/skPzAcObDQGffR/cGhi2KiveB+ig==}
@@ -6283,6 +6304,15 @@ snapshots:
     dependencies:
       '@v-c/util': 1.0.6(vue@3.5.25(typescript@5.9.3))
       vue: 3.5.25(typescript@5.9.3)
+
+  '@v-c/picker@0.0.3(dayjs@1.11.19)(vue@3.5.25(typescript@5.9.3))':
+    dependencies:
+      '@v-c/overflow': 1.0.1(vue@3.5.25(typescript@5.9.3))
+      '@v-c/trigger': 1.0.2(vue@3.5.25(typescript@5.9.3))
+      '@v-c/util': 1.0.6(vue@3.5.25(typescript@5.9.3))
+      vue: 3.5.25(typescript@5.9.3)
+    optionalDependencies:
+      dayjs: 1.11.19
 
   '@v-c/portal@1.0.1(vue@3.5.25(typescript@5.9.3))':
     dependencies:

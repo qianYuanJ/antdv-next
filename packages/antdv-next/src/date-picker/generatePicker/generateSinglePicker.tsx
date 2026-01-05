@@ -6,6 +6,7 @@ import type { GenericTimePickerProps, PickerProps } from './interface'
 import Picker from '@v-c/picker'
 import { clsx } from '@v-c/util'
 import { getTransitionName } from '@v-c/util/dist/utils/transition'
+import { omit } from 'es-toolkit'
 import { computed, defineComponent, shallowRef } from 'vue'
 import { ContextIsolator } from '../../_util/ContextIsolator'
 import { getAttrStyleAndClass, useZIndex } from '../../_util/hooks'
@@ -158,7 +159,7 @@ function generatePicker<DateType extends AnyObject = AnyObject>(generateConfig: 
           showToday: true,
         }
 
-        const mergedPicker = computed(() => picker || props.picker)
+        const mergedPicker = computed(() => props.picker || picker)
 
         const [contextLocale] = useLocale('DatePicker', enUS)
         const locale = computed(() => ({
@@ -343,7 +344,7 @@ function generatePicker<DateType extends AnyObject = AnyObject>(generateConfig: 
               <Picker
                 {...restAttrs}
                 {...additionalProps}
-                {...restProps as any}
+                {...omit(restProps, ['onKeydown']) as any}
                 ref={innerRef}
                 placeholder={getPlaceholder(locale.value, mergedPicker.value, placeholder)}
                 suffixIcon={suffixNode}
@@ -353,7 +354,7 @@ function generatePicker<DateType extends AnyObject = AnyObject>(generateConfig: 
                 superPrevIcon={<span class={`${prefixCls.value}-super-prev-icon`} />}
                 superNextIcon={<span class={`${prefixCls.value}-super-next-icon`} />}
                 transitionName={getTransitionName(rootPrefixCls.value, 'slide-up')}
-                picker={picker}
+                picker={mergedPicker.value}
                 onCalendarChange={handleCalendarChange}
                 onChange={triggerChange}
                 onPanelChange={handlePanelChange as any}
@@ -401,7 +402,6 @@ function generatePicker<DateType extends AnyObject = AnyObject>(generateConfig: 
       {
         name,
         inheritAttrs: false,
-        props: [],
       },
     )
   }

@@ -1,15 +1,17 @@
-import type { SlotsType } from 'vue'
 import type { ButtonProps } from '../button'
 import { defineComponent } from 'vue'
 import Button from '../button'
 
-const PickerButton = defineComponent<ButtonProps, {}, string, SlotsType<{ default?: () => any }>>(
+const PickerButton = defineComponent<ButtonProps>(
   (props, { slots }) => {
-    return () => (
-      <Button size="small" type="primary" {...props}>
-        {slots.default?.()}
-      </Button>
-    )
+    return () => {
+      const { size = 'small', type = 'primary', ...restProps } = props
+      return (
+        <Button size={size} type={type} {...restProps}>
+          {slots.default?.()}
+        </Button>
+      )
+    }
   },
   {
     name: 'APickerButton',

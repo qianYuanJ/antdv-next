@@ -56,7 +56,7 @@
     "@v-c/mutate-observer": "catalog:",
     "@v-c/notification": "^0.0.2",
     "@v-c/pagination": "^0.0.1",
-    "@v-c/picker": "link:/Users/zhuzhengjian/workspace/gitea/antdv-next/vue-components/packages/picker",
+    "@v-c/picker": "^0.0.3",
     "@v-c/progress": "^0.0.2",
     "@v-c/qrcode": "catalog:",
     "@v-c/rate": "^0.0.2",

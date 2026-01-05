@@ -111,7 +111,7 @@ declare module 'vue' {
     ATableSummaryCell: typeof import('antdv-next')['TableSummaryCell']
     ACalendar: typeof import('antdv-next')['Calendar']
     ADatePicker: typeof import('antdv-next')['DatePicker']
-    ADateRangePicker: typeof import('antdv-next')['DateRangePicker']
+    ARangePicker: typeof import('antdv-next')['DateRangePicker']
     ATimePicker: typeof import('antdv-next')['TimePicker']
     ATimeRangePicker: typeof import('antdv-next')['TimeRangePicker']
   }

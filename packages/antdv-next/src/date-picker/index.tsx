@@ -42,7 +42,6 @@ export type DatePickerType = typeof DatePicker & {
   app.component(DatePicker.YearPicker.name, DatePicker.YearPicker)
   app.component(DatePicker.QuarterPicker.name, DatePicker.QuarterPicker)
   app.component(DatePicker.RangePicker.name, DatePicker.RangePicker)
-  app.component(DatePicker.TimePicker.name, DatePicker.TimePicker)
 }
 
 export default DatePicker as DatePickerType
@@ -52,4 +51,3 @@ export const DateWeekPicker = DatePicker.WeekPicker
 export const DateMonthPicker = DatePicker.MonthPicker
 export const DateYearPicker = DatePicker.YearPicker
 export const DateQuarterPicker = DatePicker.QuarterPicker
-export const DateTimePicker = DatePicker.TimePicker

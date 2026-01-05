@@ -6,12 +6,10 @@ import type {
   SemanticStyles,
   SemanticStylesType,
 } from '../_util/hooks'
-
 import type { InputStatus } from '../_util/statusUtils'
 import type { AnyObject, VueNode } from '../_util/type'
 import type {
-  GenericTimePickerProps,
-  PickerPropsWithMultiple,
+  PickerProps,
   RangePickerProps,
 } from '../date-picker/generatePicker'
 import { computed, defineComponent, shallowRef } from 'vue'
@@ -37,15 +35,19 @@ export type TimePickerStyles = SemanticStylesType<
   { popup?: SemanticStyles<PanelSemanticName> }
 >
 
-export type PickerTimeProps<DateType extends AnyObject> = PickerPropsWithMultiple<
-  DateType,
-  GenericTimePickerProps<DateType>
->
+export interface PickerTimeProps<DateType extends AnyObject> extends Omit<PickerProps<DateType>, 'picker' | 'showTime'> {
 
-export type RangePickerTimeProps<DateType extends AnyObject> = Omit<
+}
+
+export interface RangePickerTimeProps<DateType extends AnyObject> extends Omit<
   RangePickerProps<DateType>,
   'showTime' | 'picker'
->
+> {
+  /** @deprecated Please use `classes.popup` instead */
+  popupClassName?: string
+  /** @deprecated Please use `styles.popup` instead */
+  popupStyle?: CSSProperties
+}
 
 const { TimePicker: InternalTimePicker, RangePicker: InternalRangePicker } = DatePicker
 
@@ -134,7 +136,7 @@ const RangePicker = defineComponent<
         onOk={onOk}
         onFocus={onFocus}
         onBlur={onBlur}
-        onKeyDown={onKeyDown}
+        onKeydown={onKeyDown}
         v-slots={slots}
       />
     )
@@ -323,7 +325,7 @@ const TimePicker = defineComponent<
               onSelect,
               onFocus,
               onBlur,
-              onKeyDown,
+              onKeydown: onKeyDown,
             } as any
           }
           v-slots={slots}

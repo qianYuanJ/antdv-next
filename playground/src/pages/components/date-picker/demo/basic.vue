@@ -9,7 +9,7 @@ const quarter = shallowRef()
 </script>
 
 <template>
-  <a-space>
+  <a-space vertical>
     <a-date-picker v-model:value="date" />
     <a-date-picker v-model:value="week" picker="week" />
     <a-date-picker v-model:value="month" picker="month" />
