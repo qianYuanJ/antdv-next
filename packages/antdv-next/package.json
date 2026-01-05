@@ -24,6 +24,8 @@
       "import": "./dist/locale/*.js",
       "default": "./dist/locale/*.js"
     },
+    "./global.d.ts": "./global.d.ts",
+    "./global": "./dist/global.d.ts",
     "./dist/reset.css": "./dist/reset.css",
     "./package.json": "./package.json"
   },
@@ -39,7 +41,7 @@
     "build": "run-s build:esm build:umd",
     "build:esm": "tsdown",
     "build:umd": "vite build",
-    "patch": "bumpp --release --commit \"chore(release): antdv-next %s\" --push --tag \"antdv-next@%s\""
+    "bump": "bumpp --commit \"chore(release): antdv-next %s\" --push --tag \"antdv-next@%s\""
   },
   "dependencies": {
     "@ant-design/colors": "catalog:",

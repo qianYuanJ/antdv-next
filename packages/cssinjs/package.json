@@ -28,7 +28,7 @@
     "prepublish": "pnpm build",
     "build": "tsdown",
     "dev": "tsdown --watch",
-    "patch": "bumpp --release --commit \"chore(release): @antdv-next/cssinjs %s\" --push --tag \"@antdv-next/cssinjs@%s\""
+    "bump": "bumpp --commit \"chore(release): @antdv-next/cssinjs %s\" --push --tag \"@antdv-next/cssinjs@%s\""
   },
   "peerDependencies": {
     "vue": ">=3.2.0"

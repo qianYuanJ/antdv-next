@@ -34,7 +34,7 @@
     "build": "tsdown",
     "gen:icons": "esno ./scripts/gen-icons.ts",
     "prepublish": "pnpm build",
-    "patch": "bumpp --release --commit \"chore(release): @antdv-next/icons %s\" --push --tag \"@antdv-next/icons@%s\""
+    "bump": "bumpp --commit \"chore(release): @antdv-next/icons %s\" --push --tag \"@antdv-next/icons@%s\""
   },
   "peerDependencies": {
     "vue": ">=3.2.0"

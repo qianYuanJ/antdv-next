@@ -9,7 +9,10 @@
       "@antdv-next/cssinjs/cssinjs-utils": ["../packages/cssinjs/src/cssinjs-utils/index.ts"],
       "antdv-next": ["../packages/antdv-next/src/index.ts"]
     },
-    "types": ["vite/client"],
+    "types": [
+      "vite/client",
+      "../packages/antdv-next/global"
+    ],
 
     /* Linting */
     "strict": true,
@@ -20,7 +23,6 @@
     "noUncheckedSideEffectImports": true
   },
   "files": [
-    "types/antd.d.ts",
     "types/vite-env.d.ts",
     "types/md.d.ts"
   ],

@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <div style="height: 200vh">
     <a-affix :offset-top="20">
@@ -15,7 +11,3 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-
-</style>
