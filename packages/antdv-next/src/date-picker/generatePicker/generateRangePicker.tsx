@@ -1,5 +1,5 @@
 import type { PickerMode, PickerRef } from '@v-c/picker'
-import type { GenerateConfig } from '@v-c/picker/generate/index'
+import type { GenerateConfig } from '@v-c/picker/generate'
 import type { SlotsType } from 'vue'
 import type { AnyObject, VueNode } from '../../_util/type'
 import type { RangePickerProps } from './interface'
@@ -57,7 +57,7 @@ function generateRangePicker<DateType extends AnyObject = AnyObject>(generateCon
   type DateRangePickerProps = RangePickerProps<DateType>
 
   const RangePickerComponent = defineComponent<
-    DateRangePickerProps,
+    RangePickerProps<DateType>,
     RangePickerEmits<DateType>,
     string,
     SlotsType<RangePickerSlots>

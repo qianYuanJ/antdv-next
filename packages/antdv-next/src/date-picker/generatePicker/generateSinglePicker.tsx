@@ -1,5 +1,5 @@
 import type { PickerMode, PickerRef } from '@v-c/picker'
-import type { GenerateConfig } from '@v-c/picker/generate/index'
+import type { GenerateConfig } from '@v-c/picker/generate'
 import type { SlotsType } from 'vue'
 import type { AnyObject, VueNode } from '../../_util/type'
 import type { GenericTimePickerProps, PickerProps } from './interface'
@@ -74,7 +74,7 @@ function generatePicker<DateType extends AnyObject = AnyObject>(generateConfig: 
     const name = displayName ? `A${displayName}` : 'ADatePicker'
 
     return defineComponent<
-      DatePickerProps,
+      PickerProps<DateType>,
       DatePickerEmits<DateType>,
       string,
       SlotsType<DatePickerSlots>

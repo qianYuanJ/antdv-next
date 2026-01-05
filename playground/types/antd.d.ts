@@ -112,10 +112,6 @@ declare module 'vue' {
     ACalendar: typeof import('antdv-next')['Calendar']
     ADatePicker: typeof import('antdv-next')['DatePicker']
     ADateRangePicker: typeof import('antdv-next')['DateRangePicker']
-    ADateWeekPicker: typeof import('antdv-next')['DateWeekPicker']
-    ADateMonthPicker: typeof import('antdv-next')['DateMonthPicker']
-    ADateQuarterPicker: typeof import('antdv-next')['DateQuarterPicker']
-    ADateYearPicker: typeof import('antdv-next')['DateYearPicker']
     ATimePicker: typeof import('antdv-next')['TimePicker']
     ATimeRangePicker: typeof import('antdv-next')['TimeRangePicker']
   }

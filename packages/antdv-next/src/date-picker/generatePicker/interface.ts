@@ -134,15 +134,48 @@ export type InjectDefaultProps<Props> = Omit<
   styles?: DatePickerStylesType<Props>
 }
 
+export interface BaseDefaultProps<Props> {
+  locale?: PickerLocale
+  size?: SizeType
+  placement?: DataPickerPlacement
+  /** @deprecated Use `variant` instead */
+  bordered?: boolean
+  status?: InputStatus
+  /**
+   * @since 5.13.0
+   * @default "outlined"
+   */
+  variant?: Variant
+  /**
+   * @deprecated `dropdownClassName` is deprecated which will be removed in next major
+   *   version.Please use `classes.popup.root` instead.
+   */
+  dropdownClassName?: string
+  /**
+   * @deprecated please use `classes.popup.root` instead
+   */
+  popupClassName?: string
+  rootClass?: string
+  /**
+   * @deprecated please use `styles.popup.root` instead
+   */
+  popupStyle?: CSSProperties
+  classes?: DatePickerClassNamesType<Props>
+  styles?: DatePickerStylesType<Props>
+}
 /** Base Single Picker props */
-export type PickerProps<DateType extends AnyObject = any> = InjectDefaultProps<
-  VcPickerProps<DateType>
->
+// export type PickerProps<DateType extends AnyObject = any> = VcPickerProps<DateType> & BaseDefaultProps<VcPickerProps<DateType>>
+
+export interface PickerProps<DateType extends AnyObject = any> extends BaseDefaultProps<DateType>, Omit<VcPickerProps, 'placement' | 'locale' | 'generateConfig' | 'hideHeader' | 'classNames' | 'styles' | RcEventKeys | 'className' | 'style' | 'rootClassName'> {
+
+}
 
 /** Base Range Picker props */
-export type RangePickerProps<DateType extends AnyObject = any> = InjectDefaultProps<
-  VcRangePickerProps<DateType>
->
+export interface RangePickerProps<DateType extends AnyObject = any>
+  extends BaseDefaultProps<DateType>,
+  Omit<VcRangePickerProps<DateType>, 'placement' | 'locale' | 'generateConfig' | 'hideHeader' | 'classNames' | 'styles' | RcEventKeys | 'className' | 'style' | 'rootClassName'> {
+
+}
 
 export type GenericTimePickerProps<DateType extends AnyObject = any> = Omit<
   PickerProps<DateType>,

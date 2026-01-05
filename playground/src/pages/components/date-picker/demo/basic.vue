@@ -1,0 +1,19 @@
+<script setup lang="ts">
+import { shallowRef } from 'vue'
+
+const date = shallowRef()
+const week = shallowRef()
+const month = shallowRef()
+const year = shallowRef()
+const quarter = shallowRef()
+</script>
+
+<template>
+  <a-space>
+    <a-date-picker v-model:value="date" />
+    <a-date-picker v-model:value="week" picker="week" />
+    <a-date-picker v-model:value="month" picker="month" />
+    <a-date-picker v-model:value="quarter" picker="quarter" />
+    <a-date-picker v-model:value="year" picker="year" />
+  </a-space>
+</template>
