@@ -30,7 +30,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 | resizable | - | boolean \| DrawerResizableConfig | - | - |
 | rootClass | - | string | - | - |
 | open | - | boolean | - | - |
-| afterOpenChange | - | (open: boolean) => void | - | - |
+| afterOpenChange | - | (open: boolean) =&gt; void | - | - |
 | destroyOnClose | Deprecated. | boolean | - | - |
 | destroyOnHidden | - | boolean | - | - |
 | mask | - | MaskType | - | - |
@@ -39,21 +39,21 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| update:open | - | (open: boolean) => void | - |
-| afterOpenChange | - | (open: boolean) => void | - |
-| close | - | (e: MouseEvent \| KeyboardEvent) => void | - |
-| keydown | - | (e: KeyboardEvent) => void | - |
-| keyup | - | (e: KeyboardEvent) => void | - |
-| mouseenter | - | (e: MouseEvent) => void | - |
-| mouseleave | - | (e: MouseEvent) => void | - |
-| mouseover | - | (e: MouseEvent) => void | - |
-| click | - | (e: MouseEvent) => void | - |
+| update:open | - | (open: boolean) =&gt; void | - |
+| afterOpenChange | - | (open: boolean) =&gt; void | - |
+| close | - | (e: MouseEvent \| KeyboardEvent) =&gt; void | - |
+| keydown | - | (e: KeyboardEvent) =&gt; void | - |
+| keyup | - | (e: KeyboardEvent) =&gt; void | - |
+| mouseenter | - | (e: MouseEvent) =&gt; void | - |
+| mouseleave | - | (e: MouseEvent) =&gt; void | - |
+| mouseover | - | (e: MouseEvent) =&gt; void | - |
+| click | - | (e: MouseEvent) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| title | - | () => any | - |
-| footer | - | () => any | - |
-| extra | - | () => any | - |
-| closeIcon | - | () => any | - |
+| title | - | () =&gt; any | - |
+| footer | - | () =&gt; any | - |
+| extra | - | () =&gt; any | - |
+| closeIcon | - | () =&gt; any | - |

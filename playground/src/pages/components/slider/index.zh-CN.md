@@ -34,7 +34,7 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| change | 当 Slider 的值发生改变时，会触发 onChange 事件，并把改变后的值作为参数传入 | (value: any) => void | - |
-| afterChange | - | (value: any) => void | - |
-| update:value | - | (value: any) => void | - |
-| changeComplete | 与 `mouseup` 和 `keyup` 触发时机一致，把当前值作为参数传入 | (value: any) => void | - |
+| change | 当 Slider 的值发生改变时，会触发 onChange 事件，并把改变后的值作为参数传入 | (value: any) =&gt; void | - |
+| afterChange | - | (value: any) =&gt; void | - |
+| update:value | - | (value: any) =&gt; void | - |
+| changeComplete | 与 `mouseup` 和 `keyup` 触发时机一致，把当前值作为参数传入 | (value: any) =&gt; void | - |

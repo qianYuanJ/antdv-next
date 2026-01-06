@@ -72,8 +72,8 @@ demo:
 | size | 控件大小。注：标准表单内的输入框大小限制为 `middle` | SizeType | - | - |
 | defaultValue | 输入框默认内容 | string | - | - |
 | value | 输入框内容 | string | - | - |
-| formatter | - | (value: string) => string | - | - |
-| separator | - | VueNode \| ((index: number) => VueNode) | - | - |
+| formatter | - | (value: string) =&gt; string | - | - |
+| separator | - | VueNode \| ((index: number) =&gt; VueNode) | - | - |
 | disabled | 是否禁用状态，默认为 false | boolean | false | - |
 | status | 设置校验状态 | InputStatus | - | 4.19.0 |
 | mask | - | boolean \| string | - | - |
@@ -91,7 +91,7 @@ demo:
 | action | - | PasswordAction | - | - |
 | visibilityToggle | - | VisibilityToggle | - | - |
 | suffix | 带有后缀图标的 input | VueNode | - | - |
-| iconRender | - | (params: { visible: boolean }) => any | - | - |
+| iconRender | - | (params: \{ visible: boolean \}) =&gt; any | - | - |
 | iconVisible | - | boolean | - | - |
 
 #### Search
@@ -127,26 +127,26 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| pressEnter | 按下回车的回调 | NonNullable<VcInputProps['onPressEnter']> | - |
-| clear | 按下清除按钮的回调 | () => void | 5.20.0 |
-| change | 输入框内容变化时的回调 | NonNullable<VcInputProps['onChange']> | - |
-| blur | - | NonNullable<VcInputProps['onBlur']> | - |
-| focus | - | NonNullable<VcInputProps['onFocus']> | - |
-| keydown | - | NonNullable<VcInputProps['onKeyDown']> | - |
-| keyup | - | NonNullable<VcInputProps['onKeyUp']> | - |
-| compositionstart | - | NonNullable<VcInputProps['onCompositionStart']> | - |
-| compositionend | - | NonNullable<VcInputProps['onCompositionEnd']> | - |
-| update:value | - | (value: VcInputProps['value']) => void | - |
+| pressEnter | 按下回车的回调 | NonNullable&lt;VcInputProps['onPressEnter']&gt; | - |
+| clear | 按下清除按钮的回调 | () =&gt; void | 5.20.0 |
+| change | 输入框内容变化时的回调 | NonNullable&lt;VcInputProps['onChange']&gt; | - |
+| blur | - | NonNullable&lt;VcInputProps['onBlur']&gt; | - |
+| focus | - | NonNullable&lt;VcInputProps['onFocus']&gt; | - |
+| keydown | - | NonNullable&lt;VcInputProps['onKeyDown']&gt; | - |
+| keyup | - | NonNullable&lt;VcInputProps['onKeyUp']&gt; | - |
+| compositionstart | - | NonNullable&lt;VcInputProps['onCompositionStart']&gt; | - |
+| compositionend | - | NonNullable&lt;VcInputProps['onCompositionEnd']&gt; | - |
+| update:value | - | (value: VcInputProps['value']) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| prefix | 带有前缀图标的 input | () => any | - |
-| suffix | 带有后缀图标的 input | () => any | - |
-| addonBefore | 带标签的 input，设置前置标签，请使用 Space.Compact 替换 | () => any | - |
-| addonAfter | 带标签的 input，设置后置标签，请使用 Space.Compact 替换 | () => any | - |
-| clearIcon | - | () => any | - |
+| prefix | 带有前缀图标的 input | () =&gt; any | - |
+| suffix | 带有后缀图标的 input | () =&gt; any | - |
+| addonBefore | 带标签的 input，设置前置标签，请使用 Space.Compact 替换 | () =&gt; any | - |
+| addonAfter | 带标签的 input，设置后置标签，请使用 Space.Compact 替换 | () =&gt; any | - |
+| clearIcon | - | () =&gt; any | - |
 
 ### 方法 {#methods}
 
@@ -155,5 +155,5 @@ demo:
 | 方法 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
 | resizableTextArea | - | any | - |
-| focus | - | (...args: any[]) => void | - |
-| blur | - | () => void | - |
+| focus | - | (...args: any[]) =&gt; void | - |
+| blur | - | () =&gt; void | - |

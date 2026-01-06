@@ -44,14 +44,14 @@ Common props ref：[Common props](/docs/vue/common-props)
 | percent | Progress circle percentage of current step in `process` status (only works on basic Steps) | number | - | 4.5.0 |
 | status | To specify the status of current step, can be set to one of the following values: `wait` `process` `finish` `error` | 'wait' \| 'process' \| 'finish' \| 'error' | `process` | - |
 | iconRender | Custom render icon, please use `items.icon` first | IconRenderType | - | - |
-| onChange | Trigger when Step is changed | (current: number) => void | - | - |
+| onChange | Trigger when Step is changed | (current: number) =&gt; void | - | - |
 | prefixCls | - | string | - | - |
 
 ### Events {#events}
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| update:current | - | (current: number) => void | - |
+| update:current | - | (current: number) =&gt; void | - |
 
 ### Slots {#slots}
 

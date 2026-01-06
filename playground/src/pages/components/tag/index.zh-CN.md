@@ -35,11 +35,11 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| close | 关闭时的回调（可通过 `e.preventDefault()` 来阻止默认行为） | (ev: MouseEvent) => void | - |
+| close | 关闭时的回调（可通过 `e.preventDefault()` 来阻止默认行为） | (ev: MouseEvent) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| icon | 设置图标 | () => any | - |
-| closeIcon | 自定义关闭按钮。5.7.0：设置为 `null` 或 `false` 时隐藏关闭按钮 | () => any | 4.4.0 |
+| icon | 设置图标 | () =&gt; any | - |
+| closeIcon | 自定义关闭按钮。5.7.0：设置为 `null` 或 `false` 时隐藏关闭按钮 | () =&gt; any | 4.4.0 |

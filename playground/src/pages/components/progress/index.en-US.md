@@ -32,7 +32,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 | styles | Customize inline style for each semantic structure inside the component. Supports object or function. | ProgressStylesType | - | - |
 | type | To set the type, options: `line` `circle` `dashboard` | ProgressType | `line` | - |
 | percent | To set the completion percentage | number | 0 | - |
-| format | The template function of the content | (percent?: number, successPercent?: number) => any | (percent) => percent + `%` | - |
+| format | The template function of the content | (percent?: number, successPercent?: number) =&gt; any | (percent) =&gt; percent + `%` | - |
 | status | To set the status of the Progress, options: `success` `exception` `normal` `active`(line only) | (typeof ProgressStatuses)[number] | - | - |
 | showInfo | Whether to display the progress value and the status icon | boolean | true | - |
 | strokeWidth | - | number | - | - |
@@ -45,7 +45,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 | gapDegree | - | number | - | - |
 | gapPlacement | - | GapPlacement | - | - |
 | gapPosition | Deprecated. | GapPosition | - | - |
-| size | Progress size | number \| [number \| string, number] \| ProgressSize \| { width?: number, height?: number } | "default" | 5.3.0, Object: 5.18.0 |
-| steps | - | number \| { count: number, gap: number } | - | - |
+| size | Progress size | number \| [number \| string, number] \| ProgressSize \| \{ width?: number, height?: number \} | "default" | 5.3.0, Object: 5.18.0 |
+| steps | - | number \| \{ count: number, gap: number \} | - | - |
 | percentPosition | - | PercentPositionType | - | - |
-| rounding | - | (step: number) => number | - | - |
+| rounding | - | (step: number) =&gt; number | - | - |

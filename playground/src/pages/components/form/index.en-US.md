@@ -31,7 +31,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 | layout | Form layout | FormLayout | `horizontal` | - |
 | labelAlign | The text align of label of all items | FormLabelAlign | `right` | - |
 | labelWrap | whether label can be wrap | boolean | false | 4.18.0 |
-| labelCol | Label layout, like `<Col>` component. Set `span` `offset` value like `{span: 3, offset: 12}` or `sm: {span: 3, offset: 12}` | ColProps | - | - |
+| labelCol | Label layout, like `&lt;Col&gt;` component. Set `span` `offset` value like `{span: 3, offset: 12}` or `sm: {span: 3, offset: 12}` | ColProps | - | - |
 | wrapperCol | The layout for input controls, same as `labelCol` | ColProps | - | - |
 | feedbackIcons | Can be passed custom icons while `Form.Item` element has `hasFeedback` | FeedbackIcons | - | 5.9.0 |
 | size | Set field component size (antd components only) | SizeType | - | - |
@@ -40,8 +40,8 @@ Common props ref：[Common props](/docs/vue/common-props)
 | requiredMark | Required mark style. Can use required mark or optional mark. You can not config to single Form.Item since this is a Form level config | RequiredMark | true | `renderProps`: 5.9.0 |
 | variant | Variant of components inside form | Variant | `outlined` | 5.13.0 \| `underlined`: 5.24.0 |
 | validateMessages | Validation prompt template, description [see below](#validatemessages) | ValidateMessages | - | - |
-| model | - | Record<string, any> | - | - |
-| rules | - | Record<string, Rule[]> | - | - |
+| model | - | Record&lt;string, any&gt; | - | - |
+| rules | - | Record&lt;string, Rule[]&gt; | - | - |
 | validateTrigger | Config field validate trigger | string \| string[] \| false | `onChange` | 4.3.0 |
 | preserve | Keep field value even when field removed. You can get the preserve field value by `getFieldsValue(true)` | boolean | true | 4.4.0 |
 | clearOnDestroy | Clear form values when the form is uninstalled | boolean | false | 5.18.0 |
@@ -51,13 +51,13 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| finish | Trigger after submitting the form and verifying data successfully | (values: Record<string, any>) => void | - |
-| finishFailed | Trigger after submitting the form and verifying data failed | (errorInfo: ValidateErrorEntity) => void | - |
-| submit | - | (e: Event) => void | - |
-| reset | - | (e: Event) => void | - |
-| validate | - | (name: InternalNamePath, status: boolean, errors: any[] \| null) => void | - |
-| valuesChange | Trigger when value updated | (changedValues: Record<string, any>, values: Record<string, any>) => void | - |
-| fieldsChange | Trigger when field updated | (changedFields: FieldData[], allFields: FieldData[]) => void | - |
+| finish | Trigger after submitting the form and verifying data successfully | (values: Record&lt;string, any&gt;) =&gt; void | - |
+| finishFailed | Trigger after submitting the form and verifying data failed | (errorInfo: ValidateErrorEntity) =&gt; void | - |
+| submit | - | (e: Event) =&gt; void | - |
+| reset | - | (e: Event) =&gt; void | - |
+| validate | - | (name: InternalNamePath, status: boolean, errors: any[] \| null) =&gt; void | - |
+| valuesChange | Trigger when value updated | (changedValues: Record&lt;string, any&gt;, values: Record&lt;string, any&gt;) =&gt; void | - |
+| fieldsChange | Trigger when field updated | (changedFields: FieldData[], allFields: FieldData[]) =&gt; void | - |
 
 ### Methods {#methods}
 
@@ -65,39 +65,39 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Method | Description | Type | Version |
 | --- | --- | --- | --- |
-| getFieldValue | - | (name: NamePath<Values>) => StoreValue | - |
-| getFieldsValue | - | (() => Values)     & ((nameList: NamePath<Values>[] \| true, filterFunc?: FilterFunc) => any)     & ((config: GetFieldsValueConfig) => any) | - |
-| getFieldError | - | (name: NamePath<Values>) => string[] | - |
-| getFieldsError | - | (nameList?: NamePath<Values>[]) => FieldError[] | - |
-| getFieldWarning | - | (name: NamePath<Values>) => string[] | - |
-| isFieldsTouched | - | ((nameList?: NamePath<Values>[], allFieldsTouched?: boolean) => boolean)     & ((allFieldsTouched?: boolean) => boolean) | - |
-| isFieldTouched | - | (name: NamePath<Values>) => boolean | - |
-| isFieldValidating | - | (name: NamePath<Values>) => boolean | - |
-| isFieldsValidating | - | (nameList?: NamePath<Values>[]) => boolean | - |
-| resetFields | - | (fields?: NamePath<Values>[]) => void | - |
-| setFields | - | (fields: FieldData<Values>[]) => void | - |
-| setFieldValue | - | (name: NamePath<Values>, value: any) => void | - |
-| setFieldsValue | - | (values: RecursivePartial<Values>) => void | - |
-| validateFields | - | ValidateFields<Values> | - |
-| submit | - | () => void | - |
+| getFieldValue | - | (name: NamePath&lt;Values&gt;) =&gt; StoreValue | - |
+| getFieldsValue | - | (() =&gt; Values)     & ((nameList: NamePath&lt;Values&gt;[] \| true, filterFunc?: FilterFunc) =&gt; any)     & ((config: GetFieldsValueConfig) =&gt; any) | - |
+| getFieldError | - | (name: NamePath&lt;Values&gt;) =&gt; string[] | - |
+| getFieldsError | - | (nameList?: NamePath&lt;Values&gt;[]) =&gt; FieldError[] | - |
+| getFieldWarning | - | (name: NamePath&lt;Values&gt;) =&gt; string[] | - |
+| isFieldsTouched | - | ((nameList?: NamePath&lt;Values&gt;[], allFieldsTouched?: boolean) =&gt; boolean)     & ((allFieldsTouched?: boolean) =&gt; boolean) | - |
+| isFieldTouched | - | (name: NamePath&lt;Values&gt;) =&gt; boolean | - |
+| isFieldValidating | - | (name: NamePath&lt;Values&gt;) =&gt; boolean | - |
+| isFieldsValidating | - | (nameList?: NamePath&lt;Values&gt;[]) =&gt; boolean | - |
+| resetFields | - | (fields?: NamePath&lt;Values&gt;[]) =&gt; void | - |
+| setFields | - | (fields: FieldData&lt;Values&gt;[]) =&gt; void | - |
+| setFieldValue | - | (name: NamePath&lt;Values&gt;, value: any) =&gt; void | - |
+| setFieldsValue | - | (values: RecursivePartial&lt;Values&gt;) =&gt; void | - |
+| validateFields | - | ValidateFields&lt;Values&gt; | - |
+| submit | - | () =&gt; void | - |
 
 #### Form
 
 | Method | Description | Type | Version |
 | --- | --- | --- | --- |
-| getFieldValue | - | (name: NamePath<Values>) => StoreValue | - |
-| getFieldsValue | - | (() => Values)     & ((nameList: NamePath<Values>[] \| true, filterFunc?: FilterFunc) => any)     & ((config: GetFieldsValueConfig) => any) | - |
-| getFieldError | - | (name: NamePath<Values>) => string[] | - |
-| getFieldsError | - | (nameList?: NamePath<Values>[]) => FieldError[] | - |
-| getFieldWarning | - | (name: NamePath<Values>) => string[] | - |
-| isFieldsTouched | - | ((nameList?: NamePath<Values>[], allFieldsTouched?: boolean) => boolean)     & ((allFieldsTouched?: boolean) => boolean) | - |
-| isFieldTouched | - | (name: NamePath<Values>) => boolean | - |
-| isFieldValidating | - | (name: NamePath<Values>) => boolean | - |
-| isFieldsValidating | - | (nameList?: NamePath<Values>[]) => boolean | - |
-| resetFields | - | (fields?: NamePath<Values>[]) => void | - |
-| setFields | - | (fields: FieldData<Values>[]) => void | - |
-| setFieldValue | - | (name: NamePath<Values>, value: any) => void | - |
-| setFieldsValue | - | (values: RecursivePartial<Values>) => void | - |
-| validateFields | - | ValidateFields<Values> | - |
-| submit | - | () => void | - |
+| getFieldValue | - | (name: NamePath&lt;Values&gt;) =&gt; StoreValue | - |
+| getFieldsValue | - | (() =&gt; Values)     & ((nameList: NamePath&lt;Values&gt;[] \| true, filterFunc?: FilterFunc) =&gt; any)     & ((config: GetFieldsValueConfig) =&gt; any) | - |
+| getFieldError | - | (name: NamePath&lt;Values&gt;) =&gt; string[] | - |
+| getFieldsError | - | (nameList?: NamePath&lt;Values&gt;[]) =&gt; FieldError[] | - |
+| getFieldWarning | - | (name: NamePath&lt;Values&gt;) =&gt; string[] | - |
+| isFieldsTouched | - | ((nameList?: NamePath&lt;Values&gt;[], allFieldsTouched?: boolean) =&gt; boolean)     & ((allFieldsTouched?: boolean) =&gt; boolean) | - |
+| isFieldTouched | - | (name: NamePath&lt;Values&gt;) =&gt; boolean | - |
+| isFieldValidating | - | (name: NamePath&lt;Values&gt;) =&gt; boolean | - |
+| isFieldsValidating | - | (nameList?: NamePath&lt;Values&gt;[]) =&gt; boolean | - |
+| resetFields | - | (fields?: NamePath&lt;Values&gt;[]) =&gt; void | - |
+| setFields | - | (fields: FieldData&lt;Values&gt;[]) =&gt; void | - |
+| setFieldValue | - | (name: NamePath&lt;Values&gt;, value: any) =&gt; void | - |
+| setFieldsValue | - | (values: RecursivePartial&lt;Values&gt;) =&gt; void | - |
+| validateFields | - | ValidateFields&lt;Values&gt; | - |
+| submit | - | () =&gt; void | - |
 | nativeElement | - | HTMLElement | - |

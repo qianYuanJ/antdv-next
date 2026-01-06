@@ -37,7 +37,7 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*-0kxQrbHx2kAAA
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| icon | 自定义 icon | () => any | - |
-| title | title 文字 | () => any | - |
-| subTitle | subTitle 文字 | () => any | - |
-| extra | 操作区 | () => any | - |
+| icon | 自定义 icon | () =&gt; any | - |
+| title | title 文字 | () =&gt; any | - |
+| subTitle | subTitle 文字 | () =&gt; any | - |
+| extra | 操作区 | () =&gt; any | - |

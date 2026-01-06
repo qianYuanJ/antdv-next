@@ -30,14 +30,14 @@ Common props ref：[Common props](/docs/vue/common-props)
 | content | - | VueNode | - | - |
 | duration | - | number | - | - |
 | type | - | NoticeType | - | - |
-| onClose | - | () => void | - | - |
+| onClose | - | () =&gt; void | - | - |
 | icon | - | VueNode | - | - |
 | key | - | Key | - | - |
 | style | - | CSSProperties | - | - |
 | class | - | string | - | - |
 | classes | - | ArgsClassNamesType | - | - |
 | styles | - | ArgsStylesType | - | - |
-| onClick | - | (e: MouseEvent) => void | - | - |
+| onClick | - | (e: MouseEvent) =&gt; void | - | - |
 | pauseOnHover | - | boolean | - | - |
 
 ### Methods {#methods}
@@ -49,5 +49,5 @@ Common props ref：[Common props](/docs/vue/common-props)
 | error | - | TypeOpen | - |
 | warning | - | TypeOpen | - |
 | loading | - | TypeOpen | - |
-| open | - | (args: ArgsProps) => MessageType | - |
-| destroy | - | (key?: Key) => void | - |
+| open | - | (args: ArgsProps) =&gt; MessageType | - |
+| destroy | - | (key?: Key) =&gt; void | - |

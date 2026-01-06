@@ -39,14 +39,14 @@ Common props ref：[Common props](/docs/vue/common-props)
 | icon | Custom icon type for an icon avatar | VueNode | - | - |
 | alt | This attribute defines the alternative text describing the image | string | - | - |
 | crossOrigin | CORS settings attributes | '' \| 'anonymous' \| 'use-credentials' | - | 4.17.0 |
-| onError | Handler when img load error, return false to prevent default fallback behavior | () => boolean | - | - |
+| onError | Handler when img load error, return false to prevent default fallback behavior | () =&gt; boolean | - | - |
 
 #### AvatarGroup
 
 | Property | Description | Type | Default | Version |
 | --- | --- | --- | --- | --- |
 | prefixCls | - | string | - | - |
-| max | - | {     count?: number     style?: CSSProperties     popover?: PopoverProps   } | - | - |
+| max | - | \{     count?: number     style?: CSSProperties     popover?: PopoverProps   \} | - | - |
 | size | The size of the avatar | AvatarSize | `default` | 4.7.0 |
 | shape | The shape of avatar | 'circle' \| 'square' | `circle` | - |
 
@@ -54,11 +54,11 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| click | - | (e: MouseEvent) => void | - |
+| click | - | (e: MouseEvent) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| icon | Custom icon type for an icon avatar | () => any | - |
-| src | The address of the image for an image avatar or image element | () => any | ReactNode: 4.8.0 |
+| icon | Custom icon type for an icon avatar | () =&gt; any | - |
+| src | The address of the image for an image avatar or image element | () =&gt; any | ReactNode: 4.8.0 |

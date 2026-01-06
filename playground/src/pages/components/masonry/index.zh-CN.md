@@ -30,21 +30,21 @@ demo:
 | styles | 语义化结构 style，支持对象和函数形式 | MasonryStylesType | - | - |
 | gutter | 间距，可以是固定值、响应式配置或水平垂直间距配置 | RowProps['gutter'] | `0` | - |
 | items | 瀑布流项 | MasonryItemType[] | - | - |
-| itemRender | 自定义项渲染 | (itemInfo: MasonryItemType & { index: number }) => any | - | - |
-| columns | 列数，可以是固定值或响应式配置 | number \| Partial<Record<Breakpoint, number>> | `3` | - |
+| itemRender | 自定义项渲染 | (itemInfo: MasonryItemType & \{ index: number \}) =&gt; any | - | - |
+| columns | 列数，可以是固定值或响应式配置 | number \| Partial&lt;Record&lt;Breakpoint, number&gt;&gt; | `3` | - |
 | fresh | 是否持续监听子项尺寸变化 | boolean | `false` | - |
 
 ### 事件 {#events}
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| layoutChange | 列排序回调 | (sortInfo: { key: Key, column: number }[]) => void | - |
+| layoutChange | 列排序回调 | (sortInfo: \{ key: Key, column: number \}[]) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| itemRender | 自定义项渲染 | (itemInfo: MasonryItemType & { index: number }) => any | - |
+| itemRender | 自定义项渲染 | (itemInfo: MasonryItemType & \{ index: number \}) =&gt; any | - |
 
 ### 方法 {#methods}
 

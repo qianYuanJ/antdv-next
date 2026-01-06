@@ -32,7 +32,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 | dot | Whether to display a red dot instead of `count` | boolean | false | - |
 | scrollNumberPrefixCls | - | string | - | - |
 | status | Set Badge as a status dot | PresetStatusColorType | - | - |
-| color | Customize Badge dot color | LiteralUnion<PresetColorKey> | - | - |
+| color | Customize Badge dot color | LiteralUnion&lt;PresetColorKey&gt; | - | - |
 | text | If `status` is set, `text` sets the display text of the status `dot` | VueNode | - | - |
 | size | If `count` is set, `size` sets the size of badge | 'default' \| 'small' | - | - |
 | offset | Set offset of the badge dot | [number \| string, number \| string] | - | - |
@@ -44,5 +44,5 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| count | Number to show in badge | () => any | - |
-| text | If `status` is set, `text` sets the display text of the status `dot` | () => any | - |
+| count | Number to show in badge | () =&gt; any | - |
+| text | If `status` is set, `text` sets the display text of the status `dot` | () =&gt; any | - |

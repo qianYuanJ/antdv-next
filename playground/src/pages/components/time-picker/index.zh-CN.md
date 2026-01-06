@@ -27,7 +27,7 @@ demo:
 
 | 属性 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
-| addon | - | () => VueNode | - | - |
+| addon | - | () =&gt; VueNode | - | - |
 | status | 设置校验状态 | InputStatus | - | 4.19.0 |
 | popupClassName | 弹出层类名，请使用 `classNames.popup` 替换 | string | - | - |
 | popupStyle | 弹出层样式对象, 请使用 `styles.popup` 替换 | CSSProperties | - | - |
@@ -39,21 +39,21 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| change | 时间发生变化的回调 | (date: DateType \| DateType[] \| null, dateString: string \| string[]) => void | - |
-| update:value | - | (date: DateType \| DateType[] \| null) => void | - |
-| calendarChange | 待选日期发生变化的回调。`info` 参数自 4.4.0 添加 | (date: DateType \| DateType[], dateString: string \| string[], info: any) => void | - |
-| panelChange | - | (date: DateType, mode: PickerMode) => void | - |
-| openChange | 面板打开/关闭时的回调 | (open: boolean) => void | - |
-| ok | - | (date: DateType \| DateType[]) => void | - |
-| select | - | (date: DateType) => void | - |
-| focus | - | (e: FocusEvent, info: any) => void | - |
-| blur | - | (e: FocusEvent, info: any) => void | - |
-| keydown | - | (e: KeyboardEvent, preventDefault: VoidFunction) => void | - |
+| change | 时间发生变化的回调 | (date: DateType \| DateType[] \| null, dateString: string \| string[]) =&gt; void | - |
+| update:value | - | (date: DateType \| DateType[] \| null) =&gt; void | - |
+| calendarChange | 待选日期发生变化的回调。`info` 参数自 4.4.0 添加 | (date: DateType \| DateType[], dateString: string \| string[], info: any) =&gt; void | - |
+| panelChange | - | (date: DateType, mode: PickerMode) =&gt; void | - |
+| openChange | 面板打开/关闭时的回调 | (open: boolean) =&gt; void | - |
+| ok | - | (date: DateType \| DateType[]) =&gt; void | - |
+| select | - | (date: DateType) =&gt; void | - |
+| focus | - | (e: FocusEvent, info: any) =&gt; void | - |
+| blur | - | (e: FocusEvent, info: any) =&gt; void | - |
+| keydown | - | (e: KeyboardEvent, preventDefault: VoidFunction) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| addon | - | () => any | - |
-| renderExtraFooter | 选择框底部显示自定义的内容 | (mode: PickerMode) => any | - |
-| suffixIcon | 自定义的选择框后缀图标 | () => any | - |
+| addon | - | () =&gt; any | - |
+| renderExtraFooter | 选择框底部显示自定义的内容 | (mode: PickerMode) =&gt; any | - |
+| suffixIcon | 自定义的选择框后缀图标 | () =&gt; any | - |

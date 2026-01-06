@@ -34,5 +34,5 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*obM7S5lIxeMAAA
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| image | 设置显示图片，为 string 时表示自定义图片地址。 | () => any | - |
-| description | 自定义描述内容 | () => any | - |
+| image | 设置显示图片，为 string 时表示自定义图片地址。 | () =&gt; any | - |
+| description | 自定义描述内容 | () =&gt; any | - |

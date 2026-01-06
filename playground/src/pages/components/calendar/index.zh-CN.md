@@ -27,18 +27,18 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*-p-wQLik200AAA
 | --- | --- | --- | --- | --- |
 | prefixCls | - | string | - | - |
 | rootClass | - | string | - | - |
-| classes | 用于自定义组件内部各语义化结构的 class，支持对象或函数 | CalendarClassNamesType<DateType> | - | - |
-| styles | 用于自定义组件内部各语义化结构的行内 style，支持对象或函数 | CalendarStylesType<DateType> | - | - |
+| classes | 用于自定义组件内部各语义化结构的 class，支持对象或函数 | CalendarClassNamesType&lt;DateType&gt; | - | - |
+| styles | 用于自定义组件内部各语义化结构的行内 style，支持对象或函数 | CalendarStylesType&lt;DateType&gt; | - | - |
 | locale | 国际化配置 | typeof enUS | [(默认配置)](https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json) | - |
 | validRange | 设置可以显示的日期 | [DateType, DateType] | - | - |
-| disabledDate | 不可选择的日期，参数为当前 `value`，注意使用时[不要直接修改](https://github.com/ant-design/ant-design/issues/30987) | (date: DateType) => boolean | - | - |
-| dateFullCellRender | 自定义渲染日期单元格，返回内容覆盖单元格，>= 5.4.0 请用 `fullCellRender` | (date: DateType) => VueNode | - | < 5.4.0 |
-| dateCellRender | Deprecated. | (date: DateType) => VueNode | - | - |
-| monthFullCellRender | Deprecated. | (date: DateType) => VueNode | - | - |
-| monthCellRender | Deprecated. | (date: DateType) => VueNode | - | - |
-| cellRender | 自定义单元格的内容 | (date: DateType, info: any) => VueNode | - | 5.4.0 |
-| fullCellRender | 自定义单元格的内容 | (date: DateType, info: any) => VueNode | - | 5.4.0 |
-| headerRender | 自定义头部内容 | HeaderRender<DateType> | - | - |
+| disabledDate | 不可选择的日期，参数为当前 `value`，注意使用时[不要直接修改](https://github.com/ant-design/ant-design/issues/30987) | (date: DateType) =&gt; boolean | - | - |
+| dateFullCellRender | 自定义渲染日期单元格，返回内容覆盖单元格，&gt;= 5.4.0 请用 `fullCellRender` | (date: DateType) =&gt; VueNode | - | &lt; 5.4.0 |
+| dateCellRender | Deprecated. | (date: DateType) =&gt; VueNode | - | - |
+| monthFullCellRender | Deprecated. | (date: DateType) =&gt; VueNode | - | - |
+| monthCellRender | Deprecated. | (date: DateType) =&gt; VueNode | - | - |
+| cellRender | 自定义单元格的内容 | (date: DateType, info: any) =&gt; VueNode | - | 5.4.0 |
+| fullCellRender | 自定义单元格的内容 | (date: DateType, info: any) =&gt; VueNode | - | 5.4.0 |
+| headerRender | 自定义头部内容 | HeaderRender&lt;DateType&gt; | - | - |
 | value | 展示日期 | DateType | - | - |
 | defaultValue | 默认展示的日期 | DateType | - | - |
 | mode | 初始模式 | CalendarMode | `month` | - |
@@ -49,19 +49,19 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*-p-wQLik200AAA
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| change | 日期变化回调 | (date: DateType) => void | - |
-| update:value | - | (date: DateType) => void | - |
-| panelChange | 日期面板变化回调 | (date: DateType, mode: CalendarMode) => void | - |
-| select | 选择日期回调，包含来源信息 | (date: DateType, selectInfo: SelectInfo) => void | `info`: 5.6.0 |
+| change | 日期变化回调 | (date: DateType) =&gt; void | - |
+| update:value | - | (date: DateType) =&gt; void | - |
+| panelChange | 日期面板变化回调 | (date: DateType, mode: CalendarMode) =&gt; void | - |
+| select | 选择日期回调，包含来源信息 | (date: DateType, selectInfo: SelectInfo) =&gt; void | `info`: 5.6.0 |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| dateFullCellRender | 自定义渲染日期单元格，返回内容覆盖单元格，>= 5.4.0 请用 `fullCellRender` | (ctx: { date: AnyObject }) => any | < 5.4.0 |
-| dateCellRender | - | (ctx: { date: AnyObject }) => any | - |
-| monthFullCellRender | - | (ctx: { date: AnyObject }) => any | - |
-| monthCellRender | - | (ctx: { date: AnyObject }) => any | - |
-| cellRender | 自定义单元格的内容 | (ctx: { date: AnyObject, info: any }) => any | 5.4.0 |
-| fullCellRender | 自定义单元格的内容 | (ctx: { date: AnyObject, info: any }) => any | 5.4.0 |
-| headerRender | 自定义头部内容 | (config: { value: AnyObject, type: CalendarMode, onChange: (date: AnyObject) => void, onTypeChange: (type: CalendarMode) => void }) => any | - |
+| dateFullCellRender | 自定义渲染日期单元格，返回内容覆盖单元格，&gt;= 5.4.0 请用 `fullCellRender` | (ctx: \{ date: AnyObject \}) =&gt; any | &lt; 5.4.0 |
+| dateCellRender | - | (ctx: \{ date: AnyObject \}) =&gt; any | - |
+| monthFullCellRender | - | (ctx: \{ date: AnyObject \}) =&gt; any | - |
+| monthCellRender | - | (ctx: \{ date: AnyObject \}) =&gt; any | - |
+| cellRender | 自定义单元格的内容 | (ctx: \{ date: AnyObject, info: any \}) =&gt; any | 5.4.0 |
+| fullCellRender | 自定义单元格的内容 | (ctx: \{ date: AnyObject, info: any \}) =&gt; any | 5.4.0 |
+| headerRender | 自定义头部内容 | (config: \{ value: AnyObject, type: CalendarMode, onChange: (date: AnyObject) =&gt; void, onTypeChange: (type: CalendarMode) =&gt; void \}) =&gt; any | - |

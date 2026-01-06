@@ -33,9 +33,9 @@ Common props ref：[Common props](/docs/vue/common-props)
 | reverse | Whether reverse nodes or not | boolean | false | - |
 | mode | By sending `alternate` the timeline will distribute the nodes to the left and right | 'left' \| 'alternate' \| 'right' | `start` | - |
 | items | Each node of timeline | TimelineItemProps[] | - | - |
-| dotRender | - | (params: { item: TimelineItemProps, index: number }) => void | - | - |
-| labelRender | - | (params: { item: TimelineItemProps, index: number }) => void | - | - |
-| contentRender | - | (params: { item: TimelineItemProps, index: number }) => void | - | - |
+| dotRender | - | (params: \{ item: TimelineItemProps, index: number \}) =&gt; void | - | - |
+| labelRender | - | (params: \{ item: TimelineItemProps, index: number \}) =&gt; void | - | - |
+| contentRender | - | (params: \{ item: TimelineItemProps, index: number \}) =&gt; void | - | - |
 
 #### TimelineItem
 
@@ -44,7 +44,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 | key | - | Key | - | - |
 | prefixCls | - | string | - | - |
 | class | - | string | - | - |
-| color | - | LiteralUnion<Color> | - | - |
+| color | - | LiteralUnion&lt;Color&gt; | - | - |
 | dot | - | VueNode | - | - |
 | pending | Set the last ghost node's existence or its content. Use `item.loading` instead | boolean | false | - |
 | position | - | string | - | - |
@@ -56,8 +56,8 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| pending | Set the last ghost node's existence or its content. Use `item.loading` instead | () => void | - |
-| pendingDot | Set the dot of the last ghost node when pending is true. Use `item.icon` instead | () => void | - |
-| dotRender | - | (params: { item: TimelineItemProps, index: number }) => void | - |
-| labelRender | - | (params: { item: TimelineItemProps, index: number }) => void | - |
-| contentRender | - | (params: { item: TimelineItemProps, index: number }) => void | - |
+| pending | Set the last ghost node's existence or its content. Use `item.loading` instead | () =&gt; void | - |
+| pendingDot | Set the dot of the last ghost node when pending is true. Use `item.icon` instead | () =&gt; void | - |
+| dotRender | - | (params: \{ item: TimelineItemProps, index: number \}) =&gt; void | - |
+| labelRender | - | (params: \{ item: TimelineItemProps, index: number \}) =&gt; void | - |
+| contentRender | - | (params: \{ item: TimelineItemProps, index: number \}) =&gt; void | - |

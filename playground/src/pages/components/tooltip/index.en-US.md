@@ -27,12 +27,12 @@ Common props ref：[Common props](/docs/vue/common-props)
 | Property | Description | Type | Default | Version |
 | --- | --- | --- | --- | --- |
 | align | - | AlignType | - | - |
-| arrow | - | boolean \| { pointAtCenter?: boolean } | - | - |
+| arrow | - | boolean \| \{ pointAtCenter?: boolean \} | - | - |
 | autoAdjustOverflow | - | boolean \| AdjustOverflow | - | - |
-| color | The background color. After using this attribute, the internal text color will adapt automatically | LiteralUnion<PresetColorType> | - | 5.27.0 |
+| color | The background color. After using this attribute, the internal text color will adapt automatically | LiteralUnion&lt;PresetColorType&gt; | - | 5.27.0 |
 | open | - | boolean | - | - |
 | defaultOpen | - | boolean | - | - |
-| getPopupContainer | - | (triggerNode: HTMLElement) => HTMLElement | - | - |
+| getPopupContainer | - | (triggerNode: HTMLElement) =&gt; HTMLElement | - | - |
 | destroyOnHidden | - | boolean | - | - |
 | zIndex | - | number | - | - |
 | placement | - | TooltipPlacement | - | - |
@@ -42,9 +42,9 @@ Common props ref：[Common props](/docs/vue/common-props)
 | mouseLeaveDelay | - | number | - | - |
 | classes | Semantic DOM class | TooltipClassNamesType | - | - |
 | styles | Semantic DOM style | TooltipStylesType | - | - |
-| getTooltipContainer | - | (node: HTMLElement) => HTMLElement | - | - |
+| getTooltipContainer | - | (node: HTMLElement) =&gt; HTMLElement | - | - |
 | motion | - | VcTooltipProps['motion'] | - | - |
-| afterOpenChange | - | (open: boolean) => void | - | - |
+| afterOpenChange | - | (open: boolean) =&gt; void | - | - |
 | builtinPlacements | - | typeof Placements | - | - |
 | title | The text shown in the tooltip | VueNode | - | - |
 | overlay | - | VueNode | - | - |
@@ -55,14 +55,14 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| openChange | - | (open: boolean) => void | - |
-| update:open | - | (open: boolean) => void | - |
+| openChange | - | (open: boolean) =&gt; void | - |
+| update:open | - | (open: boolean) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| title | The text shown in the tooltip | () => any | - |
+| title | The text shown in the tooltip | () =&gt; any | - |
 
 ### Methods {#methods}
 

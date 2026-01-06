@@ -36,11 +36,11 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| openChange | - | (open: boolean, e?: MouseEvent \| KeyboardEvent) => void | - |
+| openChange | - | (open: boolean, e?: MouseEvent \| KeyboardEvent) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| title | 卡片标题 | () => any | - |
-| content | 卡片内容 | () => any | - |
+| title | 卡片标题 | () =&gt; any | - |
+| content | 卡片内容 | () =&gt; any | - |

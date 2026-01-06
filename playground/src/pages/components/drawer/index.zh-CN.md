@@ -31,7 +31,7 @@ demo:
 | resizable | 是否启用拖拽改变尺寸 | boolean \| DrawerResizableConfig | - | boolean: 6.1.0 |
 | rootClass | - | string | - | - |
 | open | Drawer 是否可见 | boolean | - | - |
-| afterOpenChange | 切换抽屉时动画结束后的回调 | (open: boolean) => void | - | - |
+| afterOpenChange | 切换抽屉时动画结束后的回调 | (open: boolean) =&gt; void | - | - |
 | destroyOnClose | 关闭时销毁 Drawer 里的子元素 | boolean | false | - |
 | destroyOnHidden | 关闭时销毁 Drawer 里的子元素 | boolean | false | 5.25.0 |
 | mask | 遮罩效果 | MaskType | true | - |
@@ -40,21 +40,21 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| update:open | - | (open: boolean) => void | - |
-| afterOpenChange | 切换抽屉时动画结束后的回调 | (open: boolean) => void | - |
-| close | 点击遮罩层或左上角叉或取消按钮的回调 | (e: MouseEvent \| KeyboardEvent) => void | - |
-| keydown | - | (e: KeyboardEvent) => void | - |
-| keyup | - | (e: KeyboardEvent) => void | - |
-| mouseenter | - | (e: MouseEvent) => void | - |
-| mouseleave | - | (e: MouseEvent) => void | - |
-| mouseover | - | (e: MouseEvent) => void | - |
-| click | - | (e: MouseEvent) => void | - |
+| update:open | - | (open: boolean) =&gt; void | - |
+| afterOpenChange | 切换抽屉时动画结束后的回调 | (open: boolean) =&gt; void | - |
+| close | 点击遮罩层或左上角叉或取消按钮的回调 | (e: MouseEvent \| KeyboardEvent) =&gt; void | - |
+| keydown | - | (e: KeyboardEvent) =&gt; void | - |
+| keyup | - | (e: KeyboardEvent) =&gt; void | - |
+| mouseenter | - | (e: MouseEvent) =&gt; void | - |
+| mouseleave | - | (e: MouseEvent) =&gt; void | - |
+| mouseover | - | (e: MouseEvent) =&gt; void | - |
+| click | - | (e: MouseEvent) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| title | 标题 | () => any | - |
-| footer | 抽屉的页脚 | () => any | - |
-| extra | 抽屉右上角的操作区域 | () => any | 4.17.0 |
-| closeIcon | - | () => any | - |
+| title | 标题 | () =&gt; any | - |
+| footer | 抽屉的页脚 | () =&gt; any | - |
+| extra | 抽屉右上角的操作区域 | () =&gt; any | 4.17.0 |
+| closeIcon | - | () =&gt; any | - |

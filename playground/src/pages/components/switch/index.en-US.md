@@ -48,12 +48,12 @@ Common props ref：[Common props](/docs/vue/common-props)
 | --- | --- | --- | --- |
 | change | Trigger when the checked state is changing | SwitchChangeEventHandler | - |
 | click | Trigger when clicked | SwitchClickEventHandler | - |
-| update:checked | - | (checked: boolean) => void | - |
-| update:value | - | (checked: boolean) => void | - |
+| update:checked | - | (checked: boolean) =&gt; void | - |
+| update:value | - | (checked: boolean) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| checkedChildren | The content to be shown when the state is checked | () => any | - |
-| unCheckedChildren | The content to be shown when the state is unchecked | () => any | - |
+| checkedChildren | The content to be shown when the state is checked | () =&gt; any | - |
+| unCheckedChildren | The content to be shown when the state is unchecked | () =&gt; any | - |

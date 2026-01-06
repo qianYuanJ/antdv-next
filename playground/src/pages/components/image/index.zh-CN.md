@@ -36,12 +36,12 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*LVQ3R5JjjJEAAA
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| error | 加载错误回调 | NonNullable<VcImageProps['onError']> | - |
-| click | - | NonNullable<VcImageProps['onClick']> | - |
+| error | 加载错误回调 | NonNullable&lt;VcImageProps['onError']&gt; | - |
+| click | - | NonNullable&lt;VcImageProps['onClick']&gt; | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| fallback | 加载失败容错地址 | () => any | - |
-| placeholder | 加载占位，为 `true` 时使用默认占位 | () => any | - |
+| fallback | 加载失败容错地址 | () =&gt; any | - |
+| placeholder | 加载占位，为 `true` 时使用默认占位 | () =&gt; any | - |

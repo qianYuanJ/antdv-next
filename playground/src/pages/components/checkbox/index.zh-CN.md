@@ -54,7 +54,7 @@ demo:
 | name | - | string | - | - |
 | defaultValue | - | any[] | - | - |
 | value | - | any[] | - | - |
-| labelRender | - | (params: { item: CheckboxOptionType, index: number }) => any | - | - |
+| labelRender | - | (params: \{ item: CheckboxOptionType, index: number \}) =&gt; any | - | - |
 
 ### 事件 {#events}
 
@@ -62,23 +62,23 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| change | 变化时的回调函数 | (checked: CheckboxChangeEvent) => void | - |
-| update:checked | - | (checked: any) => void | - |
-| update:value | - | (value: any) => void | - |
-| mouseenter | - | (event: MouseEvent) => void | - |
-| mouseleave | - | (event: MouseEvent) => void | - |
-| keypress | - | (event: KeyboardEvent) => void | - |
-| keydown | - | (event: KeyboardEvent) => void | - |
-| focus | 获得焦点时的回调 | (event: FocusEvent) => void | - |
-| blur | 失去焦点时的回调 | (event: FocusEvent) => void | - |
-| click | - | (event: MouseEvent) => void | - |
+| change | 变化时的回调函数 | (checked: CheckboxChangeEvent) =&gt; void | - |
+| update:checked | - | (checked: any) =&gt; void | - |
+| update:value | - | (value: any) =&gt; void | - |
+| mouseenter | - | (event: MouseEvent) =&gt; void | - |
+| mouseleave | - | (event: MouseEvent) =&gt; void | - |
+| keypress | - | (event: KeyboardEvent) =&gt; void | - |
+| keydown | - | (event: KeyboardEvent) =&gt; void | - |
+| focus | 获得焦点时的回调 | (event: FocusEvent) =&gt; void | - |
+| blur | 失去焦点时的回调 | (event: FocusEvent) =&gt; void | - |
+| click | - | (event: MouseEvent) =&gt; void | - |
 
 #### CheckboxGroup
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| update:value | - | (value: any[]) => void | - |
-| change | 变化时的回调函数 | (checkedValue: any[]) => void | - |
+| update:value | - | (value: any[]) =&gt; void | - |
+| change | 变化时的回调函数 | (checkedValue: any[]) =&gt; void | - |
 
 ### 插槽 {#slots}
 
@@ -86,4 +86,4 @@ demo:
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| labelRender | - | (params: { item: CheckboxOptionType, index: number }) => any | - |
+| labelRender | - | (params: \{ item: CheckboxOptionType, index: number \}) =&gt; any | - |

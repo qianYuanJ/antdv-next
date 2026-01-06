@@ -32,24 +32,24 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| edit | Callback executed when tab is added or removed. Only works while `type="editable-card"` | (e: MouseEvent \| KeyboardEvent \| string, action: 'add' \| 'remove') => void | - |
-| change | Callback executed when active tab is changed | NonNullable<VcTabsProps['onChange']> | - |
-| tabClick | Callback executed when tab is clicked | NonNullable<VcTabsProps['onTabClick']> | - |
-| tabScroll | Trigger when tab scroll | NonNullable<VcTabsProps['onTabScroll']> | 4.3.0 |
-| update:activeKey | - | (activeKey: string) => void | - |
+| edit | Callback executed when tab is added or removed. Only works while `type="editable-card"` | (e: MouseEvent \| KeyboardEvent \| string, action: 'add' \| 'remove') =&gt; void | - |
+| change | Callback executed when active tab is changed | NonNullable&lt;VcTabsProps['onChange']&gt; | - |
+| tabClick | Callback executed when tab is clicked | NonNullable&lt;VcTabsProps['onTabClick']&gt; | - |
+| tabScroll | Trigger when tab scroll | NonNullable&lt;VcTabsProps['onTabScroll']&gt; | 4.3.0 |
+| update:activeKey | - | (activeKey: string) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| addIcon | Customize add icon, only works with `type="editable-card"` | () => any | 4.4.0 |
-| moreIcon | - | () => any | - |
-| removeIcon | The custom icon of remove, only works with `type="editable-card"` | () => any | 5.15.0 |
-| labelRender | - | (args: { item: Tab, index: number }) => any | - |
-| contentRender | - | (args: { item: Tab, index: number }) => any | - |
-| renderTabBar | Replace the TabBar | (args: { props: any, TabNavListComponent: any }) => any | - |
-| rightExtra | - | () => any | - |
-| leftExtra | - | () => any | - |
+| addIcon | Customize add icon, only works with `type="editable-card"` | () =&gt; any | 4.4.0 |
+| moreIcon | - | () =&gt; any | - |
+| removeIcon | The custom icon of remove, only works with `type="editable-card"` | () =&gt; any | 5.15.0 |
+| labelRender | - | (args: \{ item: Tab, index: number \}) =&gt; any | - |
+| contentRender | - | (args: \{ item: Tab, index: number \}) =&gt; any | - |
+| renderTabBar | Replace the TabBar | (args: \{ props: any, TabNavListComponent: any \}) =&gt; any | - |
+| rightExtra | - | () =&gt; any | - |
+| leftExtra | - | () =&gt; any | - |
 
 ### Methods {#methods}
 

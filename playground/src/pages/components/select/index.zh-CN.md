@@ -38,40 +38,40 @@ demo:
 | popupMatchSelectWidth | 下拉菜单和选择器同宽。默认将设置 `min-width`，当值小于选择框宽度时会被忽略。false 时会关闭虚拟滚动 | boolean \| number | true | 5.5.0 |
 | styles | 用于自定义 Select 组件内部各语义化结构的行内 style，支持对象或函数 | SelectStylesType | - | - |
 | classes | 用于自定义 Select 组件内部各语义化结构的 class，支持对象或函数 | SelectClassNamesType | - | - |
-| optionRender | 自定义渲染下拉选项 | (params: { option: OptionParams[0], info: OptionParams[1] }) => any | - | 5.11.0 |
+| optionRender | 自定义渲染下拉选项 | (params: \{ option: OptionParams[0], info: OptionParams[1] \}) =&gt; any | - | 5.11.0 |
 
 ### 事件 {#events}
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| openChange | 展开下拉菜单的回调 | (open: boolean) => void | - |
-| dropdownVisibleChange | 展开下拉菜单的回调，使用 `onOpenChange` 替换 | (open: boolean) => void | - |
-| clear | 清除内容时回调 | NonNullable<VcSelectProps['onClear']> | 4.6.0 |
-| keydown | - | NonNullable<VcSelectProps['onKeyDown']> | - |
-| keyup | - | NonNullable<VcSelectProps['onKeyUp']> | - |
-| blur | 失去焦点时回调 | NonNullable<VcSelectProps['onBlur']> | - |
-| update:value | - | (value: SelectValue) => void | - |
-| click | - | NonNullable<VcSelectProps['onClick']> | - |
-| active | 键盘和鼠标交互时触发 | NonNullable<VcSelectProps['onActive']> | - |
-| change | 选中 option，或 input 的 value 变化时，调用此函数 | NonNullable<VcSelectProps['onChange']> | - |
-| deselect | 取消选中时调用，参数为选中项的 value (或 key) 值，仅在 `multiple` 或 `tags` 模式下生效 | NonNullable<VcSelectProps['onDeselect']> | - |
-| inputKeydown | - | NonNullable<VcSelectProps['onInputKeyDown']> | - |
-| mousedown | - | NonNullable<VcSelectProps['onMouseDown']> | - |
-| mouseleave | - | NonNullable<VcSelectProps['onMouseLeave']> | - |
-| mouseenter | - | NonNullable<VcSelectProps['onMouseEnter']> | - |
-| focus | 获得焦点时回调 | NonNullable<VcSelectProps['onFocus']> | - |
-| popupScroll | 下拉列表滚动时的回调 | NonNullable<VcSelectProps['onPopupScroll']> | - |
-| select | 被选中时调用，参数为选中项的 value (或 key) 值 | NonNullable<VcSelectProps['onSelect']> | - |
+| openChange | 展开下拉菜单的回调 | (open: boolean) =&gt; void | - |
+| dropdownVisibleChange | 展开下拉菜单的回调，使用 `onOpenChange` 替换 | (open: boolean) =&gt; void | - |
+| clear | 清除内容时回调 | NonNullable&lt;VcSelectProps['onClear']&gt; | 4.6.0 |
+| keydown | - | NonNullable&lt;VcSelectProps['onKeyDown']&gt; | - |
+| keyup | - | NonNullable&lt;VcSelectProps['onKeyUp']&gt; | - |
+| blur | 失去焦点时回调 | NonNullable&lt;VcSelectProps['onBlur']&gt; | - |
+| update:value | - | (value: SelectValue) =&gt; void | - |
+| click | - | NonNullable&lt;VcSelectProps['onClick']&gt; | - |
+| active | 键盘和鼠标交互时触发 | NonNullable&lt;VcSelectProps['onActive']&gt; | - |
+| change | 选中 option，或 input 的 value 变化时，调用此函数 | NonNullable&lt;VcSelectProps['onChange']&gt; | - |
+| deselect | 取消选中时调用，参数为选中项的 value (或 key) 值，仅在 `multiple` 或 `tags` 模式下生效 | NonNullable&lt;VcSelectProps['onDeselect']&gt; | - |
+| inputKeydown | - | NonNullable&lt;VcSelectProps['onInputKeyDown']&gt; | - |
+| mousedown | - | NonNullable&lt;VcSelectProps['onMouseDown']&gt; | - |
+| mouseleave | - | NonNullable&lt;VcSelectProps['onMouseLeave']&gt; | - |
+| mouseenter | - | NonNullable&lt;VcSelectProps['onMouseEnter']&gt; | - |
+| focus | 获得焦点时回调 | NonNullable&lt;VcSelectProps['onFocus']&gt; | - |
+| popupScroll | 下拉列表滚动时的回调 | NonNullable&lt;VcSelectProps['onPopupScroll']&gt; | - |
+| select | 被选中时调用，参数为选中项的 value (或 key) 值 | NonNullable&lt;VcSelectProps['onSelect']&gt; | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| suffixIcon | 自定义的选择框后缀图标。以防止图标被用于其他交互，替换的图标默认不会响应展开、收缩事件，可以通过添加 `pointer-events: none` 样式透传。 | () => any | - |
-| prefix | 自定义前缀 | () => any | 5.22.0 |
+| suffixIcon | 自定义的选择框后缀图标。以防止图标被用于其他交互，替换的图标默认不会响应展开、收缩事件，可以通过添加 `pointer-events: none` 样式透传。 | () =&gt; any | - |
+| prefix | 自定义前缀 | () =&gt; any | 5.22.0 |
 | tagRender | 自定义 tag 内容 render，仅在 `mode` 为 `multiple` 或 `tags` 时生效 | SelectProps['tagRender'] | - |
 | labelRender | 自定义当前选中的 label 内容 render （LabelInValueType的定义见 [LabelInValueType](https://github.com/react-component/select/blob/b39c28aa2a94e7754ebc570f200ab5fd33bd31e7/src/Select.tsx#L70)） | SelectProps['labelRender'] | 5.15.0 |
 | popupRender | 自定义下拉框内容 | SelectProps['popupRender'] | 5.25.0 |
-| optionRender | 自定义渲染下拉选项 | (params: { option: OptionParams[0], info: OptionParams[1] }) => any | 5.11.0 |
-| maxTagPlaceholder | 隐藏 tag 时显示的内容 | (data: any[]) => any | - |
-| notFoundContent | 当下拉列表为空时显示的内容 | () => any | - |
+| optionRender | 自定义渲染下拉选项 | (params: \{ option: OptionParams[0], info: OptionParams[1] \}) =&gt; any | 5.11.0 |
+| maxTagPlaceholder | 隐藏 tag 时显示的内容 | (data: any[]) =&gt; any | - |
+| notFoundContent | 当下拉列表为空时显示的内容 | () =&gt; any | - |

@@ -34,9 +34,9 @@ demo:
 | reverse | 节点排序 | boolean | false | - |
 | mode | 通过设置 `mode` 可以改变时间轴和内容的相对位置 | 'left' \| 'alternate' \| 'right' | `start` | - |
 | items | 选项配置 | TimelineItemProps[] | - | - |
-| dotRender | - | (params: { item: TimelineItemProps, index: number }) => void | - | - |
-| labelRender | - | (params: { item: TimelineItemProps, index: number }) => void | - | - |
-| contentRender | - | (params: { item: TimelineItemProps, index: number }) => void | - | - |
+| dotRender | - | (params: \{ item: TimelineItemProps, index: number \}) =&gt; void | - | - |
+| labelRender | - | (params: \{ item: TimelineItemProps, index: number \}) =&gt; void | - | - |
+| contentRender | - | (params: \{ item: TimelineItemProps, index: number \}) =&gt; void | - | - |
 
 #### TimelineItem
 
@@ -45,7 +45,7 @@ demo:
 | key | - | Key | - | - |
 | prefixCls | - | string | - | - |
 | class | - | string | - | - |
-| color | - | LiteralUnion<Color> | - | - |
+| color | - | LiteralUnion&lt;Color&gt; | - | - |
 | dot | - | VueNode | - | - |
 | pending | 指定最后一个幽灵节点是否存在或内容，请使用 `item.loading` 代替 | boolean | false | - |
 | position | - | string | - | - |
@@ -57,8 +57,8 @@ demo:
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| pending | 指定最后一个幽灵节点是否存在或内容，请使用 `item.loading` 代替 | () => void | - |
-| pendingDot | 当最后一个幽灵节点存在時，指定其时间图点，请使用 `item.icon` 代替 | () => void | - |
-| dotRender | - | (params: { item: TimelineItemProps, index: number }) => void | - |
-| labelRender | - | (params: { item: TimelineItemProps, index: number }) => void | - |
-| contentRender | - | (params: { item: TimelineItemProps, index: number }) => void | - |
+| pending | 指定最后一个幽灵节点是否存在或内容，请使用 `item.loading` 代替 | () =&gt; void | - |
+| pendingDot | 当最后一个幽灵节点存在時，指定其时间图点，请使用 `item.icon` 代替 | () =&gt; void | - |
+| dotRender | - | (params: \{ item: TimelineItemProps, index: number \}) =&gt; void | - |
+| labelRender | - | (params: \{ item: TimelineItemProps, index: number \}) =&gt; void | - |
+| contentRender | - | (params: \{ item: TimelineItemProps, index: number \}) =&gt; void | - |

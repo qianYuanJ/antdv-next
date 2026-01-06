@@ -35,11 +35,11 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| openChange | - | (open: boolean, e?: MouseEvent \| KeyboardEvent) => void | - |
+| openChange | - | (open: boolean, e?: MouseEvent \| KeyboardEvent) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| title | - | () => any | - |
-| content | - | () => any | - |
+| title | - | () =&gt; any | - |
+| content | - | () =&gt; any | - |

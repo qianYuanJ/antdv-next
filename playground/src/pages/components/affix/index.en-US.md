@@ -34,10 +34,10 @@ Common props ref：[Common props](/docs/vue/common-props)
 | --- | --- | --- | --- | --- |
 | offsetTop | Offset from the top of the viewport (in pixels) | number | 0 | - |
 | offsetBottom | Offset from the bottom of the viewport (in pixels) | number | - | - |
-| target | Specifies the scrollable area DOM node | () => Window \| HTMLElement \| null | () => window | - |
+| target | Specifies the scrollable area DOM node | () =&gt; Window \| HTMLElement \| null | () =&gt; window | - |
 
 ### Methods {#methods}
 
 | Method | Description | Type | Version |
 | --- | --- | --- | --- |
-| updatePosition | - | ReturnType<typeof throttleByAnimationFrame> | - |
+| updatePosition | - | ReturnType&lt;typeof throttleByAnimationFrame&gt; | - |

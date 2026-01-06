@@ -35,7 +35,7 @@ demo:
 | precision | 数值精度 | number | - | - |
 | value | 数值内容 | valueType | - | - |
 | valueStyle | 设置数值区域的样式 | CSSProperties | - | - |
-| valueRender | - | (node: any) => VNodeChild | - | - |
+| valueRender | - | (node: any) =&gt; VNodeChild | - | - |
 | title | 数值的标题 | VueNode | - | - |
 | prefix | 设置数值的前缀 | VueNode | - | - |
 | suffix | 设置数值的后缀 | VueNode | - | - |
@@ -53,7 +53,7 @@ demo:
 | precision | 数值精度 | number | - | - |
 | value | 数值内容 | valueType | - | - |
 | valueStyle | 设置数值区域的样式 | CSSProperties | - | - |
-| valueRender | - | (node: any) => VNodeChild | - | - |
+| valueRender | - | (node: any) =&gt; VNodeChild | - | - |
 | title | 数值的标题 | VueNode | - | - |
 | prefix | 设置数值的前缀 | VueNode | - | - |
 | suffix | 设置数值的后缀 | VueNode | - | - |
@@ -67,13 +67,13 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| mouseenter | - | (e: MouseEvent) => void | - |
-| mouseleave | - | (e: MouseEvent) => void | - |
+| mouseenter | - | (e: MouseEvent) =&gt; void | - |
+| mouseleave | - | (e: MouseEvent) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| title | 数值的标题 | () => any | - |
-| prefix | 设置数值的前缀 | () => any | - |
-| suffix | 设置数值的后缀 | () => any | - |
+| title | 数值的标题 | () =&gt; any | - |
+| prefix | 设置数值的前缀 | () =&gt; any | - |
+| suffix | 设置数值的后缀 | () =&gt; any | - |

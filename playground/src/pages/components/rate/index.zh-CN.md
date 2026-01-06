@@ -35,10 +35,10 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| update:value | - | (value: number) => void | - |
-| change | 选择时的回调 | (value: number) => void | - |
-| hoverChange | 鼠标经过时数值变化的回调 | (value: number) => void | - |
-| focus | 获取焦点时的回调 | () => void | - |
-| blur | 失去焦点时的回调 | () => void | - |
-| keydown | - | (e: KeyboardEvent) => void | - |
-| mouseleave | - | (e: FocusEvent) => void | - |
+| update:value | - | (value: number) =&gt; void | - |
+| change | 选择时的回调 | (value: number) =&gt; void | - |
+| hoverChange | 鼠标经过时数值变化的回调 | (value: number) =&gt; void | - |
+| focus | 获取焦点时的回调 | () =&gt; void | - |
+| blur | 失去焦点时的回调 | () =&gt; void | - |
+| keydown | - | (e: KeyboardEvent) =&gt; void | - |
+| mouseleave | - | (e: FocusEvent) =&gt; void | - |

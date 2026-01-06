@@ -53,7 +53,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 | name | - | string | - | - |
 | defaultValue | - | any[] | - | - |
 | value | - | any[] | - | - |
-| labelRender | - | (params: { item: CheckboxOptionType, index: number }) => any | - | - |
+| labelRender | - | (params: \{ item: CheckboxOptionType, index: number \}) =&gt; any | - | - |
 
 ### Events {#events}
 
@@ -61,23 +61,23 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| change | The callback function that is triggered when the state changes | (checked: CheckboxChangeEvent) => void | - |
-| update:checked | - | (checked: any) => void | - |
-| update:value | - | (value: any) => void | - |
-| mouseenter | - | (event: MouseEvent) => void | - |
-| mouseleave | - | (event: MouseEvent) => void | - |
-| keypress | - | (event: KeyboardEvent) => void | - |
-| keydown | - | (event: KeyboardEvent) => void | - |
-| focus | Called when entering the component | (event: FocusEvent) => void | - |
-| blur | Called when leaving the component | (event: FocusEvent) => void | - |
-| click | - | (event: MouseEvent) => void | - |
+| change | The callback function that is triggered when the state changes | (checked: CheckboxChangeEvent) =&gt; void | - |
+| update:checked | - | (checked: any) =&gt; void | - |
+| update:value | - | (value: any) =&gt; void | - |
+| mouseenter | - | (event: MouseEvent) =&gt; void | - |
+| mouseleave | - | (event: MouseEvent) =&gt; void | - |
+| keypress | - | (event: KeyboardEvent) =&gt; void | - |
+| keydown | - | (event: KeyboardEvent) =&gt; void | - |
+| focus | Called when entering the component | (event: FocusEvent) =&gt; void | - |
+| blur | Called when leaving the component | (event: FocusEvent) =&gt; void | - |
+| click | - | (event: MouseEvent) =&gt; void | - |
 
 #### CheckboxGroup
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| update:value | - | (value: any[]) => void | - |
-| change | The callback function that is triggered when the state changes | (checkedValue: any[]) => void | - |
+| update:value | - | (value: any[]) =&gt; void | - |
+| change | The callback function that is triggered when the state changes | (checkedValue: any[]) =&gt; void | - |
 
 ### Slots {#slots}
 
@@ -85,4 +85,4 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| labelRender | - | (params: { item: CheckboxOptionType, index: number }) => any | - |
+| labelRender | - | (params: \{ item: CheckboxOptionType, index: number \}) =&gt; any | - |

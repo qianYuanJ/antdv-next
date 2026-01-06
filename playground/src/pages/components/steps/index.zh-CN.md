@@ -45,14 +45,14 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*cFsBQLA0b7UAAA
 | percent | 当前 `process` 步骤显示的进度条进度（只对基本类型的 Steps 生效） | number | - | 4.5.0 |
 | status | 指定当前步骤的状态，可选 `wait` `process` `finish` `error` | 'wait' \| 'process' \| 'finish' \| 'error' | `process` | - |
 | iconRender | 自定义渲染图标，请优先使用 `items.icon` | IconRenderType | - | - |
-| onChange | 点击切换步骤时触发 | (current: number) => void | - | - |
+| onChange | 点击切换步骤时触发 | (current: number) =&gt; void | - | - |
 | prefixCls | - | string | - | - |
 
 ### 事件 {#events}
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| update:current | - | (current: number) => void | - |
+| update:current | - | (current: number) =&gt; void | - |
 
 ### 插槽 {#slots}
 

@@ -71,8 +71,8 @@ Common props ref：[Common props](/docs/vue/common-props)
 | size | The size of the input box. Note: in the context of a form, the `middle` size is used | SizeType | - | - |
 | defaultValue | The initial input content | string | - | - |
 | value | The input content value | string | - | - |
-| formatter | - | (value: string) => string | - | - |
-| separator | - | VueNode \| ((index: number) => VueNode) | - | - |
+| formatter | - | (value: string) =&gt; string | - | - |
+| separator | - | VueNode \| ((index: number) =&gt; VueNode) | - | - |
 | disabled | Whether the input is disabled | boolean | false | - |
 | status | Set validation status | InputStatus | - | 4.19.0 |
 | mask | - | boolean \| string | - | - |
@@ -90,7 +90,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 | action | - | PasswordAction | - | - |
 | visibilityToggle | - | VisibilityToggle | - | - |
 | suffix | The suffix icon for the Input | VueNode | - | - |
-| iconRender | - | (params: { visible: boolean }) => any | - | - |
+| iconRender | - | (params: \{ visible: boolean \}) =&gt; any | - | - |
 | iconVisible | - | boolean | - | - |
 
 #### Search
@@ -126,26 +126,26 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| pressEnter | The callback function that is triggered when Enter key is pressed | NonNullable<VcInputProps['onPressEnter']> | - |
-| clear | Callback when click the clear button | () => void | 5.20.0 |
-| change | Callback when user input | NonNullable<VcInputProps['onChange']> | - |
-| blur | - | NonNullable<VcInputProps['onBlur']> | - |
-| focus | - | NonNullable<VcInputProps['onFocus']> | - |
-| keydown | - | NonNullable<VcInputProps['onKeyDown']> | - |
-| keyup | - | NonNullable<VcInputProps['onKeyUp']> | - |
-| compositionstart | - | NonNullable<VcInputProps['onCompositionStart']> | - |
-| compositionend | - | NonNullable<VcInputProps['onCompositionEnd']> | - |
-| update:value | - | (value: VcInputProps['value']) => void | - |
+| pressEnter | The callback function that is triggered when Enter key is pressed | NonNullable&lt;VcInputProps['onPressEnter']&gt; | - |
+| clear | Callback when click the clear button | () =&gt; void | 5.20.0 |
+| change | Callback when user input | NonNullable&lt;VcInputProps['onChange']&gt; | - |
+| blur | - | NonNullable&lt;VcInputProps['onBlur']&gt; | - |
+| focus | - | NonNullable&lt;VcInputProps['onFocus']&gt; | - |
+| keydown | - | NonNullable&lt;VcInputProps['onKeyDown']&gt; | - |
+| keyup | - | NonNullable&lt;VcInputProps['onKeyUp']&gt; | - |
+| compositionstart | - | NonNullable&lt;VcInputProps['onCompositionStart']&gt; | - |
+| compositionend | - | NonNullable&lt;VcInputProps['onCompositionEnd']&gt; | - |
+| update:value | - | (value: VcInputProps['value']) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| prefix | The prefix icon for the Input | () => any | - |
-| suffix | The suffix icon for the Input | () => any | - |
-| addonBefore | The label text displayed before (on the left side of) the input field, please use Space.Compact instead | () => any | - |
-| addonAfter | The label text displayed after (on the right side of) the input field, please use Space.Compact instead | () => any | - |
-| clearIcon | - | () => any | - |
+| prefix | The prefix icon for the Input | () =&gt; any | - |
+| suffix | The suffix icon for the Input | () =&gt; any | - |
+| addonBefore | The label text displayed before (on the left side of) the input field, please use Space.Compact instead | () =&gt; any | - |
+| addonAfter | The label text displayed after (on the right side of) the input field, please use Space.Compact instead | () =&gt; any | - |
+| clearIcon | - | () =&gt; any | - |
 
 ### Methods {#methods}
 
@@ -154,5 +154,5 @@ Common props ref：[Common props](/docs/vue/common-props)
 | Method | Description | Type | Version |
 | --- | --- | --- | --- |
 | resizableTextArea | - | any | - |
-| focus | - | (...args: any[]) => void | - |
-| blur | - | () => void | - |
+| focus | - | (...args: any[]) =&gt; void | - |
+| blur | - | () =&gt; void | - |

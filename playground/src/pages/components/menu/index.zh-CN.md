@@ -32,9 +32,9 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*Vn4XSqJFAxcAAA
 | title | - | VueNode | - | - |
 | eventKey | - | string | - | - |
 | warnKey | - | boolean | - | - |
-| attribute | Deprecated. | Record<string, string> | - | - |
-| onKeyDown | - | (e: KeyboardEvent) => void | - | - |
-| onFocus | - | (e: FocusEvent) => void | - | - |
+| attribute | Deprecated. | Record&lt;string, string&gt; | - | - |
+| onKeyDown | - | (e: KeyboardEvent) =&gt; void | - | - |
+| onFocus | - | (e: FocusEvent) =&gt; void | - | - |
 | role | - | string | - | - |
 
 #### Menu
@@ -48,9 +48,9 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*Vn4XSqJFAxcAAA
 | classes | 用于自定义组件内部各语义化结构的 class，支持对象或函数 | MenuClassNamesType | - | - |
 | styles | 用于自定义组件内部各语义化结构的行内 style，支持对象或函数 | MenuStylesType | - | - |
 | rootClass | - | string | - | - |
-| labelRender | - | (item: RenderItem) => any | - | - |
-| extraRender | - | (item: RenderItem) => any | - | - |
-| itemIcon | - | (props: MenuItemProps & RenderIconInfo) => any | - | - |
+| labelRender | - | (item: RenderItem) =&gt; any | - | - |
+| extraRender | - | (item: RenderItem) =&gt; any | - | - |
+| itemIcon | - | (props: MenuItemProps & RenderIconInfo) =&gt; any | - | - |
 
 #### SubMenu
 
@@ -62,25 +62,25 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*Vn4XSqJFAxcAAA
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| click | 点击 MenuItem 调用此函数 | (info: MenuInfo) => void | - |
-| select | 被选中时调用 | (info: SelectInfo) => void | - |
-| deselect | 取消选中时调用，仅在 multiple 生效 | (info: SelectInfo) => void | - |
-| openChange | SubMenu 展开/关闭的回调 | (openKeys: string[]) => void | - |
-| update:openKeys | - | (openKeys: string[]) => void | - |
-| update:selectedKeys | - | (selectedKeys: string[]) => void | - |
+| click | 点击 MenuItem 调用此函数 | (info: MenuInfo) =&gt; void | - |
+| select | 被选中时调用 | (info: SelectInfo) =&gt; void | - |
+| deselect | 取消选中时调用，仅在 multiple 生效 | (info: SelectInfo) =&gt; void | - |
+| openChange | SubMenu 展开/关闭的回调 | (openKeys: string[]) =&gt; void | - |
+| update:openKeys | - | (openKeys: string[]) =&gt; void | - |
+| update:selectedKeys | - | (selectedKeys: string[]) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| expandIcon | 自定义展开图标 | () => any | 4.9.0 |
-| labelRender | - | (item: RenderItem) => any | - |
-| extraRender | - | (item: RenderItem) => any | - |
-| itemIcon | - | (props: MenuItemProps & RenderIconInfo) => any | - |
+| expandIcon | 自定义展开图标 | () =&gt; any | 4.9.0 |
+| labelRender | - | (item: RenderItem) =&gt; any | - |
+| extraRender | - | (item: RenderItem) =&gt; any | - |
+| itemIcon | - | (props: MenuItemProps & RenderIconInfo) =&gt; any | - |
 
 ### 方法 {#methods}
 
 | 方法 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
 | menu | - | VcMenuRef \| null | - |
-| focus | - | (options?: FocusOptions) => void | - |
+| focus | - | (options?: FocusOptions) =&gt; void | - |

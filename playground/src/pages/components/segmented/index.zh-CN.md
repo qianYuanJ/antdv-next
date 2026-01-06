@@ -36,19 +36,19 @@ demo:
 | classes | 用于自定义 Segmented 组件内部各语义化结构的 class，支持对象或函数 | SegmentedClassNamesType | - | - |
 | styles | 用于自定义 Segmented 组件内部各语义化结构的行内 style，支持对象或函数 | SegmentedStylesType | - | - |
 | shape | 形状 | 'default' \| 'round' | `default` | 5.24.0 |
-| iconRender | - | (option: SegmentedLabeledOption) => any | - | - |
-| labelRender | - | (option: SegmentedLabeledOption) => any | - | - |
+| iconRender | - | (option: SegmentedLabeledOption) =&gt; any | - | - |
+| labelRender | - | (option: SegmentedLabeledOption) =&gt; any | - | - |
 
 ### 事件 {#events}
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| change | 选项变化时的回调函数 | (value: RcSegmentedValue) => void | - |
-| update:value | - | (value: RcSegmentedValue) => void | - |
+| change | 选项变化时的回调函数 | (value: RcSegmentedValue) =&gt; void | - |
+| update:value | - | (value: RcSegmentedValue) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| iconRender | - | (option: SegmentedLabeledOption) => any | - |
-| labelRender | - | (option: SegmentedLabeledOption) => any | - |
+| iconRender | - | (option: SegmentedLabeledOption) =&gt; any | - |
+| labelRender | - | (option: SegmentedLabeledOption) =&gt; any | - |

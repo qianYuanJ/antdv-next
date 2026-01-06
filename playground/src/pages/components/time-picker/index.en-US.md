@@ -26,7 +26,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Property | Description | Type | Default | Version |
 | --- | --- | --- | --- | --- |
-| addon | - | () => VueNode | - | - |
+| addon | - | () =&gt; VueNode | - | - |
 | status | Set validation status | InputStatus | - | 4.19.0 |
 | popupClassName | The className of panel, please use `classNames.popup` instead | string | - | - |
 | popupStyle | The style of panel, please use `styles.popup` instead | CSSProperties | - | - |
@@ -38,21 +38,21 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| change | A callback function, can be executed when the selected time is changing | (date: DateType \| DateType[] \| null, dateString: string \| string[]) => void | - |
-| update:value | - | (date: DateType \| DateType[] \| null) => void | - |
-| calendarChange | Callback function, can be executed when the start time or the end time of the range is changing. `info` argument is added in 4.4.0 | (date: DateType \| DateType[], dateString: string \| string[], info: any) => void | - |
-| panelChange | - | (date: DateType, mode: PickerMode) => void | - |
-| openChange | A callback function which will be called while panel opening/closing | (open: boolean) => void | - |
-| ok | - | (date: DateType \| DateType[]) => void | - |
-| select | - | (date: DateType) => void | - |
-| focus | - | (e: FocusEvent, info: any) => void | - |
-| blur | - | (e: FocusEvent, info: any) => void | - |
-| keydown | - | (e: KeyboardEvent, preventDefault: VoidFunction) => void | - |
+| change | A callback function, can be executed when the selected time is changing | (date: DateType \| DateType[] \| null, dateString: string \| string[]) =&gt; void | - |
+| update:value | - | (date: DateType \| DateType[] \| null) =&gt; void | - |
+| calendarChange | Callback function, can be executed when the start time or the end time of the range is changing. `info` argument is added in 4.4.0 | (date: DateType \| DateType[], dateString: string \| string[], info: any) =&gt; void | - |
+| panelChange | - | (date: DateType, mode: PickerMode) =&gt; void | - |
+| openChange | A callback function which will be called while panel opening/closing | (open: boolean) =&gt; void | - |
+| ok | - | (date: DateType \| DateType[]) =&gt; void | - |
+| select | - | (date: DateType) =&gt; void | - |
+| focus | - | (e: FocusEvent, info: any) =&gt; void | - |
+| blur | - | (e: FocusEvent, info: any) =&gt; void | - |
+| keydown | - | (e: KeyboardEvent, preventDefault: VoidFunction) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| addon | - | () => any | - |
-| renderExtraFooter | Called from time picker panel to render some addon to its bottom | (mode: PickerMode) => any | - |
-| suffixIcon | The custom suffix icon | () => any | - |
+| addon | - | () =&gt; any | - |
+| renderExtraFooter | Called from time picker panel to render some addon to its bottom | (mode: PickerMode) =&gt; any | - |
+| suffixIcon | The custom suffix icon | () =&gt; any | - |

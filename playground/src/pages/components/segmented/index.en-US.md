@@ -35,19 +35,19 @@ Common props ref：[Common props](/docs/vue/common-props)
 | classes | Customize class for each semantic structure inside the Segmented component. Supports object or function. | SegmentedClassNamesType | - | - |
 | styles | Customize inline style for each semantic structure inside the Segmented component. Supports object or function. | SegmentedStylesType | - | - |
 | shape | shape of Segmented | 'default' \| 'round' | `default` | 5.24.0 |
-| iconRender | - | (option: SegmentedLabeledOption) => any | - | - |
-| labelRender | - | (option: SegmentedLabeledOption) => any | - | - |
+| iconRender | - | (option: SegmentedLabeledOption) =&gt; any | - | - |
+| labelRender | - | (option: SegmentedLabeledOption) =&gt; any | - | - |
 
 ### Events {#events}
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| change | The callback function that is triggered when the state changes | (value: RcSegmentedValue) => void | - |
-| update:value | - | (value: RcSegmentedValue) => void | - |
+| change | The callback function that is triggered when the state changes | (value: RcSegmentedValue) =&gt; void | - |
+| update:value | - | (value: RcSegmentedValue) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| iconRender | - | (option: SegmentedLabeledOption) => any | - |
-| labelRender | - | (option: SegmentedLabeledOption) => any | - |
+| iconRender | - | (option: SegmentedLabeledOption) =&gt; any | - |
+| labelRender | - | (option: SegmentedLabeledOption) =&gt; any | - |

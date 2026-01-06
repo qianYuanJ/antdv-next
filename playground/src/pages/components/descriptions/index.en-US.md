@@ -30,7 +30,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 | extra | The action area of the description list, placed at the top-right | VueNode | - | 4.5.0 |
 | labelRender | - | RenderDescriptionsItem | - | - |
 | contentRender | - | RenderDescriptionsItem | - | - |
-| column | The number of `DescriptionItems` in a row, could be an object (like `{ xs: 8, sm: 16, md: 24}`, but must have `bordered={true}`) or a number | number \| Partial<Record<Breakpoint, number>> | 3 | - |
+| column | The number of `DescriptionItems` in a row, could be an object (like `{ xs: 8, sm: 16, md: 24}`, but must have `bordered={true}`) or a number | number \| Partial&lt;Record&lt;Breakpoint, number&gt;&gt; | 3 | - |
 | layout | Define description layout | 'horizontal' \| 'vertical' | `horizontal` | - |
 | colon | Change default props `colon` value of Descriptions.Item. Indicates whether the colon after the label is displayed | boolean | true | - |
 | styles | Customize inline style for each semantic structure inside the component. Supports object or function. | DescriptionsStylesType | - | - |
@@ -42,7 +42,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| title | The title of the description list, placed at the top | () => any | - |
-| extra | The action area of the description list, placed at the top-right | () => any | 4.5.0 |
+| title | The title of the description list, placed at the top | () =&gt; any | - |
+| extra | The action area of the description list, placed at the top-right | () =&gt; any | 4.5.0 |
 | labelRender | - | RenderDescriptionsItem | - |
 | contentRender | - | RenderDescriptionsItem | - |

@@ -37,38 +37,38 @@ Common props ref：[Common props](/docs/vue/common-props)
 | variant | Variants of Input | Variant | `outlined` | 5.13.0 \| `underlined`: 5.24.0 |
 | classes | Customize class for each semantic structure inside the component. Supports object or function. | InputNumberClassNamesType | - | - |
 | styles | Customize inline style for each semantic structure inside the component. Supports object or function. | InputNumberStylesType | - | - |
-| controls | Whether to show `+-` controls, or set custom arrow icons | boolean \| { upIcon?: VueNode, downIcon?: VueNode } | - | - |
+| controls | Whether to show `+-` controls, or set custom arrow icons | boolean \| \{ upIcon?: VueNode, downIcon?: VueNode \} | - | - |
 | type | - | 'number' \| 'text' | - | - |
 
 ### Events {#events}
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| change | The callback triggered when the value is changed | (value: any) => void | - |
-| update:value | - | (value: any) => void | - |
-| input | - | (text: string) => void | - |
-| pressEnter | The callback function that is triggered when Enter key is pressed | (e: KeyboardEvent) => void | - |
-| step | The number to which the current value is increased or decreased. It can be an integer or decimal | (value: any, info: InputNumberStepContext) => void | - |
-| mousedown | - | (e: MouseEvent) => void | - |
-| click | - | (e: MouseEvent) => void | - |
-| mouseup | - | (e: MouseEvent) => void | - |
-| mouseleave | - | (e: MouseEvent) => void | - |
-| mousemove | - | (e: MouseEvent) => void | - |
-| mouseenter | - | (e: MouseEvent) => void | - |
-| mouseout | - | (e: MouseEvent) => void | - |
-| focus | - | (e: FocusEvent) => void | - |
-| blur | - | (e: FocusEvent) => void | - |
-| keydown | - | (e: KeyboardEvent) => void | - |
-| keyup | - | (e: KeyboardEvent) => void | - |
-| compositionstart | - | (e: CompositionEvent) => void | - |
-| compositionend | - | (e: CompositionEvent) => void | - |
-| beforeinput | - | (e: InputEvent) => void | - |
+| change | The callback triggered when the value is changed | (value: any) =&gt; void | - |
+| update:value | - | (value: any) =&gt; void | - |
+| input | - | (text: string) =&gt; void | - |
+| pressEnter | The callback function that is triggered when Enter key is pressed | (e: KeyboardEvent) =&gt; void | - |
+| step | The number to which the current value is increased or decreased. It can be an integer or decimal | (value: any, info: InputNumberStepContext) =&gt; void | - |
+| mousedown | - | (e: MouseEvent) =&gt; void | - |
+| click | - | (e: MouseEvent) =&gt; void | - |
+| mouseup | - | (e: MouseEvent) =&gt; void | - |
+| mouseleave | - | (e: MouseEvent) =&gt; void | - |
+| mousemove | - | (e: MouseEvent) =&gt; void | - |
+| mouseenter | - | (e: MouseEvent) =&gt; void | - |
+| mouseout | - | (e: MouseEvent) =&gt; void | - |
+| focus | - | (e: FocusEvent) =&gt; void | - |
+| blur | - | (e: FocusEvent) =&gt; void | - |
+| keydown | - | (e: KeyboardEvent) =&gt; void | - |
+| keyup | - | (e: KeyboardEvent) =&gt; void | - |
+| compositionstart | - | (e: CompositionEvent) =&gt; void | - |
+| compositionend | - | (e: CompositionEvent) =&gt; void | - |
+| beforeinput | - | (e: InputEvent) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| prefix | The prefix icon for the Input | () => any | - |
-| suffix | The suffix icon for the Input | () => any | 5.20.0 |
-| addonBefore | The label text displayed before (on the left side of) the input field, please use Space.Compact instead | () => any | - |
-| addonAfter | The label text displayed after (on the right side of) the input field, please use Space.Compact instead | () => any | - |
+| prefix | The prefix icon for the Input | () =&gt; any | - |
+| suffix | The suffix icon for the Input | () =&gt; any | 5.20.0 |
+| addonBefore | The label text displayed before (on the left side of) the input field, please use Space.Compact instead | () =&gt; any | - |
+| addonAfter | The label text displayed after (on the right side of) the input field, please use Space.Compact instead | () =&gt; any | - |

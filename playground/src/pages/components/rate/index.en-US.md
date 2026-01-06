@@ -34,10 +34,10 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| update:value | - | (value: number) => void | - |
-| change | Callback when select value | (value: number) => void | - |
-| hoverChange | Callback when hover item | (value: number) => void | - |
-| focus | Callback when component get focus | () => void | - |
-| blur | Callback when component lose focus | () => void | - |
-| keydown | - | (e: KeyboardEvent) => void | - |
-| mouseleave | - | (e: FocusEvent) => void | - |
+| update:value | - | (value: number) =&gt; void | - |
+| change | Callback when select value | (value: number) =&gt; void | - |
+| hoverChange | Callback when hover item | (value: number) =&gt; void | - |
+| focus | Callback when component get focus | () =&gt; void | - |
+| blur | Callback when component lose focus | () =&gt; void | - |
+| keydown | - | (e: KeyboardEvent) =&gt; void | - |
+| mouseleave | - | (e: FocusEvent) =&gt; void | - |

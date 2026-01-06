@@ -40,10 +40,10 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*5WDvQp_H7LUAAA
 | cover | 卡片封面 | VueNode | - | - |
 | actions | 卡片操作组，位置在卡片底部 | VueNode[] | - | - |
 | tabList | 页签标题列表 | CardTabListType[] | - | - |
-| tabBarExtraContent | tab bar 上额外的元素 | VueNode \| { [key: string]: VueNode } | - | - |
+| tabBarExtraContent | tab bar 上额外的元素 | VueNode \| \{ [key: string]: VueNode \} | - | - |
 | activeTabKey | 当前激活页签的 key | string | - | - |
 | defaultActiveTabKey | 初始化选中页签的 key，如果没有设置 activeTabKey | string | `第一个页签的 key` | - |
-| tabProps | [Tabs](/components/tabs-cn#tabs) | Record<string, any> | - | - |
+| tabProps | [Tabs](/components/tabs-cn#tabs) | Record&lt;string, any&gt; | - | - |
 | classes | 用于自定义组件内部各语义化结构的 class，支持对象或函数 | CardClassNamesType | - | - |
 | styles | 用于自定义组件内部各语义化结构的行内 style，支持对象或函数 | CardStylesType | - | - |
 | variant | 形态变体 | 'borderless' \| 'outlined' | `outlined` | 5.24.0 |
@@ -70,17 +70,17 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*5WDvQp_H7LUAAA
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| tabChange | 页签切换的回调 | (key: string) => void | - |
-| update:activeTabKey | - | (key: string) => void | - |
+| tabChange | 页签切换的回调 | (key: string) =&gt; void | - |
+| update:activeTabKey | - | (key: string) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| title | 卡片标题 | () => any | - |
-| extra | 卡片右上角的操作区域 | () => any | - |
-| cover | 卡片封面 | () => any | - |
-| actions | 卡片操作组，位置在卡片底部 | () => any | - |
+| title | 卡片标题 | () =&gt; any | - |
+| extra | 卡片右上角的操作区域 | () =&gt; any | - |
+| cover | 卡片封面 | () =&gt; any | - |
+| actions | 卡片操作组，位置在卡片底部 | () =&gt; any | - |
 | tabContentRender | - | TabsSlots['contentRender'] | - |
 | tabLabelRender | - | TabsSlots['labelRender'] | - |
-| tabBarExtraContent | tab bar 上额外的元素 | () => any | - |
+| tabBarExtraContent | tab bar 上额外的元素 | () =&gt; any | - |

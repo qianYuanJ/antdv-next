@@ -33,7 +33,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| change | Callback function that is fired when the user changes the slider's value | (value: any) => void | - |
-| afterChange | - | (value: any) => void | - |
-| update:value | - | (value: any) => void | - |
-| changeComplete | Fire when `mouseup` or `keyup` is fired | (value: any) => void | - |
+| change | Callback function that is fired when the user changes the slider's value | (value: any) =&gt; void | - |
+| afterChange | - | (value: any) =&gt; void | - |
+| update:value | - | (value: any) =&gt; void | - |
+| changeComplete | Fire when `mouseup` or `keyup` is fired | (value: any) =&gt; void | - |

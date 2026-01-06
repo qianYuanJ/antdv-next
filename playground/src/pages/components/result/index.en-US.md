@@ -36,7 +36,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| icon | Custom back icon | () => any | - |
-| title | The title | () => any | - |
-| subTitle | The subTitle | () => any | - |
-| extra | Operating area | () => any | - |
+| icon | Custom back icon | () =&gt; any | - |
+| title | The title | () =&gt; any | - |
+| subTitle | The subTitle | () =&gt; any | - |
+| extra | Operating area | () =&gt; any | - |

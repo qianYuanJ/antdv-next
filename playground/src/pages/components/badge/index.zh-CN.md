@@ -33,7 +33,7 @@ group: 数据展示
 | dot | 不展示数字，只有一个小红点 | boolean | false | - |
 | scrollNumberPrefixCls | - | string | - | - |
 | status | 设置 Badge 为状态点 | PresetStatusColorType | - | - |
-| color | 自定义小圆点的颜色 | LiteralUnion<PresetColorKey> | - | - |
+| color | 自定义小圆点的颜色 | LiteralUnion&lt;PresetColorKey&gt; | - | - |
 | text | 在设置了 `status` 的前提下有效，设置状态点的文本 | VueNode | - | - |
 | size | 在设置了 `count` 的前提下有效，设置小圆点的大小 | 'default' \| 'small' | - | - |
 | offset | 设置状态点的位置偏移 | [number \| string, number \| string] | - | - |
@@ -45,5 +45,5 @@ group: 数据展示
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| count | 展示的数字，大于 overflowCount 时显示为 `${overflowCount}+`，为 0 时隐藏 | () => any | - |
-| text | 在设置了 `status` 的前提下有效，设置状态点的文本 | () => any | - |
+| count | 展示的数字，大于 overflowCount 时显示为 `${overflowCount}+`，为 0 时隐藏 | () =&gt; any | - |
+| text | 在设置了 `status` 的前提下有效，设置状态点的文本 | () =&gt; any | - |

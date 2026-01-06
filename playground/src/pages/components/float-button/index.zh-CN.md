@@ -50,7 +50,7 @@ demo:
 | tooltip | 气泡卡片的内容 | VueNode \| TooltipProps | - | TooltipProps: 5.25.0 |
 | href | 点击跳转的地址，指定此属性 button 的行为和 a 链接一致 | string | - | - |
 | target | 相当于 a 标签的 target 属性，href 存在时生效 | '_self' \| '_blank' \| '_parent' \| '_top' \| string | - | - |
-| badge | 带徽标数字的悬浮按钮（不支持 `status` 以及相关属性） | FloatButtonBadgeProps & { class?: string } | - | 5.4.0 |
+| badge | 带徽标数字的悬浮按钮（不支持 `status` 以及相关属性） | FloatButtonBadgeProps & \{ class?: string \} | - | 5.4.0 |
 | htmlType | 设置 `button` 原生的 `type` 值，可选值请参考 [HTML 标准](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button#type) | ButtonHTMLType | `button` | 5.21.0 |
 | ariaLabel | - | string | - | - |
 | style | - | CSSProperties | - | - |
@@ -61,18 +61,18 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| click | 点击按钮时的回调 | (e: MouseEvent) => void | - |
-| mouseenter | - | (e: MouseEvent) => void | - |
-| mouseleave | - | (e: MouseEvent) => void | - |
-| focus | - | (e: FocusEvent) => void | - |
-| blur | - | (e: FocusEvent) => void | - |
+| click | 点击按钮时的回调 | (e: MouseEvent) =&gt; void | - |
+| mouseenter | - | (e: MouseEvent) =&gt; void | - |
+| mouseleave | - | (e: MouseEvent) =&gt; void | - |
+| focus | - | (e: FocusEvent) =&gt; void | - |
+| blur | - | (e: FocusEvent) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| icon | 自定义图标 | () => any | - |
-| tooltip | 气泡卡片的内容 | () => any | TooltipProps: 5.25.0 |
+| icon | 自定义图标 | () =&gt; any | - |
+| tooltip | 气泡卡片的内容 | () =&gt; any | TooltipProps: 5.25.0 |
 
 ### 方法 {#methods}
 

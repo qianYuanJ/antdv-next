@@ -42,9 +42,9 @@ Common props ref：[Common props](/docs/vue/common-props)
 | slickGoTo | - | number | - | - |
 | dotPosition | The position of the dots, which can be one of `top` `bottom` `left` `right` `start` `end`, Please use `dotPlacement` instead | DotPlacement \| 'left' \| 'right' | `bottom` | - |
 | dotPlacement | The position of the dots, which can be one of `top` `bottom` `start` `end` | DotPlacement | `bottom` | - |
-| dots | Whether to show the dots at the bottom of the gallery, `object` for `dotsClass` | boolean \| { class?: string } | true | - |
+| dots | Whether to show the dots at the bottom of the gallery, `object` for `dotsClass` | boolean \| \{ class?: string \} | true | - |
 | waitForAnimate | Whether to wait for the animation when switching | boolean | false | - |
-| autoplay | Whether to scroll automatically, you can specify `autoplay={{ dotDuration: true }}` to display the progress bar | boolean \| { dotDuration?: boolean } | false | dotDuration: 5.24.0 |
+| autoplay | Whether to scroll automatically, you can specify `autoplay={{ dotDuration: true }}` to display the progress bar | boolean \| \{ dotDuration?: boolean \} | false | dotDuration: 5.24.0 |
 | prevArrow | - | VueNode | - | - |
 | nextArrow | - | VueNode | - | - |
 
@@ -52,26 +52,26 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| init | - | NonNullable<Settings['onInit']> | - |
-| reInit | - | NonNullable<Settings['onReInit']> | - |
-| edge | - | NonNullable<Settings['onEdge']> | - |
-| swipe | - | NonNullable<Settings['onSwipe']> | - |
-| lazyLoad | - | NonNullable<Settings['onLazyLoad']> | - |
-| lazyLoadError | - | NonNullable<Settings['onLazyLoadError']> | - |
+| init | - | NonNullable&lt;Settings['onInit']&gt; | - |
+| reInit | - | NonNullable&lt;Settings['onReInit']&gt; | - |
+| edge | - | NonNullable&lt;Settings['onEdge']&gt; | - |
+| swipe | - | NonNullable&lt;Settings['onSwipe']&gt; | - |
+| lazyLoad | - | NonNullable&lt;Settings['onLazyLoad']&gt; | - |
+| lazyLoadError | - | NonNullable&lt;Settings['onLazyLoadError']&gt; | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| prevArrow | - | () => any | - |
-| nextArrow | - | () => any | - |
+| prevArrow | - | () =&gt; any | - |
+| nextArrow | - | () =&gt; any | - |
 
 ### Methods {#methods}
 
 | Method | Description | Type | Version |
 | --- | --- | --- | --- |
-| goTo | - | (slide: number, dontAnimate?: boolean) => void | - |
-| next | - | () => void | - |
-| prev | - | () => void | - |
-| autoPlay | - | (playType?: 'update' \| 'leave' \| 'blur') => void | - |
+| goTo | - | (slide: number, dontAnimate?: boolean) =&gt; void | - |
+| next | - | () =&gt; void | - |
+| prev | - | () =&gt; void | - |
+| autoPlay | - | (playType?: 'update' \| 'leave' \| 'blur') =&gt; void | - |
 | innerSlider | - | any | - |

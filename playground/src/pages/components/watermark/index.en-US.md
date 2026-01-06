@@ -32,7 +32,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 | height | The height of the watermark, the default value of `content` is its own height | number | 64 | - |
 | image | Image source, it is recommended to export 2x or 3x image, high priority (support base64 format) | string | - | - |
 | content | Watermark text content | string \| string[] | - | - |
-| font | Text style | {     color?: CanvasFillStrokeStyles['fillStyle']     fontSize?: number \| string     fontWeight?: 'normal' \| 'light' \| 'weight' \| number     fontStyle?: 'none' \| 'normal' \| 'italic' \| 'oblique'     fontFamily?: string     textAlign?: CanvasTextAlign   } | [Font](#font) | - |
+| font | Text style | \{     color?: CanvasFillStrokeStyles['fillStyle']     fontSize?: number \| string     fontWeight?: 'normal' \| 'light' \| 'weight' \| number     fontStyle?: 'none' \| 'normal' \| 'italic' \| 'oblique'     fontFamily?: string     textAlign?: CanvasTextAlign   \} | [Font](#font) | - |
 | rootClass | - | string | - | - |
 | gap | The spacing between watermarks | [number, number] | \[100, 100\] | - |
 | offset | The offset of the watermark from the upper left corner of the container. The default is `gap/2` | [number, number] | \[gap\[0\]/2, gap\[1\]/2\] | - |

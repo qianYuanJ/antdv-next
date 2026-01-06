@@ -35,25 +35,25 @@ demo:
 | classes | 用于自定义组件内部各语义化结构的 class，支持对象或函数 | MentionsClassNamesType | - | - |
 | styles | 用于自定义组件内部各语义化结构的行内 style，支持对象或函数 | MentionsStylesType | - | - |
 | size | - | SizeType | - | - |
-| labelRender | - | (ctx: { option: MentionsOptionProps, index: number }) => any | - | - |
-| allowClear | 可以点击清除图标删除内容 | boolean \| {     clearIcon?: VueNode   } | false | 5.13.0 |
+| labelRender | - | (ctx: \{ option: MentionsOptionProps, index: number \}) =&gt; any | - | - |
+| allowClear | 可以点击清除图标删除内容 | boolean \| \{     clearIcon?: VueNode   \} | false | 5.13.0 |
 | disabled | - | boolean | - | - |
 
 ### 事件 {#events}
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| focus | 获得焦点时触发 | (event: FocusEvent) => void | - |
-| blur | 失去焦点时触发 | (event: FocusEvent) => void | - |
-| change | 值改变时触发 | (value: string) => void | - |
-| select | 选择选项时触发 | (option: MentionsOptionProps, prefix: string) => void | - |
-| popupScroll | 滚动时触发 | (event: Event) => void | 5.23.0 |
-| search | 搜索时触发 | (text: string, prefix: string) => void | - |
-| update:value | - | (value: string) => void | - |
+| focus | 获得焦点时触发 | (event: FocusEvent) =&gt; void | - |
+| blur | 失去焦点时触发 | (event: FocusEvent) =&gt; void | - |
+| change | 值改变时触发 | (value: string) =&gt; void | - |
+| select | 选择选项时触发 | (option: MentionsOptionProps, prefix: string) =&gt; void | - |
+| popupScroll | 滚动时触发 | (event: Event) =&gt; void | 5.23.0 |
+| search | 搜索时触发 | (text: string, prefix: string) =&gt; void | - |
+| update:value | - | (value: string) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| suffix | - | () => any | - |
-| labelRender | - | (ctx: { option: MentionsOptionProps, index: number }) => any | - |
+| suffix | - | () =&gt; any | - |
+| labelRender | - | (ctx: \{ option: MentionsOptionProps, index: number \}) =&gt; any | - |

@@ -28,12 +28,12 @@ demo:
 | 属性 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
 | align | - | AlignType | - | - |
-| arrow | - | boolean \| { pointAtCenter?: boolean } | - | - |
+| arrow | - | boolean \| \{ pointAtCenter?: boolean \} | - | - |
 | autoAdjustOverflow | - | boolean \| AdjustOverflow | - | - |
-| color | 设置背景颜色，使用该属性后内部文字颜色将自适应 | LiteralUnion<PresetColorType> | - | 5.27.0 |
+| color | 设置背景颜色，使用该属性后内部文字颜色将自适应 | LiteralUnion&lt;PresetColorType&gt; | - | 5.27.0 |
 | open | - | boolean | - | - |
 | defaultOpen | - | boolean | - | - |
-| getPopupContainer | - | (triggerNode: HTMLElement) => HTMLElement | - | - |
+| getPopupContainer | - | (triggerNode: HTMLElement) =&gt; HTMLElement | - | - |
 | destroyOnHidden | - | boolean | - | - |
 | zIndex | - | number | - | - |
 | placement | - | TooltipPlacement | - | - |
@@ -43,9 +43,9 @@ demo:
 | mouseLeaveDelay | - | number | - | - |
 | classes | 语义化结构 class | TooltipClassNamesType | - | - |
 | styles | 语义化结构 style | TooltipStylesType | - | - |
-| getTooltipContainer | - | (node: HTMLElement) => HTMLElement | - | - |
+| getTooltipContainer | - | (node: HTMLElement) =&gt; HTMLElement | - | - |
 | motion | - | VcTooltipProps['motion'] | - | - |
-| afterOpenChange | - | (open: boolean) => void | - | - |
+| afterOpenChange | - | (open: boolean) =&gt; void | - | - |
 | builtinPlacements | - | typeof Placements | - | - |
 | title | 提示文字 | VueNode | - | - |
 | overlay | - | VueNode | - | - |
@@ -56,14 +56,14 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| openChange | - | (open: boolean) => void | - |
-| update:open | - | (open: boolean) => void | - |
+| openChange | - | (open: boolean) =&gt; void | - |
+| update:open | - | (open: boolean) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| title | 提示文字 | () => any | - |
+| title | 提示文字 | () =&gt; any | - |
 
 ### 方法 {#methods}
 

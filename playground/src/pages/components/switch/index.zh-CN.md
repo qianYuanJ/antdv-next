@@ -49,12 +49,12 @@ demo:
 | --- | --- | --- | --- |
 | change | 变化时的回调函数 | SwitchChangeEventHandler | - |
 | click | 点击时的回调函数 | SwitchClickEventHandler | - |
-| update:checked | - | (checked: boolean) => void | - |
-| update:value | - | (checked: boolean) => void | - |
+| update:checked | - | (checked: boolean) =&gt; void | - |
+| update:value | - | (checked: boolean) =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| checkedChildren | 选中时的内容 | () => any | - |
-| unCheckedChildren | 非选中时的内容 | () => any | - |
+| checkedChildren | 选中时的内容 | () =&gt; any | - |
+| unCheckedChildren | 非选中时的内容 | () =&gt; any | - |

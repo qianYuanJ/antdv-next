@@ -58,36 +58,36 @@ group:
 
 | 属性 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
-| autoInsertSpace | 我们默认提供两个汉字之间的空格，可以设置 `autoInsertSpace` 为 `false` 关闭 | boolean | `true` |  |
-| block | 将按钮宽度调整为其父宽度的选项 | boolean | false |  |
-| classes | 用于自定义组件内部各语义化结构的 class，支持对象或函数 | Record<[SemanticDOM](#semantic-dom), string> \| (info: { props })=> Record<[SemanticDOM](#semantic-dom), string> | - |  |
-| color | 设置按钮的颜色 | `default` \| `primary` \| `danger` \| [PresetColors](#presetcolors) | - | |
-| danger | 语法糖，设置危险按钮。当设置 `color` 时会以后者为准 | boolean | false |  |
-| disabled | 设置按钮失效状态 | boolean | false |  |
-| ghost | 幽灵属性，使按钮背景透明 | boolean | false |  |
-| href | 点击跳转的地址，指定此属性 button 的行为和 a 链接一致 | string | - |  |
-| htmlType | 设置 `button` 原生的 `type` 值，可选值请参考 [HTML 标准](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button#type) | `submit` \| `reset` \| `button` | `button` |  |
+| autoInsertSpace | 我们默认提供两个汉字之间的空格，可以设置 `autoInsertSpace` 为 `false` 关闭 | boolean | `true` | - |
+| block | 将按钮宽度调整为其父宽度的选项 | boolean | false | - |
+| classes | 用于自定义组件内部各语义化结构的 class，支持对象或函数 | Record&lt;[SemanticDOM](#semantic-dom), string&gt; \| (info: \{ props \})=&gt; Record&lt;[SemanticDOM](#semantic-dom), string&gt; | - | - |
+| color | 设置按钮的颜色 | `default` \| `primary` \| `danger` \| [PresetColors](#presetcolors) | - | - |
+| danger | 语法糖，设置危险按钮。当设置 `color` 时会以后者为准 | boolean | false | - |
+| disabled | 设置按钮失效状态 | boolean | false | - |
+| ghost | 幽灵属性，使按钮背景透明 | boolean | false | - |
+| href | 点击跳转的地址，指定此属性 button 的行为和 a 链接一致 | string | - | - |
+| htmlType | 设置 `button` 原生的 `type` 值，可选值请参考 [HTML 标准](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button#type) | `submit` \| `reset` \| `button` | `button` | - |
 | iconPlacement | 设置按钮图标组件的位置 | `start` \| `end` | `start` | - |
-| loading | 设置按钮载入状态 | boolean \| { delay: number, icon: VueNode } | false |  |
-| shape | 设置按钮形状 | `default` \| `circle` \| `round` | `default` |  |
-| size | 设置按钮大小 | `large` \| `middle` \| `small` | `middle` |  |
-| styles | 用于自定义组件内部各语义化结构的行内 style，支持对象或函数 | Record<[SemanticDOM](#semantic-dom), CSSProperties> \| (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties> | - |  |
-| target | 相当于 a 链接的 target 属性，href 存在时生效 | string | - |  |
-| type | 语法糖，设置按钮类型。当设置 `variant` 与 `color` 时以后者为准 | `primary` \| `dashed` \| `link` \| `text` \| `default` | `default` |  |
-| variant | 设置按钮的变体 | `outlined` \| `dashed` \| `solid` \| `filled` \| `text` \| `link` | - |  |
+| loading | 设置按钮载入状态 | boolean \| \{ delay: number, icon: VueNode \} | false | - |
+| shape | 设置按钮形状 | `default` \| `circle` \| `round` | `default` | - |
+| size | 设置按钮大小 | `large` \| `middle` \| `small` | `middle` | - |
+| styles | 用于自定义组件内部各语义化结构的行内 style，支持对象或函数 | Record&lt;[SemanticDOM](#semantic-dom), CSSProperties&gt; \| (info: \{ props \})=&gt; Record&lt;[SemanticDOM](#semantic-dom), CSSProperties&gt; | - | - |
+| target | 相当于 a 链接的 target 属性，href 存在时生效 | string | - | - |
+| type | 语法糖，设置按钮类型。当设置 `variant` 与 `color` 时以后者为准 | `primary` \| `dashed` \| `link` \| `text` \| `default` | `default` | - |
+| variant | 设置按钮的变体 | `outlined` \| `dashed` \| `solid` \| `filled` \| `text` \| `link` | - | - |
 
 ### 事件 {#events}
 
 | 事件 | 说明 | 类型  | 版本 |
 | --- | --- | ---  | --- |
-| `click` | 点击按钮时的回调 | `(event: React.MouseEvent<HTMLElement, MouseEvent>) => void` |  |
+| `click` | 点击按钮时的回调 | `(event: React.MouseEvent&lt;HTMLElement, MouseEvent&gt;) =&gt; void` | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- |----| --- |
-| `icon` | 设置按钮的图标组件 |    |  |
-| `loadingIcon` | 设置按钮载入的图标组件 |    |  |
+| `icon` | 设置按钮的图标组件 | - | - |
+| `loadingIcon` | 设置按钮载入的图标组件 | - | - |
 
 ### PresetColors
 

@@ -33,7 +33,7 @@ demo:
 | styles | 用于自定义组件内部各语义化结构的行内 style，支持对象或函数 | ProgressStylesType | - | - |
 | type | 类型，可选 `line` `circle` `dashboard` | ProgressType | `line` | - |
 | percent | 百分比 | number | 0 | - |
-| format | 内容的模板函数 | (percent?: number, successPercent?: number) => any | (percent) => percent + `%` | - |
+| format | 内容的模板函数 | (percent?: number, successPercent?: number) =&gt; any | (percent) =&gt; percent + `%` | - |
 | status | 状态，可选：`success` `exception` `normal` `active`(仅限 line) | (typeof ProgressStatuses)[number] | - | - |
 | showInfo | 是否显示进度数值或状态图标 | boolean | true | - |
 | strokeWidth | - | number | - | - |
@@ -46,7 +46,7 @@ demo:
 | gapDegree | - | number | - | - |
 | gapPlacement | - | GapPlacement | - | - |
 | gapPosition | Deprecated. | GapPosition | - | - |
-| size | 进度条的尺寸 | number \| [number \| string, number] \| ProgressSize \| { width?: number, height?: number } | "default" | 5.3.0, Object: 5.18.0 |
-| steps | - | number \| { count: number, gap: number } | - | - |
+| size | 进度条的尺寸 | number \| [number \| string, number] \| ProgressSize \| \{ width?: number, height?: number \} | "default" | 5.3.0, Object: 5.18.0 |
+| steps | - | number \| \{ count: number, gap: number \} | - | - |
 | percentPosition | - | PercentPositionType | - | - |
-| rounding | - | (step: number) => number | - | - |
+| rounding | - | (step: number) =&gt; number | - | - |

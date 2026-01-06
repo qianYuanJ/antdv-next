@@ -35,12 +35,12 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| error | Callback when loading error occurs | NonNullable<VcImageProps['onError']> | - |
-| click | - | NonNullable<VcImageProps['onClick']> | - |
+| error | Callback when loading error occurs | NonNullable&lt;VcImageProps['onError']&gt; | - |
+| click | - | NonNullable&lt;VcImageProps['onClick']&gt; | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| fallback | Fallback URL when load fails | () => any | - |
-| placeholder | Loading placeholder; if true, uses default placeholder | () => any | - |
+| fallback | Fallback URL when load fails | () =&gt; any | - |
+| placeholder | Loading placeholder; if true, uses default placeholder | () =&gt; any | - |

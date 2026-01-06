@@ -36,7 +36,7 @@ demo:
 | okButtonProps | ok 按钮 props | ButtonProps | - | - |
 | cancelButtonProps | cancel 按钮 props | ButtonProps | - | - |
 | showCancel | 是否显示取消按钮 | boolean | true | 4.18.0 |
-| icon | 自定义弹出气泡 Icon 图标 | VueNode | &lt;ExclamationCircle /> | - |
+| icon | 自定义弹出气泡 Icon 图标 | VueNode | &lt;ExclamationCircle /&gt; | - |
 | classes | - | PopconfirmClassNamesType | - | - |
 | styles | - | PopconfirmStylesType | - | - |
 
@@ -44,17 +44,17 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| openChange | - | (open: boolean, e?: MouseEvent \| KeyboardEvent) => void | - |
-| confirm | 点击确认的回调 | (e?: MouseEvent) => void | - |
-| cancel | 点击取消的回调 | (e?: MouseEvent) => void | - |
-| popupClick | 弹出气泡点击事件 | (e: MouseEvent) => void | 5.5.0 |
+| openChange | - | (open: boolean, e?: MouseEvent \| KeyboardEvent) =&gt; void | - |
+| confirm | 点击确认的回调 | (e?: MouseEvent) =&gt; void | - |
+| cancel | 点击取消的回调 | (e?: MouseEvent) =&gt; void | - |
+| popupClick | 弹出气泡点击事件 | (e: MouseEvent) =&gt; void | 5.5.0 |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| title | 确认框标题 | () => any | - |
-| description | 确认内容的详细描述 | () => any | 5.1.0 |
-| icon | 自定义弹出气泡 Icon 图标 | () => any | - |
-| okText | 确认按钮文字 | () => any | - |
-| cancelText | 取消按钮文字 | () => any | - |
+| title | 确认框标题 | () =&gt; any | - |
+| description | 确认内容的详细描述 | () =&gt; any | 5.1.0 |
+| icon | 自定义弹出气泡 Icon 图标 | () =&gt; any | - |
+| okText | 确认按钮文字 | () =&gt; any | - |
+| cancelText | 取消按钮文字 | () =&gt; any | - |

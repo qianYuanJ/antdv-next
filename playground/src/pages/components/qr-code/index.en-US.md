@@ -43,11 +43,11 @@ Common props ref：[Common props](/docs/vue/common-props)
 | --- | --- | --- | --- | --- |
 | type | - | 'canvas' \| 'svg' | - | - |
 | icon | - | string | - | - |
-| iconSize | - | number \| { width: number, height: number } | - | - |
+| iconSize | - | number \| \{ width: number, height: number \} | - | - |
 | bordered | - | boolean | - | - |
 | errorLevel | - | 'L' \| 'M' \| 'Q' \| 'H' | - | - |
 | status | - | QRStatus | - | - |
-| statusRender | - | (info: StatusRenderInfo) => any | - | - |
+| statusRender | - | (info: StatusRenderInfo) =&gt; any | - | - |
 | color | - | any | - | - |
 | classes | - | QRCodeClassNamesType | - | - |
 | styles | - | QRCodeStylesType | - | - |
@@ -56,13 +56,13 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| refresh | - | () => void | - |
+| refresh | - | () =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| statusRender | - | (info: StatusRenderInfo) => any | - |
+| statusRender | - | (info: StatusRenderInfo) =&gt; any | - |
 ## Semantic DOM
 
 <!-- <code src="./demo/_semantic.vue" simplify="true"></code> -->

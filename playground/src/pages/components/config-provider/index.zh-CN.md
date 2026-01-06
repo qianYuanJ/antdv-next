@@ -25,8 +25,8 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*YC4ERpGAddoAAA
 
 | 属性 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
-| getTargetContainer | 配置 Affix、Anchor 滚动监听容器。 | () => HTMLElement \| Window | () => window | 4.2.0 |
-| getPopupContainer | 弹出框（Select, Tooltip, Menu 等等）渲染父节点，默认渲染到 body 上。 | (triggerNode?: HTMLElement) => HTMLElement | () => document.body | - |
+| getTargetContainer | 配置 Affix、Anchor 滚动监听容器。 | () =&gt; HTMLElement \| Window | () =&gt; window | 4.2.0 |
+| getPopupContainer | 弹出框（Select, Tooltip, Menu 等等）渲染父节点，默认渲染到 body 上。 | (triggerNode?: HTMLElement) =&gt; HTMLElement | () =&gt; document.body | - |
 | prefixCls | 设置统一样式前缀 | string | `ant` | - |
 | iconPrefixCls | 设置图标统一样式前缀 | string | `anticon` | 4.11.0 |
 | renderEmpty | 自定义组件空状态。参考 [空状态](/components/empty-cn) | RenderEmptyHandler | - | - |
@@ -105,4 +105,4 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*YC4ERpGAddoAAA
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| renderEmpty | 自定义组件空状态。参考 [空状态](/components/empty-cn) | (componentName?: string) => any | - |
+| renderEmpty | 自定义组件空状态。参考 [空状态](/components/empty-cn) | (componentName?: string) =&gt; any | - |

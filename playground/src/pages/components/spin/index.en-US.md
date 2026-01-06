@@ -41,5 +41,5 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| indicator | React node of the spinning indicator | () => any | - |
-| tip | Customize description content when Spin has children | () => any | - |
+| indicator | React node of the spinning indicator | () =&gt; any | - |
+| tip | Customize description content when Spin has children | () =&gt; any | - |

@@ -33,10 +33,10 @@ Common props ref：[Common props](/docs/vue/common-props)
 | styles | Customize inline style for each semantic structure inside the component. Supports object or function. | AnchorStylesType | - | - |
 | offsetTop | Pixels to offset from top when calculating position of scroll | number | 0 | - |
 | bounds | Bounding distance of anchor area | number | 5 | - |
-| affix | Fixed mode of Anchor | boolean \| Omit<AffixProps, 'offsetTop' \| 'target'> | true | object: 5.19.0 |
+| affix | Fixed mode of Anchor | boolean \| Omit&lt;AffixProps, 'offsetTop' \| 'target'&gt; | true | object: 5.19.0 |
 | showInkInFixed | Whether show ink-square when `affix={false}` | boolean | false | - |
-| getContainer | Scrolling container | () => AnchorContainer | () => window | - |
-| getCurrentAnchor | Customize the anchor highlight | (activeLink: string) => string | - | - |
+| getContainer | Scrolling container | () =&gt; AnchorContainer | () =&gt; window | - |
+| getCurrentAnchor | Customize the anchor highlight | (activeLink: string) =&gt; string | - | - |
 | targetOffset | Anchor scroll offset, default as `offsetTop`, [example](#anchor-demo-targetoffset) | number | - | - |
 | items | Data configuration option content, support nesting through children | AnchorLinkItemProps[] | - | 5.1.0 |
 | direction | Set Anchor direction | AnchorDirection | `vertical` | 5.2.0 |
@@ -55,11 +55,11 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| click | Set the handler to handle `click` event | (e: MouseEvent, link: { title: VNodeChild, href: string }) => any | - |
-| change | Listening for anchor link change | (currentActiveLink: string) => any | - |
+| click | Set the handler to handle `click` event | (e: MouseEvent, link: \{ title: VNodeChild, href: string \}) =&gt; any | - |
+| change | Listening for anchor link change | (currentActiveLink: string) =&gt; any | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| item | - | (item: AnchorLinkItemProps) => any | - |
+| item | - | (item: AnchorLinkItemProps) =&gt; any | - |

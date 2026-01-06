@@ -33,5 +33,5 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| image | Customize image. Will treat as image url when string provided | () => any | - |
-| description | Customize description | () => any | - |
+| image | Customize image. Will treat as image url when string provided | () =&gt; any | - |
+| description | Customize description | () =&gt; any | - |

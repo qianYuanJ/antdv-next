@@ -31,14 +31,14 @@ demo:
 | content | 提示内容 | VueNode | - | - |
 | duration | 自动关闭的延时，单位秒。设为 0 时不自动关闭 | number | 3 | - |
 | type | - | NoticeType | - | - |
-| onClose | 关闭时触发的回调函数 | () => void | - | - |
+| onClose | 关闭时触发的回调函数 | () =&gt; void | - | - |
 | icon | - | VueNode | - | - |
 | key | - | Key | - | - |
 | style | - | CSSProperties | - | - |
 | class | - | string | - | - |
 | classes | - | ArgsClassNamesType | - | - |
 | styles | - | ArgsStylesType | - | - |
-| onClick | - | (e: MouseEvent) => void | - | - |
+| onClick | - | (e: MouseEvent) =&gt; void | - | - |
 | pauseOnHover | - | boolean | - | - |
 
 ### 方法 {#methods}
@@ -50,5 +50,5 @@ demo:
 | error | - | TypeOpen | - |
 | warning | - | TypeOpen | - |
 | loading | - | TypeOpen | - |
-| open | - | (args: ArgsProps) => MessageType | - |
-| destroy | - | (key?: Key) => void | - |
+| open | - | (args: ArgsProps) =&gt; MessageType | - |
+| destroy | - | (key?: Key) =&gt; void | - |

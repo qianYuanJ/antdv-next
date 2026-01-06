@@ -34,7 +34,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 | precision | The precision of input value | number | - | - |
 | value | Display value | valueType | - | - |
 | valueStyle | Set value section style | CSSProperties | - | - |
-| valueRender | - | (node: any) => VNodeChild | - | - |
+| valueRender | - | (node: any) =&gt; VNodeChild | - | - |
 | title | Display title | VueNode | - | - |
 | prefix | The prefix node of value | VueNode | - | - |
 | suffix | The suffix node of value | VueNode | - | - |
@@ -52,7 +52,7 @@ Common props ref：[Common props](/docs/vue/common-props)
 | precision | The precision of input value | number | - | - |
 | value | Display value | valueType | - | - |
 | valueStyle | Set value section style | CSSProperties | - | - |
-| valueRender | - | (node: any) => VNodeChild | - | - |
+| valueRender | - | (node: any) =&gt; VNodeChild | - | - |
 | title | Display title | VueNode | - | - |
 | prefix | The prefix node of value | VueNode | - | - |
 | suffix | The suffix node of value | VueNode | - | - |
@@ -66,13 +66,13 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| mouseenter | - | (e: MouseEvent) => void | - |
-| mouseleave | - | (e: MouseEvent) => void | - |
+| mouseenter | - | (e: MouseEvent) =&gt; void | - |
+| mouseleave | - | (e: MouseEvent) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| title | Display title | () => any | - |
-| prefix | The prefix node of value | () => any | - |
-| suffix | The suffix node of value | () => any | - |
+| title | Display title | () =&gt; any | - |
+| prefix | The prefix node of value | () =&gt; any | - |
+| suffix | The suffix node of value | () =&gt; any | - |

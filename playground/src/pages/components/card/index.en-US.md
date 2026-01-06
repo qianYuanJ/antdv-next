@@ -39,10 +39,10 @@ Common props ref：[Common props](/docs/vue/common-props)
 | cover | Card cover | VueNode | - | - |
 | actions | The action list, shows at the bottom of the Card | VueNode[] | - | - |
 | tabList | List of TabPane's head | CardTabListType[] | - | - |
-| tabBarExtraContent | Extra content in tab bar | VueNode \| { [key: string]: VueNode } | - | - |
+| tabBarExtraContent | Extra content in tab bar | VueNode \| \{ [key: string]: VueNode \} | - | - |
 | activeTabKey | Current TabPane's key | string | - | - |
 | defaultActiveTabKey | Initial active TabPane's key, if `activeTabKey` is not set | string | `The key of first tab` | - |
-| tabProps | [Tabs](/components/tabs/#tabs) | Record<string, any> | - | - |
+| tabProps | [Tabs](/components/tabs/#tabs) | Record&lt;string, any&gt; | - | - |
 | classes | Customize class for each semantic structure inside the component. Supports object or function. | CardClassNamesType | - | - |
 | styles | Customize inline style for each semantic structure inside the component. Supports object or function. | CardStylesType | - | - |
 | variant | Variants of Card | 'borderless' \| 'outlined' | `outlined` | 5.24.0 |
@@ -69,17 +69,17 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| tabChange | Callback when tab is switched | (key: string) => void | - |
-| update:activeTabKey | - | (key: string) => void | - |
+| tabChange | Callback when tab is switched | (key: string) =&gt; void | - |
+| update:activeTabKey | - | (key: string) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| title | Card title | () => any | - |
-| extra | Content to render in the top-right corner of the card | () => any | - |
-| cover | Card cover | () => any | - |
-| actions | The action list, shows at the bottom of the Card | () => any | - |
+| title | Card title | () =&gt; any | - |
+| extra | Content to render in the top-right corner of the card | () =&gt; any | - |
+| cover | Card cover | () =&gt; any | - |
+| actions | The action list, shows at the bottom of the Card | () =&gt; any | - |
 | tabContentRender | - | TabsSlots['contentRender'] | - |
 | tabLabelRender | - | TabsSlots['labelRender'] | - |
-| tabBarExtraContent | Extra content in tab bar | () => any | - |
+| tabBarExtraContent | Extra content in tab bar | () =&gt; any | - |

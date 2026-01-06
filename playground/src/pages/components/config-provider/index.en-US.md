@@ -24,8 +24,8 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Property | Description | Type | Default | Version |
 | --- | --- | --- | --- | --- |
-| getTargetContainer | Config Affix, Anchor scroll target container | () => HTMLElement \| Window | () => window | 4.2.0 |
-| getPopupContainer | To set the container of the popup element. The default is to create a `div` element in `body` | (triggerNode?: HTMLElement) => HTMLElement | () => document.body | - |
+| getTargetContainer | Config Affix, Anchor scroll target container | () =&gt; HTMLElement \| Window | () =&gt; window | 4.2.0 |
+| getPopupContainer | To set the container of the popup element. The default is to create a `div` element in `body` | (triggerNode?: HTMLElement) =&gt; HTMLElement | () =&gt; document.body | - |
 | prefixCls | Set prefix className | string | `ant` | - |
 | iconPrefixCls | Set icon prefix className | string | `anticon` | 4.11.0 |
 | renderEmpty | Set empty content of components. Ref [Empty](/components/empty/) | RenderEmptyHandler | - | - |
@@ -104,4 +104,4 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| renderEmpty | Set empty content of components. Ref [Empty](/components/empty/) | (componentName?: string) => any | - |
+| renderEmpty | Set empty content of components. Ref [Empty](/components/empty/) | (componentName?: string) =&gt; any | - |

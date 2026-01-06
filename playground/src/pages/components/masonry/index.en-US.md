@@ -29,21 +29,21 @@ Common props ref：[Common props](/docs/vue/common-props)
 | styles | - | MasonryStylesType | - | - |
 | gutter | Spacing between items | RowProps['gutter'] | - | - |
 | items | - | MasonryItemType[] | - | - |
-| itemRender | - | (itemInfo: MasonryItemType & { index: number }) => any | - | - |
-| columns | Number of columns in the masonry grid layout | number \| Partial<Record<Breakpoint, number>> | - | - |
+| itemRender | - | (itemInfo: MasonryItemType & \{ index: number \}) =&gt; any | - | - |
+| columns | Number of columns in the masonry grid layout | number \| Partial&lt;Record&lt;Breakpoint, number&gt;&gt; | - | - |
 | fresh | Trigger when item layout order changed | boolean | - | - |
 
 ### Events {#events}
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| layoutChange | - | (sortInfo: { key: Key, column: number }[]) => void | - |
+| layoutChange | - | (sortInfo: \{ key: Key, column: number \}[]) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| itemRender | - | (itemInfo: MasonryItemType & { index: number }) => any | - |
+| itemRender | - | (itemInfo: MasonryItemType & \{ index: number \}) =&gt; any | - |
 
 ### Methods {#methods}
 

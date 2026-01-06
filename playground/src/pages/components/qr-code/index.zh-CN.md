@@ -44,11 +44,11 @@ group:
 | --- | --- | --- | --- | --- |
 | type | - | 'canvas' \| 'svg' | - | - |
 | icon | - | string | - | - |
-| iconSize | - | number \| { width: number, height: number } | - | - |
+| iconSize | - | number \| \{ width: number, height: number \} | - | - |
 | bordered | - | boolean | - | - |
 | errorLevel | - | 'L' \| 'M' \| 'Q' \| 'H' | - | - |
 | status | - | QRStatus | - | - |
-| statusRender | - | (info: StatusRenderInfo) => any | - | - |
+| statusRender | - | (info: StatusRenderInfo) =&gt; any | - | - |
 | color | - | any | - | - |
 | classes | - | QRCodeClassNamesType | - | - |
 | styles | - | QRCodeStylesType | - | - |
@@ -57,13 +57,13 @@ group:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| refresh | - | () => void | - |
+| refresh | - | () =&gt; void | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| statusRender | - | (info: StatusRenderInfo) => any | - |
+| statusRender | - | (info: StatusRenderInfo) =&gt; any | - |
 ## Semantic DOM
 
 <!-- <demo src="./demo/_semantic.vue" simplify="true"></demo> -->

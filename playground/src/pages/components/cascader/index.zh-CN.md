@@ -41,8 +41,8 @@ demo:
 | popupClassName | 自定义浮层类名，使用 `classNames.popup.root` 替换 | string | - | 4.23.0 |
 | dropdownClassName | Deprecated. | string | - | - |
 | dropdownStyle | 下拉菜单的 style 属性，使用 `styles.popup.root` 替换 | CSSProperties | - | - |
-| dropdownRender | 自定义下拉框内容，请使用 `popupRender` 替换 | (menu: any) => any | - | 4.4.0 |
-| popupRender | 自定义下拉框内容 | (menu: any) => any | - | - |
+| dropdownRender | 自定义下拉框内容，请使用 `popupRender` 替换 | (menu: any) =&gt; any | - | 4.4.0 |
+| popupRender | 自定义下拉框内容 | (menu: any) =&gt; any | - | - |
 | dropdownMenuColumnStyle | 下拉菜单列的样式，请使用 `popupMenuColumnStyle` 替换 | CSSProperties | - | - |
 | popupMenuColumnStyle | 下拉菜单列的样式 | CSSProperties | - | - |
 | variant | 形态变体 | Variant | `outlined` | 5.13.0 \| `underlined`: 5.24.0 |
@@ -53,20 +53,20 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| openChange | 显示/隐藏浮层的回调 | (visible: boolean) => void | - |
-| dropdownVisibleChange | 显示/隐藏浮层的回调，请使用 `onOpenChange` 替换 | (visible: boolean) => void | 4.17.0 |
-| popupVisibleChange | - | (visible: boolean) => void | - |
-| change | 选择完成后的回调 | NonNullable<VcCascaderProps['onChange']> | - |
-| update:value | - | (value: any) => void | - |
-| search | - | NonNullable<VcCascaderProps['onSearch']> | - |
+| openChange | 显示/隐藏浮层的回调 | (visible: boolean) =&gt; void | - |
+| dropdownVisibleChange | 显示/隐藏浮层的回调，请使用 `onOpenChange` 替换 | (visible: boolean) =&gt; void | 4.17.0 |
+| popupVisibleChange | - | (visible: boolean) =&gt; void | - |
+| change | 选择完成后的回调 | NonNullable&lt;VcCascaderProps['onChange']&gt; | - |
+| update:value | - | (value: any) =&gt; void | - |
+| search | - | NonNullable&lt;VcCascaderProps['onSearch']&gt; | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| suffixIcon | 自定义的选择框后缀图标 | () => any | - |
-| notFoundContent | 当下拉列表为空时显示的内容 | () => any | - |
-| popupRender | 自定义下拉框内容 | (menu: any) => any | - |
-| displayRender | 选择后展示的渲染函数 | (data: { labels: string[], selectedOptions?: DefaultOptionType[] }) => any | `multiple`: 4.18.0 |
-| optionRender | 自定义渲染下拉选项 | (option: DefaultOptionType) => any | 5.16.0 |
-| expandIcon | 自定义次级菜单展开图标 | () => any | 4.4.0 |
+| suffixIcon | 自定义的选择框后缀图标 | () =&gt; any | - |
+| notFoundContent | 当下拉列表为空时显示的内容 | () =&gt; any | - |
+| popupRender | 自定义下拉框内容 | (menu: any) =&gt; any | - |
+| displayRender | 选择后展示的渲染函数 | (data: \{ labels: string[], selectedOptions?: DefaultOptionType[] \}) =&gt; any | `multiple`: 4.18.0 |
+| optionRender | 自定义渲染下拉选项 | (option: DefaultOptionType) =&gt; any | 5.16.0 |
+| expandIcon | 自定义次级菜单展开图标 | () =&gt; any | 4.4.0 |

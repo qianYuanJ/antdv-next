@@ -34,10 +34,10 @@ group:
 | styles | 用于自定义组件内部各语义化结构的行内 style，支持对象或函数 | AnchorStylesType | - | - |
 | offsetTop | 距离窗口顶部达到指定偏移量后触发 | number | - | - |
 | bounds | 锚点区域边界 | number | 5 | - |
-| affix | 固定模式 | boolean \| Omit<AffixProps, 'offsetTop' \| 'target'> | true | object: 5.19.0 |
+| affix | 固定模式 | boolean \| Omit&lt;AffixProps, 'offsetTop' \| 'target'&gt; | true | object: 5.19.0 |
 | showInkInFixed | `affix={false}` 时是否显示小方块 | boolean | false | - |
-| getContainer | 指定滚动的容器 | () => AnchorContainer | () => window | - |
-| getCurrentAnchor | 自定义高亮的锚点 | (activeLink: string) => string | - | - |
+| getContainer | 指定滚动的容器 | () =&gt; AnchorContainer | () =&gt; window | - |
+| getCurrentAnchor | 自定义高亮的锚点 | (activeLink: string) =&gt; string | - | - |
 | targetOffset | 锚点滚动偏移量，默认与 offsetTop 相同，[例子](#anchor-demo-targetoffset) | number | - | - |
 | items | 数据化配置选项内容，支持通过 children 嵌套 | AnchorLinkItemProps[] | - | 5.1.0 |
 | direction | 设置导航方向 | AnchorDirection | `vertical` | 5.2.0 |
@@ -56,11 +56,11 @@ group:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| click | `click` 事件的 handler | (e: MouseEvent, link: { title: VNodeChild, href: string }) => any | - |
-| change | 监听锚点链接改变 | (currentActiveLink: string) => any | - |
+| click | `click` 事件的 handler | (e: MouseEvent, link: \{ title: VNodeChild, href: string \}) =&gt; any | - |
+| change | 监听锚点链接改变 | (currentActiveLink: string) =&gt; any | - |
 
 ### 插槽 {#slots}
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| item | - | (item: AnchorLinkItemProps) => any | - |
+| item | - | (item: AnchorLinkItemProps) =&gt; any | - |

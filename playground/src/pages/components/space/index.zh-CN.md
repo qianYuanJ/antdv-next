@@ -39,4 +39,4 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*37T2R6O9oi0AAA
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| separator | 设置分隔符 | () => any | - |
+| separator | 设置分隔符 | () =&gt; any | - |

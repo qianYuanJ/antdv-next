@@ -38,4 +38,4 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| separator | Set separator | () => any | - |
+| separator | Set separator | () =&gt; any | - |

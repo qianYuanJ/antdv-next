@@ -31,9 +31,9 @@ Common props ref：[Common props](/docs/vue/common-props)
 | title | - | VueNode | - | - |
 | eventKey | - | string | - | - |
 | warnKey | - | boolean | - | - |
-| attribute | Deprecated. | Record<string, string> | - | - |
-| onKeyDown | - | (e: KeyboardEvent) => void | - | - |
-| onFocus | - | (e: FocusEvent) => void | - | - |
+| attribute | Deprecated. | Record&lt;string, string&gt; | - | - |
+| onKeyDown | - | (e: KeyboardEvent) =&gt; void | - | - |
+| onFocus | - | (e: FocusEvent) =&gt; void | - | - |
 | role | - | string | - | - |
 
 #### Menu
@@ -47,9 +47,9 @@ Common props ref：[Common props](/docs/vue/common-props)
 | classes | - | MenuClassNamesType | - | - |
 | styles | - | MenuStylesType | - | - |
 | rootClass | - | string | - | - |
-| labelRender | - | (item: RenderItem) => any | - | - |
-| extraRender | - | (item: RenderItem) => any | - | - |
-| itemIcon | - | (props: MenuItemProps & RenderIconInfo) => any | - | - |
+| labelRender | - | (item: RenderItem) =&gt; any | - | - |
+| extraRender | - | (item: RenderItem) =&gt; any | - | - |
+| itemIcon | - | (props: MenuItemProps & RenderIconInfo) =&gt; any | - | - |
 
 #### SubMenu
 
@@ -61,25 +61,25 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| click | - | (info: MenuInfo) => void | - |
-| select | - | (info: SelectInfo) => void | - |
-| deselect | - | (info: SelectInfo) => void | - |
-| openChange | - | (openKeys: string[]) => void | - |
-| update:openKeys | - | (openKeys: string[]) => void | - |
-| update:selectedKeys | - | (selectedKeys: string[]) => void | - |
+| click | - | (info: MenuInfo) =&gt; void | - |
+| select | - | (info: SelectInfo) =&gt; void | - |
+| deselect | - | (info: SelectInfo) =&gt; void | - |
+| openChange | - | (openKeys: string[]) =&gt; void | - |
+| update:openKeys | - | (openKeys: string[]) =&gt; void | - |
+| update:selectedKeys | - | (selectedKeys: string[]) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| expandIcon | - | () => any | - |
-| labelRender | - | (item: RenderItem) => any | - |
-| extraRender | - | (item: RenderItem) => any | - |
-| itemIcon | - | (props: MenuItemProps & RenderIconInfo) => any | - |
+| expandIcon | - | () =&gt; any | - |
+| labelRender | - | (item: RenderItem) =&gt; any | - |
+| extraRender | - | (item: RenderItem) =&gt; any | - |
+| itemIcon | - | (props: MenuItemProps & RenderIconInfo) =&gt; any | - |
 
 ### Methods {#methods}
 
 | Method | Description | Type | Version |
 | --- | --- | --- | --- |
 | menu | - | VcMenuRef \| null | - |
-| focus | - | (options?: FocusOptions) => void | - |
+| focus | - | (options?: FocusOptions) =&gt; void | - |

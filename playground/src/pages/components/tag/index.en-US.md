@@ -34,11 +34,11 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Event | Description | Type | Version |
 | --- | --- | --- | --- |
-| close | Callback executed when tag is closed (can be prevented by `e.preventDefault()`) | (ev: MouseEvent) => void | - |
+| close | Callback executed when tag is closed (can be prevented by `e.preventDefault()`) | (ev: MouseEvent) =&gt; void | - |
 
 ### Slots {#slots}
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| icon | Set the icon of tag | () => any | - |
-| closeIcon | Custom close icon. 5.7.0: close button will be hidden when setting to `null` or `false` | () => any | 4.4.0 |
+| icon | Set the icon of tag | () =&gt; any | - |
+| closeIcon | Custom close icon. 5.7.0: close button will be hidden when setting to `null` or `false` | () =&gt; any | 4.4.0 |

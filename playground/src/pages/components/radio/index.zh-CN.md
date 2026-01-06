@@ -40,7 +40,7 @@ demo:
 | buttonStyle | - | RadioGroupButtonStyle | - | - |
 | block | - | boolean | - | - |
 | vertical | - | boolean | - | - |
-| labelRender | - | (params: { item: CheckboxOptionType, index: number }) => any | - | - |
+| labelRender | - | (params: \{ item: CheckboxOptionType, index: number \}) =&gt; any | - | - |
 
 #### Radio
 
@@ -56,12 +56,12 @@ demo:
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| change | - | (e: RadioChangeEvent) => void | - |
-| mouseenter | - | (e: MouseEvent) => void | - |
-| mouseleave | - | (e: MouseEvent) => void | - |
-| focus | - | (e: FocusEvent) => void | - |
-| blur | - | (e: FocusEvent) => void | - |
-| update:value | - | (value: any) => void | - |
+| change | - | (e: RadioChangeEvent) =&gt; void | - |
+| mouseenter | - | (e: MouseEvent) =&gt; void | - |
+| mouseleave | - | (e: MouseEvent) =&gt; void | - |
+| focus | - | (e: FocusEvent) =&gt; void | - |
+| blur | - | (e: FocusEvent) =&gt; void | - |
+| update:value | - | (value: any) =&gt; void | - |
 
 ### 插槽 {#slots}
 
@@ -69,4 +69,4 @@ demo:
 
 | 插槽 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
-| labelRender | - | (params: { item: CheckboxOptionType, index: number }) => any | - |
+| labelRender | - | (params: \{ item: CheckboxOptionType, index: number \}) =&gt; any | - |
