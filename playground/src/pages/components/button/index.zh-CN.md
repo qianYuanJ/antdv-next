@@ -40,12 +40,17 @@ group:
   <demo src="./demo/basic.vue">语法糖</demo>
   <demo src="./demo/color-variant.vue">颜色与变体</demo>
   <demo src="./demo/icon.vue">按钮图标</demo>
+  <demo src="./demo/icon-placement.vue">按钮图标位置</demo>
   <demo src="./demo/disabled.vue">不可用状态</demo>
   <demo src="./demo/loading.vue">加载中状态</demo>
   <demo src="./demo/ghost.vue">幽灵按钮</demo>
+  <demo src="./demo/size.vue">按钮尺寸</demo>
   <demo src="./demo/danger.vue">危险按钮</demo>
+  <demo src="./demo/multiple.vue">多个按钮组合</demo>
   <demo src="./demo/block.vue">Block 按钮</demo>
+  <demo src="./demo/linear-gradient.vue">渐变按钮</demo>
   <demo src="./demo/chinese-space.vue">移除两个汉字之间的空格</demo>
+  <demo src="./demo/style-class.vue">自定义语义结构的样式和类</demo>
 </demo-group>
 
 ## API

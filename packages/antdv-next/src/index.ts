@@ -1,7 +1,11 @@
 import type { App, Plugin } from 'vue'
+import type { SizeType } from './config-provider/SizeContext'
 import * as components from './components'
 import version from './version'
 
+export type {
+  SizeType,
+}
 export { useResponsive } from './_util/hooks/useResponsive'
 let prefix = 'A'
 export * from './components'

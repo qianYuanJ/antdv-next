@@ -50,7 +50,7 @@ export type DropdownStylesType = SemanticStylesType<DropdownProps, SemanticName>
 export interface DropdownProps extends ComponentBaseProps {
   classes?: DropdownClassNamesType
   styles?: DropdownStylesType
-  menu?: MenuProps & { activeKey?: VcMenuProps['activeKey'] }
+  menu?: MenuProps & { activeKey?: VcMenuProps['activeKey'], onClick: MenuEmits['click'] }
   autoFocus?: boolean
   arrow?: boolean | DropdownArrowOptions
   trigger?: ('click' | 'hover' | 'contextMenu')[]

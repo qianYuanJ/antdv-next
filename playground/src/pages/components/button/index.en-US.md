@@ -39,11 +39,16 @@ And 4 other properties additionally.
   <demo src="./demo/basic.vue">Syntactic sugar</demo>
   <demo src="./demo/color-variant.vue">Color & Variant</demo>
   <demo src="./demo/icon.vue">Icon</demo>
+  <demo src="./demo/icon-placement.vue">Icon Placement</demo>
   <demo src="./demo/disabled.vue">Disabled</demo>
   <demo src="./demo/loading.vue">Loading</demo>
+  <demo src="./demo/size.vue">Size</demo>
   <demo src="./demo/ghost.vue">Ghost Button</demo>
   <demo src="./demo/danger.vue">Danger Buttons</demo>
   <demo src="./demo/block.vue">Block Button</demo>
+  <demo src="./demo/multiple.vue">Multiple Buttons</demo>
+  <demo src="./demo/linear-gradient.vue">Gradient Button</demo>
+  <demo src="./demo/style-class.vue">Custom semantic dom styling</demo>
 </demo-group>
 
 ## API
