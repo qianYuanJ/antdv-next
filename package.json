@@ -33,7 +33,7 @@
     "turbo": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
-    "vite-plugin-dayjs": "^1.0.0",
+    "vite-plugin-dayjs": "^1.0.1",
     "vite-plugin-inspect": "catalog:",
     "vite-plugin-tsx-resolve-types": "catalog:",
     "vitest": "catalog:",
