@@ -124,6 +124,12 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*HdS6Q5vUCDcAAA
 | collapse   | 展开-收起时的回调函数，有点击 trigger 以及响应式反馈两种方式可以触发 | (collapsed, type) =\> \{\} | - |
 
 
+#### 插槽 {#layout-sider-slots}
+
+| 名称    | 说明           | 参数 |
+|-------|--------------|----|
+| trigger | 自定义 trigger，设置为 null 时隐藏 trigger       | -  |
+
 #### breakpoint width
 
 ```js
