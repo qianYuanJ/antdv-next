@@ -11,7 +11,7 @@ Child elements are aligned in the parent by `start`, `center`, `end`, `space-bet
 </docs>
 
 <template>
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     sub-element align left
   </a-divider>
   <a-row justify="start">
@@ -29,7 +29,7 @@ Child elements are aligned in the parent by `start`, `center`, `end`, `space-bet
     </a-col>
   </a-row>
 
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     sub-element align center
   </a-divider>
   <a-row justify="center">
@@ -47,7 +47,7 @@ Child elements are aligned in the parent by `start`, `center`, `end`, `space-bet
     </a-col>
   </a-row>
 
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     sub-element align right
   </a-divider>
   <a-row justify="end">
@@ -65,7 +65,7 @@ Child elements are aligned in the parent by `start`, `center`, `end`, `space-bet
     </a-col>
   </a-row>
 
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     sub-element monospaced arrangement
   </a-divider>
   <a-row justify="space-between">
@@ -83,7 +83,7 @@ Child elements are aligned in the parent by `start`, `center`, `end`, `space-bet
     </a-col>
   </a-row>
 
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     sub-element align full
   </a-divider>
   <a-row justify="space-around">
@@ -101,7 +101,7 @@ Child elements are aligned in the parent by `start`, `center`, `end`, `space-bet
     </a-col>
   </a-row>
 
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     sub-element align evenly
   </a-divider>
   <a-row justify="space-evenly">

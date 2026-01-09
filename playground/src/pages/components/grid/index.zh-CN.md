@@ -10,13 +10,28 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*DLUwQ4B2_zQAAA
 
 <DocHeading></DocHeading>
 
-## 何时使用 {#when-to-use}
+## 设计理念 {#design-concept}
 
-栅格系统基于 24 栅格与 Flex 布局，用于页面整体布局、内容区块对齐以及响应式排版。
+<div class="grid-demo">
+  <img draggable="false" src="https://gw.alipayobjects.com/zos/bmw-prod/9189c9ef-c601-40dc-9960-c11dbb681888.svg" alt="grid design" />
+</div>
 
-- 通过 `Row` 建立水平布局区域，`Col` 作为内容容器，且只允许 `Col` 作为 `Row` 的直接子元素。
-- 栅格跨度范围 1-24，总和超过 24 时会自动换行。
-- 使用 `justify`、`align` 和 `order` 控制排列与对齐。
+在多数业务情况下，Ant Design 需要在设计区域内解决大量信息收纳的问题，因此在 12 栅格系统的基础上，我们将整个设计建议区域按照 24 等分的原则进行划分。
+
+划分之后的信息区块我们称之为『盒子』。建议横向排列的盒子数量最多四个，最少一个。『盒子』在整个屏幕上占比见上图。设计部分基于盒子的单位定制盒子内部的排版规则，以保证视觉层面的舒适感。
+
+## 概述 {#overview}
+
+布局的栅格化系统，我们是基于行（row）和列（col）来定义信息区块的外部框架，以保证页面的每个区域能够稳健地排布起来。下面简单介绍一下它的工作原理：
+
+- 通过 `row` 在水平方向建立一组 `column`（简写 col）。
+- 你的内容应当放置于 `col` 内，并且，只有 `col` 可以作为 `row` 的直接元素。
+- 栅格系统中的列是指 1 到 24 的值来表示其跨越的范围。例如，三个等宽的列可以使用 `<Col span={8} />` 来创建。
+- 如果一个 `row` 中的 `col` 总和超过 24，那么多余的 `col` 会作为一个整体另起一行排列。
+
+我们的栅格化系统基于 Flex 布局，允许子元素在父节点内的水平对齐方式 - 居左、居中、居右、等宽排列、分散排列。子元素与子元素之间，支持顶部对齐、垂直居中对齐、底部对齐的方式。同时，支持使用 order 来定义元素的排列顺序。
+
+布局是基于 24 栅格来定义每一个『盒子』的宽度，但不拘泥于栅格。
 
 ## 示例 {#examples}
 
@@ -38,70 +53,30 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*DLUwQ4B2_zQAAA
 
 ## API
 
-### 属性 {#property}
-
 通用属性参考：[通用属性](/docs/vue/common-props)
 
-#### Row
+### Row
 
-| 属性 | 说明 | 类型 | 默认值 | 版本 |
+| 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
-| gutter | 栅格间隔，支持响应式对象 `{ xs: 8, sm: 16, md: 24 }`，或数组 `[水平间距, 垂直间距]` | Gutter \| [Gutter, Gutter] | 0 | string: 5.28.0 |
-| align | 垂直对齐方式 | RowAlign \| ResponsiveAligns | `top` | object: 4.24.0 |
-| justify | 水平排列方式 | RowJustify \| ResponsiveJustify | `start` | object: 4.24.0 |
-| prefixCls | 自定义前缀类名 | string | - | - |
-| wrap | 是否自动换行 | boolean | true | 4.8.0 |
+| align | 垂直对齐方式 | `top` \| `middle` \| `bottom` \| `stretch` \| `{[key in 'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| 'xxl']: 'top' \| 'middle' \| 'bottom' \| 'stretch'}` | `top` |  |
+| gutter | 栅格间隔，可以写成[字符串CSS单位](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Values_and_Units)或支持响应式的对象写法来设置水平间隔 { xs: 8, sm: 16, md: 24}。或者使用数组形式同时设置 `[水平间距, 垂直间距]` | number \| string \| object \| array | 0 |  |
+| justify | 水平排列方式 | `start` \| `end` \| `center` \| `space-around` \| `space-between` \| `space-evenly` \| `{[key in 'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| 'xxl']: 'start' \| 'end' \| 'center' \| 'space-around' \| 'space-between' \| 'space-evenly'}` | `start` |  |
+| wrap | 是否自动换行 | boolean | true |  |
 
-#### Col
+### Col
 
-| 属性 | 说明 | 类型 | 默认值 | 版本 |
+| 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
-| flex | flex 布局属性 | FlexType | - | - |
-| span | 栅格占位格数，为 0 时相当于 `display: none` | ColSpanType | - | - |
-| order | 栅格顺序 | ColSpanType | 0 | - |
-| offset | 栅格左侧的间隔格数 | ColSpanType | 0 | - |
-| push | 栅格向右移动格数 | ColSpanType | 0 | - |
-| pull | 栅格向左移动格数 | ColSpanType | 0 | - |
-| prefixCls | 自定义前缀类名 | string | - | - |
-| xs | `窗口宽度 < 576px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | ColSpanType \| ColSize | - | - |
-| sm | `窗口宽度 ≥ 576px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | ColSpanType \| ColSize | - | - |
-| md | `窗口宽度 ≥ 768px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | ColSpanType \| ColSize | - | - |
-| lg | `窗口宽度 ≥ 992px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | ColSpanType \| ColSize | - | - |
-| xl | `窗口宽度 ≥ 1200px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | ColSpanType \| ColSize | - | - |
-| xxl | `窗口宽度 ≥ 1600px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | ColSpanType \| ColSize | - | - |
-
-### 插槽 {#slots}
-
-#### Row
-
-| 插槽 | 说明 | 类型 | 版本 |
-| --- | --- | --- | --- |
-| default | Row 内容，仅 `Col` 可作为直接子元素。 | () => VueNode | - |
-
-#### Col
-
-| 插槽 | 说明 | 类型 | 版本 |
-| --- | --- | --- | --- |
-| default | Col 内容。 | () => VueNode | - |
-
-### 类型定义
-
-```ts
-type Breakpoint = 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs'
-type Gutter = number | Partial<Record<Breakpoint, number>>
-type RowAlign = 'top' | 'middle' | 'bottom' | 'stretch'
-type RowJustify = 'start' | 'end' | 'center' | 'space-around' | 'space-between' | 'space-evenly'
-type ResponsiveAligns = Partial<Record<Breakpoint, RowAlign>>
-type ResponsiveJustify = Partial<Record<Breakpoint, RowJustify>>
-
-type ColSpanType = number | string
-type FlexType = number | string
-interface ColSize {
-  flex?: FlexType
-  span?: ColSpanType
-  order?: ColSpanType
-  offset?: ColSpanType
-  push?: ColSpanType
-  pull?: ColSpanType
-}
-```
+| flex | flex 布局属性 | string \| number | - |  |
+| offset | 栅格左侧的间隔格数，间隔内不可以有栅格 | number | 0 |  |
+| order | 栅格顺序 | number | 0 |  |
+| pull | 栅格向左移动格数 | number | 0 |  |
+| push | 栅格向右移动格数 | number | 0 |  |
+| span | 栅格占位格数，为 0 时相当于 `display: none` | number | - |  |
+| xs | `窗口宽度 < 576px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number \| object | - |  |
+| sm | `窗口宽度 ≥ 576px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number \| object | - |  |
+| md | `窗口宽度 ≥ 768px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number \| object | - |  |
+| lg | `窗口宽度 ≥ 992px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number \| object | - |  |
+| xl | `窗口宽度 ≥ 1200px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number \| object | - |  |
+| xxl | `窗口宽度 ≥ 1600px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number \| object | - |  |

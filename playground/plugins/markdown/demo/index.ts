@@ -1,6 +1,5 @@
 import type { PluginOption } from 'vite'
 import fs from 'node:fs/promises'
-import pm from 'picomatch'
 import { normalizePath } from 'vite'
 import { parse } from 'vue/compiler-sfc'
 import { createMarkdown, loadBaseMd, loadShiki } from '../markdown'
@@ -98,25 +97,25 @@ export function demoPlugin(): PluginOption {
         }
       }
     },
-    handleHotUpdate(ctx) {
-      const relativePath = toRelativePath(ctx.file, ctx.server.config.root)
-      const isDemo = DEMO_GLOB.some(pattern => pm.isMatch(relativePath, pattern))
-      if (isDemo) {
-        const normalizedFile = normalizePath(ctx.file)
-        const server = ctx.server
-        // const virtualModule = server.moduleGraph.getModuleById(RESOLVED_VIRTUAL_MODULE_ID)
-        // if (virtualModule) {
-        //   server.moduleGraph.invalidateModule(virtualModule)
-        //   return [virtualModule]
-        // }
-        const mods = Array.from(server.moduleGraph.urlToModuleMap.values())
-          .filter(m => m.id?.includes(normalizedFile) && m.id?.includes(DEMO_SUFFIX))
-
-        if (mods.length > 0) {
-          mods.forEach(m => server.moduleGraph.invalidateModule(m))
-          return mods
-        }
-      }
-    },
+    // handleHotUpdate(ctx) {
+    //   const relativePath = toRelativePath(ctx.file, ctx.server.config.root)
+    //   const isDemo = DEMO_GLOB.some(pattern => pm.isMatch(relativePath, pattern))
+    //   if (isDemo) {
+    //     const normalizedFile = normalizePath(ctx.file)
+    //     const server = ctx.server
+    //     // const virtualModule = server.moduleGraph.getModuleById(RESOLVED_VIRTUAL_MODULE_ID)
+    //     // if (virtualModule) {
+    //     //   server.moduleGraph.invalidateModule(virtualModule)
+    //     //   return [virtualModule]
+    //     // }
+    //     const mods = Array.from(server.moduleGraph.urlToModuleMap.values())
+    //       .filter(m => m.id?.includes(normalizedFile) && m.id?.includes(DEMO_SUFFIX))
+    //
+    //     if (mods.length > 0) {
+    //       mods.forEach(m => server.moduleGraph.invalidateModule(m))
+    //       return mods
+    //     }
+    //   }
+    // },
   }
 }

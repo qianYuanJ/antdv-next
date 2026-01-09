@@ -33,14 +33,14 @@ const colCountMarks = colCountValues.reduce<Record<number, number>>((acc, value,
 const gutterValue = computed(() => gutterValues[gutterKey.value])
 const vGutterValue = computed(() => vGutterValues[vGutterKey.value])
 const colCount = computed(() => colCountValues[colCountKey.value])
-const colSpan = computed(() => 24 / colCount.value)
+const colSpan = computed(() => 24 / colCount.value!)
 
 const formatGutter = (value?: number) => gutterValues[value ?? 0]
 const formatVGutter = (value?: number) => vGutterValues[value ?? 0]
 const formatColCount = (value?: number) => colCountValues[value ?? 0]
 
 const colSnippet = computed(() => {
-  return Array.from({ length: colCount.value })
+  return Array.from({ length: colCount.value! })
     .map(() => `  <a-col :span="${colSpan.value}"><div>Column</div></a-col>`)
     .join('\n')
 })
@@ -93,12 +93,12 @@ const rowCodeSingle = computed(() => {
     </div>
 
     <a-row :gutter="[gutterValue, vGutterValue]">
-      <template v-for="index in colCount" :key="`row-a-${index}`">
+      <template v-for="_index in colCount" :key="`row-a-${_index}`">
         <a-col :span="colSpan">
           <div>Column</div>
         </a-col>
       </template>
-      <template v-for="index in colCount" :key="`row-b-${index}`">
+      <template v-for="_index in colCount" :key="`row-b-${_index}`">
         <a-col :span="colSpan">
           <div>Column</div>
         </a-col>
@@ -109,7 +109,7 @@ const rowCodeSingle = computed(() => {
       Another Row:
     </div>
     <a-row :gutter="[gutterValue, vGutterValue]">
-      <template v-for="index in colCount" :key="`row-c-${index}`">
+      <template v-for="_index in colCount" :key="`row-c-${_index}`">
         <a-col :span="colSpan">
           <div>Column</div>
         </a-col>
@@ -136,12 +136,12 @@ const rowCodeSingle = computed(() => {
 .row-label {
   margin-top: 8px;
 }
-.grid-playground :deep(.ant-col) {
+.grid-playground div .ant-col {
   padding: 0;
-  background: transparent;
+  background: transparent !important;
   border: 0;
 }
-.grid-playground :deep(.ant-col) > div {
+.grid-playground .ant-col > div {
   height: 120px;
   font-size: 14px;
   line-height: 120px;

@@ -7,7 +7,7 @@ Child elements vertically aligned.
 </docs>
 
 <template>
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     Align Top
   </a-divider>
   <a-row justify="center" align="top" class="row-demo">
@@ -33,7 +33,7 @@ Child elements vertically aligned.
     </a-col>
   </a-row>
 
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     Align Middle
   </a-divider>
   <a-row justify="space-around" align="middle" class="row-demo">
@@ -59,7 +59,7 @@ Child elements vertically aligned.
     </a-col>
   </a-row>
 
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     Align Bottom
   </a-divider>
   <a-row justify="space-between" align="bottom" class="row-demo">
@@ -90,11 +90,6 @@ Child elements vertically aligned.
 .row-demo {
   padding: 8px 0;
   background: rgba(128, 128, 128, 0.08);
-}
-.demo-box {
-  color: #fff;
-  text-align: center;
-  background: #0092ff;
 }
 .height-50 {
   height: 50px;

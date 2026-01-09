@@ -7,7 +7,7 @@ To change the element order by `order`.
 </docs>
 
 <template>
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     Normal
   </a-divider>
   <a-row class="row-demo">
@@ -25,7 +25,7 @@ To change the element order by `order`.
     </a-col>
   </a-row>
 
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     Responsive
   </a-divider>
   <a-row class="row-demo">

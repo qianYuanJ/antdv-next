@@ -12,7 +12,7 @@ Create a basic grid using a single set of `Row` and `Col`. All `Col` must be pla
 
 <template>
   <a-row>
-    <a-col :span="12">
+    <a-col :span="24">
       col
     </a-col>
   </a-row>

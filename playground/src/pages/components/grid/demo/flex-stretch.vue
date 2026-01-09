@@ -7,7 +7,7 @@ Col provides `flex` to support filling the rest space.
 </docs>
 
 <template>
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     Percentage columns
   </a-divider>
   <a-row>
@@ -19,7 +19,7 @@ Col provides `flex` to support filling the rest space.
     </a-col>
   </a-row>
 
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     Fill rest
   </a-divider>
   <a-row>
@@ -31,7 +31,7 @@ Col provides `flex` to support filling the rest space.
     </a-col>
   </a-row>
 
-  <a-divider orientation="left">
+  <a-divider title-placement="left">
     Raw flex style
   </a-divider>
   <a-row>
