@@ -41,7 +41,7 @@ interface Section {
 
 export type AnchorDirection = 'vertical' | 'horizontal'
 
-export type SemanticName = 'root' | 'item' | 'title' | 'indicator'
+export type SemanticName = 'root' | 'item' | 'itemTitle' | 'indicator'
 export type AnchorClassNamesType = SemanticClassNamesType<AnchorProps, SemanticName>
 export type AnchorStylesType = SemanticStylesType<AnchorProps, SemanticName>
 

@@ -79,7 +79,7 @@ const AnchorLink = defineComponent<
 
       const titleClassName = classNames(
         `${prefixCls.value}-link-title`,
-        mergedClassNames?.value?.title,
+        mergedClassNames?.value?.itemTitle,
         {
           [`${prefixCls.value}-link-title-active`]: active.value,
         },
@@ -90,7 +90,7 @@ const AnchorLink = defineComponent<
         <div class={[wrapperClassName]} style={mergedStyles?.value?.item}>
           <a
             class={titleClassName}
-            style={mergedStyles?.value?.title}
+            style={mergedStyles?.value?.itemTitle}
             href={href}
             title={typeof title === 'string' ? title : ''}
             target={target}

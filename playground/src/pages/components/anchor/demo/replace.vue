@@ -1,20 +1,21 @@
 <docs lang="zh-CN">
-最简单的用法。
+替换浏览器历史记录中的路径，后退按钮将返回到上一页而不是上一个锚点。
 </docs>
 
 <docs lang="en-US">
-The simplest usage.
+Replace path in browser history, so back button returns to previous page instead of previous anchor item.
 </docs>
 
 <template>
   <a-row>
     <a-col :span="16">
-      <div id="part-1" style="height: 100vh;background: rgba(255,0,0,0.02)" />
-      <div id="part-2" style="height: 100vh;background: rgba(0,255,0,0.02)" />
-      <div id="part-3" style="height: 100vh;background: rgba(0,0,255,0.02)" />
+      <div id="part-1" style="height: 100vh; background: rgba(255, 0, 0, 0.02)" />
+      <div id="part-2" style="height: 100vh; background: rgba(0, 255, 0, 0.02)" />
+      <div id="part-3" style="height: 100vh; background: rgba(0, 0, 255, 0.02)" />
     </a-col>
     <a-col :span="8">
       <a-anchor
+        replace
         :items="[
           {
             key: 'part-1',
