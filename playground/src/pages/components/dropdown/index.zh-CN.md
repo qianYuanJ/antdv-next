@@ -78,9 +78,10 @@ demo:
 
 ### 插槽 {#slots}
 
-| 插槽 | 说明 | 类型 | 版本 |
-| --- | --- | --- | --- |
-| popupRender | 自定义弹出框内容 | (menu: VueNode) =&gt; any | - |
+| 插槽          | 说明         | 类型 | 版本 |
+|-------------|------------| --- | --- |
+| popupRender | 自定义弹出框内容   | (menu: VueNode) =&gt; any | - |
+| labelRender | 自定义label内容 | (item: Item) =&gt; any | - |
 
 Dropdown 会透传 Menu 的插槽（例如 `labelRender`）。
 

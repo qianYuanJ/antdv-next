@@ -74,9 +74,10 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 ### Slots {#slots}
 
-| Slot | Description | Type | Version |
-| --- | --- | --- | --- |
+| Slot        | Description             | Type                      | Version |
+|-------------|-------------------------|---------------------------| --- |
 | popupRender | Customize popup content | (menu: VueNode) =&gt; any | - |
+| labelRender | Customize label content | (item: Item) =&gt; any    | - |
 
 Dropdown also supports Menu slots (such as `labelRender`) via the Dropdown slots.
 
