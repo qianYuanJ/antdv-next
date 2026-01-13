@@ -15,13 +15,13 @@ const bottom = ref(100)
 
 <template>
   <a-affix :offset-top="top">
-    <a-button @click="() => top = top + 10">
+    <a-button type="primary" @click="() => top = top + 10">
       Affix top
     </a-button>
   </a-affix>
   <br>
   <a-affix :offset-bottom="bottom">
-    <a-button @click="() => bottom = bottom + 10">
+    <a-button type="primary" @click="() => bottom = bottom + 10">
       Affix bottom
     </a-button>
   </a-affix>
