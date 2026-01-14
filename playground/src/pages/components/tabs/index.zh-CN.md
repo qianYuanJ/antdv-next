@@ -15,6 +15,25 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*8HMoTZUoSGoAAA
 ## 示例 {#examples}
 
 <demo-group>
+<demo src="./demo/basic.vue">基本</demo>
+<demo src="./demo/disabled.vue">禁用</demo>
+<demo src="./demo/centered.vue">居中</demo>
+<demo src="./demo/icon.vue">图标</demo>
+<demo src="./demo/custom-indicator.vue">指示条</demo>
+<demo src="./demo/slide.vue">滑动</demo>
+<demo src="./demo/extra.vue">附加内容</demo>
+<demo src="./demo/size.vue">大小</demo>
+<demo src="./demo/placement.vue">位置</demo>
+<demo src="./demo/card.vue">卡片式页签</demo>
+<demo src="./demo/editable-card.vue">新增和关闭页签</demo>
+<demo src="./demo/card-top.vue" compact background="grey" debug>卡片式页签容器</demo>
+<demo src="./demo/custom-add-trigger.vue">自定义新增页签触发器</demo>
+<demo src="./demo/custom-tab-bar.vue">自定义页签头</demo>
+<demo src="./demo/custom-tab-bar-node.vue">可拖拽标签</demo>
+<demo src="./demo/style-class.vue" version="6.0.0">自定义语义结构的样式和类</demo>
+<demo src="./demo/animated.vue" debug>动画</demo>
+<demo src="./demo/nest.vue" debug>嵌套</demo>
+<demo src="./demo/component-token.vue" debug>组件 Token</demo>
 </demo-group>
 
 ## API
