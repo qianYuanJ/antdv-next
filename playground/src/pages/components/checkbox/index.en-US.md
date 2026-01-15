@@ -16,6 +16,13 @@ demo:
 ## Examples {#examples}
 
 <demo-group>
+<demo src="./demo/basic.vue">Basic</demo>
+<demo src="./demo/disabled.vue">Disabled</demo>
+<demo src="./demo/controller.vue">Controlled Checkbox</demo>
+<demo src="./demo/group.vue">Checkbox Group</demo>
+<demo src="./demo/check-all.vue">Check all</demo>
+<demo src="./demo/layout.vue">Use with Grid</demo>
+<demo src="./demo/style-class.vue">Custom semantic dom styling</demo>
 </demo-group>
 
 ## API

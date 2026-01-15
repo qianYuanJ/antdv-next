@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+简单的 checkbox。
+</docs>
+
+<docs lang="en-US">
+Basic usage of checkbox.
+</docs>
+
 <script setup lang="ts">
 import { shallowRef } from 'vue'
 

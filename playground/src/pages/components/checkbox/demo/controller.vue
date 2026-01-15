@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+联动 checkbox。
+</docs>
+
+<docs lang="en-US">
+Communicated with other components.
+</docs>
+
 <script setup lang="ts">
 import { computed, shallowRef } from 'vue'
 

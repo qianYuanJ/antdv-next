@@ -17,6 +17,13 @@ demo:
 ## 示例 {#examples}
 
 <demo-group>
+<demo src="./demo/basic.vue">基本用法</demo>
+<demo src="./demo/disabled.vue">失效</demo>
+<demo src="./demo/controller.vue">受控的 Checkbox</demo>
+<demo src="./demo/group.vue">Checkbox 组</demo>
+<demo src="./demo/check-all.vue">全选</demo>
+<demo src="./demo/layout.vue">布局</demo>
+<demo src="./demo/style-class.vue">自定义语义结构的样式和类</demo>
 </demo-group>
 
 ## API

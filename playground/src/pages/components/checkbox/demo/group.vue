@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+方便的从数组生成 Checkbox 组。
+</docs>
+
+<docs lang="en-US">
+Generate a group of checkboxes from an array.
+</docs>
+
 <script setup lang="ts">
 import { shallowRef } from 'vue'
 
@@ -12,7 +20,7 @@ const options: any[] = [
 const optionsWithDisabled: any[] = [
   { label: 'Apple', value: 'Apple', className: 'label-1' },
   { label: 'Pear', value: 'Pear', className: 'label-2' },
-  { label: 'Orange', value: 'Orange', className: 'label-3', disabled: true },
+  { label: 'Orange', value: 'Orange', className: 'label-3', disabled: false },
 ]
 
 const val = shallowRef()
@@ -25,5 +33,5 @@ const val = shallowRef()
   <a-checkbox-group v-model:value="val" :default-value="['Apple']" :options="options" />
   <br>
   <br>
-  <a-checkbox-group v-model:value="val" :default-value="['Apple']" :options="optionsWithDisabled" />
+  <a-checkbox-group v-model:value="val" disabled :default-value="['Apple']" :options="optionsWithDisabled" />
 </template>
