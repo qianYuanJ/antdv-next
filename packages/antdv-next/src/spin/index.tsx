@@ -4,8 +4,9 @@ import type { EmptyEmit, VueNode } from '../_util/type.ts'
 import type { ComponentBaseProps } from '../config-provider/context'
 import { classNames } from '@v-c/util'
 import { filterEmpty } from '@v-c/util/dist/props-util'
-import { debounce, omit } from 'es-toolkit'
-import { computed, defineComponent, shallowRef, watchEffect } from 'vue'
+import { omit } from 'es-toolkit'
+import { debounce } from 'throttle-debounce'
+import { computed, defineComponent, shallowRef, watch } from 'vue'
 import { pureAttrs, useMergeSemantic, useToArr, useToProps } from '../_util/hooks'
 import { getSlotPropsFnRun, toPropsRefs } from '../_util/tools.ts'
 import { devUseWarning, isDev } from '../_util/warning.ts'
@@ -89,19 +90,28 @@ const Spin = defineComponent<
     const { classes, styles } = toPropsRefs(props, 'classes', 'styles')
     const spinning = shallowRef(shouldDelay(props.spinning, props.delay) ? false : !!props.spinning)
     const mergedPercent = usePercent(spinning, computed(() => props.percent))
-    watchEffect((onCleanup) => {
-      if (props.spinning) {
-        const showSpinning = debounce(() => {
-          spinning.value = true
-        }, props.delay ?? 0)
-        showSpinning()
-        onCleanup(() => {
-          showSpinning?.cancel?.()
-        })
-        return
-      }
-      spinning.value = false
-    })
+
+    watch(
+      [() => props.delay, () => props.fullscreen],
+      (_, _p, onCleanup) => {
+        if (props.spinning) {
+          const showSpinning = debounce(
+            props?.delay ?? 0,
+            () => {
+              spinning.value = true
+            },
+          )
+          showSpinning()
+          onCleanup(() => {
+            showSpinning?.cancel?.()
+          })
+        }
+        spinning.value = false
+      },
+      {
+        immediate: true,
+      },
+    )
 
     const warning = devUseWarning('Spin')
 

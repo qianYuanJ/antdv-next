@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+展示进度，当设置 `percent="auto"` 时会预估一个永远不会停止的进度条。
+</docs>
+
+<docs lang="en-US">
+Show the progress. When `percent="auto"` is set, an indeterminate progress will be displayed.
+</docs>
+
 <script setup lang="ts">
 import { computed, onUnmounted, ref, watch } from 'vue'
 
@@ -28,24 +36,25 @@ watch(percent, (_n, _o, onCleanup) => {
   immediate: true,
 })
 
+watch(auto, () => {
+  percent.value = -50
+})
+
 onUnmounted(() => {
   if (timerRef) {
     clearTimeout(timerRef)
     timerRef = null
   }
 })
-
-function toggleAuto() {
-  auto.value = !auto.value
-  percent.value = -50
-}
 </script>
 
 <template>
   <a-flex align="center" gap="middle">
-    <a-button @click="toggleAuto">
-      {{ auto ? 'Auto: ON' : 'Auto: OFF' }}
-    </a-button>
+    <a-switch
+      v-model:checked="auto"
+      checked-children="Auto"
+      un-checked-children="Auto"
+    />
     <a-spin :percent="mergedPercent" size="small" />
     <a-spin :percent="mergedPercent" />
     <a-spin :percent="mergedPercent" size="large" />

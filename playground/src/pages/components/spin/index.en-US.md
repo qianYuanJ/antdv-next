@@ -13,9 +13,20 @@ demo:
 
 ## When To Use {#when-to-use}
 
+When part of the page is waiting for asynchronous data or during a rendering process, an appropriate loading animation can effectively alleviate users' inquietude.
+
 ## Examples {#examples}
 
 <demo-group>
+  <demo src="./demo/basic.vue">Basic Usage</demo>
+  <demo src="./demo/size.vue">Size</demo>
+  <demo src="./demo/nested.vue">Embedded mode</demo>
+  <demo src="./demo/tip.vue">Customized description</demo>
+  <demo src="./demo/delay-and-debounce.vue">Delay</demo>
+  <demo src="./demo/custom-indicator.vue">Custom spinning indicator</demo>
+  <demo src="./demo/percent.vue">Progress</demo>
+  <demo src="./demo/style-class.vue">Custom semantic dom styling</demo>
+  <demo src="./demo/fullscreen.vue">Fullscreen</demo>
 </demo-group>
 
 ## API
@@ -31,9 +42,10 @@ Common props ref：[Common props](/docs/vue/common-props)
 | tip | Customize description content when Spin has children | VueNode | - | - |
 | delay | Specifies a delay in milliseconds for loading state (prevent flush) | number | - | - |
 | wrapperClassName | The className of wrapper when Spin has children | string | - | - |
-| indicator | React node of the spinning indicator | VueNode | - | - |
-| fullscreen | Display a backdrop with the `Spin` component | boolean | false | 5.11.0 |
-| percent | The progress percentage, when set to `auto`, it will be an indeterminate progress | number \| 'auto' | - | 5.18.0 |
+| indicator | The node of the spinning indicator | VueNode | - | - |
+| fullscreen | Display a backdrop with the `Spin` component | boolean | false | - |
+| percent | The progress percentage, when set to `auto`, it will be an indeterminate progress | number \| 'auto' | - | - |
+| rootClass | Root container class | string | - | - |
 | classes | Customize class for each semantic structure inside the component. Supports object or function. | SpinClassNamesType | - | - |
 | styles | Customize inline style for each semantic structure inside the component. Supports object or function. | SpinStylesType | - | - |
 
@@ -41,5 +53,26 @@ Common props ref：[Common props](/docs/vue/common-props)
 
 | Slot | Description | Type | Version |
 | --- | --- | --- | --- |
-| indicator | React node of the spinning indicator | () =&gt; any | - |
+| default | Content to wrap with Spin | () =&gt; any | - |
+| indicator | The node of the spinning indicator | () =&gt; any | - |
 | tip | Customize description content when Spin has children | () =&gt; any | - |
+
+### Static Methods {#static-methods}
+
+- `Spin.setDefaultIndicator(indicator: VueNode)`
+
+  You can define default spin element globally.
+
+## Semantic DOM {#semantic-dom}
+
+| Name | Description |
+| --- | --- |
+| root | Root element |
+| wrapper | Wrapper element for nested loading |
+| mask | Fullscreen mask element |
+| indicator | Indicator element |
+| tip | Description element |
+
+## Design Token {#design-token}
+
+<ComponentTokenTable component="Spin"></ComponentTokenTable>

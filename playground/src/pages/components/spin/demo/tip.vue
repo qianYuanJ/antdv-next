@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+自定义描述文案。
+</docs>
+
+<docs lang="en-US">
+Customize the description text.
+</docs>
+
 <template>
   <a-flex gap="middle" vertical>
     <a-flex gap="middle">
