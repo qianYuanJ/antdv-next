@@ -6,6 +6,8 @@ subtitle: 时间选择框
 description: 输入或选择时间的控件。
 cover: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*kGmGSLk_1fwAAAAAAAAAAAAADrJ8AQ/original
 coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*1hDmQJIDFJQAAAAAAAAAAAAADrJ8AQ/original
+demo:
+  cols: 2
 ---
 
 ## 何时使用 {#when-to-use}
@@ -31,7 +33,6 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*1hDmQJIDFJQAAA
 <demo src="./demo/status.vue">自定义状态</demo>
 <demo src="./demo/suffix.vue">前后缀</demo>
 <demo src="./demo/style-class.vue" version="6.0.0">自定义语义结构的样式和类</demo>
-<demo src="./demo/render-panel.vue" debug>_InternalPanelDoNotUseOrYouWillBeFired</demo>
 </demo-group>
 
 ## API

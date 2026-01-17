@@ -5,6 +5,8 @@ title: TimePicker
 description: To select/input a time.
 cover: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*kGmGSLk_1fwAAAAAAAAAAAAADrJ8AQ/original
 coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*1hDmQJIDFJQAAAAAAAAAAAAADrJ8AQ/original
+demo:
+  cols: 2
 ---
 
 ## When To Use
@@ -30,7 +32,6 @@ By clicking the input box, you can select a time from a popup panel.
 <demo src="./demo/status.vue">Status</demo>
 <demo src="./demo/suffix.vue">Prefix and Suffix</demo>
 <demo src="./demo/style-class.vue" version="6.0.0">Custom semantic dom styling</demo>
-<demo src="./demo/render-panel.vue" debug>_InternalPanelDoNotUseOrYouWillBeFired</demo>
 </demo-group>
 
 ## API
