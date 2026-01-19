@@ -7,6 +7,7 @@ const ComponentsBlock = defineAsyncComponent(() => import('./components/preview-
 const Theme = defineAsyncComponent(() => import('./components/theme/index.vue'))
 const Group = defineAsyncComponent(() => import('./components/group/index.vue'))
 const ComponentsList = defineAsyncComponent(() => import('./components/components-list/index.vue'))
+const DesignFramework = defineAsyncComponent(() => import('./components/design-framework/index.vue'))
 
 const locales = {
   'zh-CN': {
@@ -121,7 +122,7 @@ const currentLocale = computed(() => locales[locale.value])
         </template>
       </Suspense>
 
-      <!-- 设计语言 - placeholder for future DesignFramework -->
+      <!-- 设计语言与研发框架 -->
       <Suspense>
         <Group
           :title="currentLocale.designTitle"
@@ -136,7 +137,7 @@ const currentLocale = computed(() => locales[locale.value])
               alt="bg"
             >
           </template>
-          <!-- DesignFramework will be added here -->
+          <DesignFramework />
         </Group>
         <template #fallback>
           <div />
