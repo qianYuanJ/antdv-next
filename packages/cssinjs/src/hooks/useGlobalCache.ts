@@ -12,8 +12,6 @@ export type ExtractStyle<CacheValue> = (
     autoPrefix?: boolean
   },
 ) => [order: number, styleId: string, style: string] | null
-// @ts-expect-error // FIXME:
-const isDev = process.env.NODE_ENV !== 'production'
 const effectMap = new Map<string, boolean>()
 
 /**
@@ -60,7 +58,8 @@ export function useGlobalCache<CacheType>(
   const cacheContent = computed(() => {
     let entity = styleContext.value.cache.opGet(fullPathStr.value)
 
-    if (isDev && !entity) {
+    // 在所有环境下检查 entity 是否存在，避免生产环境下主题切换时缓存为空导致的错误
+    if (!entity) {
       buildCache()
       entity = getCacheEntity()
     }
