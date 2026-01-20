@@ -11,7 +11,7 @@ Antdv Next is a Vue 3 enterprise component library built on the Ant Design desig
 ## ✨ Features
 
 - 🌈 Enterprise-class UI designed for web applications.
-- 📦 A set of high-quality React components out of the box.
+- 📦 A set of high-quality Vue3 components out of the box.
 - 🛡 Written in TypeScript with predictable static types.
 - ⚙️ Whole package of design resources and development tools.
 - 🌍 Internationalization support for dozens of languages.

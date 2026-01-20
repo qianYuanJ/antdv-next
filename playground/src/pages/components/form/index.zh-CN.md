@@ -65,11 +65,13 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*ylFATY6w-ygAAA
 
 ## API
 
-### 属性 {#property}
 
 通用属性参考：[通用属性](/docs/vue/common-props)
 
-#### Form
+### Form
+
+
+### 属性 {#form-props}
 
 | 属性 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
@@ -98,7 +100,7 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*ylFATY6w-ygAAA
 | rootClass | 根容器类名 | string | - | - |
 | prefixCls | 组件前缀类名 | string | - | - |
 
-### 事件 {#events}
+### 事件 {#form-events}
 
 | 事件 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
@@ -110,10 +112,12 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*ylFATY6w-ygAAA
 | valuesChange | 字段值更新时触发回调事件 | (changedValues: Record&lt;string, any&gt;, values: Record&lt;string, any&gt;) =&gt; void | - |
 | fieldsChange | 字段更新时触发回调事件 | (changedFields: FieldData[], allFields: FieldData[]) =&gt; void | - |
 
-### 方法 {#methods}
+### 方法 {#form-methods}
 
-#### FormInstance
-
+```ts
+import { FormInstance } from "antdv-next"
+const formRef = ref<FormInstance>();
+```
 | 方法 | 说明 | 类型 | 版本 |
 | --- | --- | --- | --- |
 | getFieldValue | - | (name: NamePath) =&gt; StoreValue | - |
@@ -135,7 +139,9 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*ylFATY6w-ygAAA
 | submit | - | () =&gt; void | - |
 | nativeElement | - | HTMLFormElement \| undefined | - |
 
-### Form.Item {#form-item}
+### FormItem {#form-item}
+
+#### Props {#form-item-props}
 
 | 属性 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
@@ -163,7 +169,9 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*ylFATY6w-ygAAA
 | rootClass | 根容器类名 | string | - | - |
 | prefixCls | 组件前缀类名 | string | - | - |
 
-### validateMessages {#validatemessages}
+### Types
+
+#### validateMessages {#validatemessages}
 
 Form 提供默认校验提示文案，你可以通过 `validateMessages` 自定义模板：
 
