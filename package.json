@@ -39,6 +39,7 @@
     "tinyglobby": "catalog:",
     "tsdown": "catalog:",
     "turbo": "catalog:",
+    "typedoc": "^0.28.16",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dayjs": "catalog:",

@@ -88,6 +88,8 @@
     "build:esm": "tsdown",
     "build:umd": "vite build",
     "build:web-types": "esno ./scripts/web-types/index.ts",
+    "build:llm": "esno ./scripts/llm/generate-llms.ts",
+    "build:llm-semantic": "esno ./scripts/llm/generate-llms-semantic.ts",
     "prepublish": "pnpm build",
     "bump": "bumpp --commit \"chore(release): antdv-next %s\" --push --tag \"antdv-next@%s\""
   },
