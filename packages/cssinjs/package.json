@@ -5,19 +5,19 @@
   "description": "cssinjs solution for ant-design-vue",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
     },
     "./cssinjs-utils": {
-      "types": "./dist/cssinjs-utils/index.d.ts",
-      "import": "./dist/cssinjs-utils/index.js",
-      "default": "./dist/cssinjs-utils/index.js"
+      "types": "./dist/cssinjs-utils/index.d.mts",
+      "import": "./dist/cssinjs-utils/index.mjs",
+      "default": "./dist/cssinjs-utils/index.mjs"
     },
     "./dist/*": {
-      "types": "./dist/*.d.ts",
-      "import": "./dist/*.js",
-      "default": "./dist/*.js"
+      "types": "./dist/*.d.mts",
+      "import": "./dist/*.mjs",
+      "default": "./dist/*.mjs"
     }
   },
   "files": [
