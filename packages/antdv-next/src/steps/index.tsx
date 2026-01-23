@@ -42,7 +42,7 @@ export type StepsClassNamesType = SemanticClassNamesType<StepsProps, StepsSemant
 
 export type StepsStylesType = SemanticStylesType<StepsProps, StepsSemanticName>
 
-interface StepItem {
+export interface StepItem {
   class?: string
   style?: CSSProperties
   classes?: NonNullable<VcStepsProps['items']>[number]['classNames']
