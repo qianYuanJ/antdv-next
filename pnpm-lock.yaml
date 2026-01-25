@@ -344,8 +344,8 @@ catalogs:
       specifier: ^1.0.9
       version: 1.0.9
     '@v-c/steps':
-      specifier: ^0.0.1
-      version: 0.0.1
+      specifier: ^0.0.2
+      version: 0.0.2
     '@v-c/switch':
       specifier: ^0.0.1
       version: 0.0.1
@@ -356,8 +356,8 @@ catalogs:
       specifier: ^0.0.3
       version: 0.0.3
     '@v-c/textarea':
-      specifier: ^1.0.1
-      version: 1.0.1
+      specifier: ^1.0.2
+      version: 1.0.2
     '@v-c/tooltip':
       specifier: ^1.0.1
       version: 1.0.1
@@ -601,7 +601,7 @@ importers:
         version: 1.0.9(vue@3.5.27(typescript@5.9.3))
       '@v-c/steps':
         specifier: catalog:vc
-        version: 0.0.1(vue@3.5.27(typescript@5.9.3))
+        version: 0.0.2(vue@3.5.27(typescript@5.9.3))
       '@v-c/switch':
         specifier: catalog:vc
         version: 0.0.1(vue@3.5.27(typescript@5.9.3))
@@ -613,7 +613,7 @@ importers:
         version: 0.0.3(vue@3.5.27(typescript@5.9.3))
       '@v-c/textarea':
         specifier: catalog:vc
-        version: 1.0.1(vue@3.5.27(typescript@5.9.3))
+        version: 1.0.2(vue@3.5.27(typescript@5.9.3))
       '@v-c/tooltip':
         specifier: catalog:vc
         version: 1.0.1(vue@3.5.27(typescript@5.9.3))
@@ -1690,56 +1690,48 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rolldown/binding-linux-arm64-gnu@1.0.0-beta.60':
     resolution: {integrity: sha512-sqI+Vdx1gmXJMsXN3Fsewm3wlt7RHvRs1uysSp//NLsCoh9ZFEUr4ZzGhWKOg6Rvf+njNu/vCsz96x7wssLejQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rolldown/binding-linux-arm64-musl@1.0.0-beta.59':
     resolution: {integrity: sha512-CCKEk+H+8c0WGe/8n1E20n85Tq4Pv+HNAbjP1KfUXW+01aCWSMjU56ChNrM2tvHnXicfm7QRNoZyfY8cWh7jLQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rolldown/binding-linux-arm64-musl@1.0.0-beta.60':
     resolution: {integrity: sha512-8xlqGLDtTP8sBfYwneTDu8+PRm5reNEHAuI/+6WPy9y350ls0KTFd3EJCOWEXWGW0F35ko9Fn9azmurBTjqOrQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rolldown/binding-linux-x64-gnu@1.0.0-beta.59':
     resolution: {integrity: sha512-VlfwJ/HCskPmQi8R0JuAFndySKVFX7yPhE658o27cjSDWWbXVtGkSbwaxstii7Q+3Rz87ZXN+HLnb1kd4R9Img==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rolldown/binding-linux-x64-gnu@1.0.0-beta.60':
     resolution: {integrity: sha512-iR4nhVouVZK1CiGGGyz+prF5Lw9Lmz30Rl36Hajex+dFVFiegka604zBwzTp5Tl0BZnr50ztnVJ30tGrBhDr8Q==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rolldown/binding-linux-x64-musl@1.0.0-beta.59':
     resolution: {integrity: sha512-kuO92hTRyGy0Ts3Nsqll0rfO8eFsEJe9dGQGktkQnZ2hrJrDVN0y419dMgKy/gB2S2o7F2dpWhpfQOBehZPwVA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rolldown/binding-linux-x64-musl@1.0.0-beta.60':
     resolution: {integrity: sha512-HbfNcqNeqxFjSMf1Kpe8itr2e2lr0Bm6HltD2qXtfU91bSSikVs9EWsa1ThshQ1v2ZvxXckGjlVLtah6IoslPg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rolldown/binding-openharmony-arm64@1.0.0-beta.59':
     resolution: {integrity: sha512-PXAebvNL4sYfCqi8LdY4qyFRacrRoiPZLo3NoUmiTxm7MPtYYR8CNtBGNokqDmMuZIQIecRaD/jbmFAIDz7DxQ==}
@@ -2288,8 +2280,8 @@ packages:
     peerDependencies:
       vue: ^3.0.0
 
-  '@v-c/steps@0.0.1':
-    resolution: {integrity: sha512-L2y+Cq5ZfdHZI9GzhaQ9229Y6VMoow277EY06MAWbLhjOo7XQQ/u5mp3QOBKwmR/RCkdBhGeCqYbxBaFtZpgvg==}
+  '@v-c/steps@0.0.2':
+    resolution: {integrity: sha512-M4cjvYMNu4Rmp21Dlde6ZPaRqZbfCCoP0qrhKe1BBdSNw4ZvkQ33Ylcn65iDcL342XIRd4eJeFMIHJkeJe/aqw==}
     peerDependencies:
       vue: ^3.0.0
 
@@ -2308,8 +2300,8 @@ packages:
     peerDependencies:
       vue: ^3.0.0
 
-  '@v-c/textarea@1.0.1':
-    resolution: {integrity: sha512-0zT3vMmxG/rz9eqyFyK69JlluVT27tYGV8hlITWEBe8/Yp8gLEjAZnz2rdNXYaxExpcSfsTG3rDs6VYmmFlCjw==}
+  '@v-c/textarea@1.0.2':
+    resolution: {integrity: sha512-YckODO4jO0TSCSjFGZim+PI7YX7eX9eRKHiug+AliMlx4cd4ZVav+63Id7yhbNlm6MejdSItmHIyHpJv9DTtKw==}
     peerDependencies:
       vue: ^3.0.0
 
@@ -3999,28 +3991,24 @@ packages:
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   lightningcss-linux-arm64-musl@1.30.2:
     resolution: {integrity: sha512-5Vh9dGeblpTxWHpOx8iauV02popZDsCYMPIgiuw97OJ5uaDsL86cnqSFs5LZkG3ghHoX5isLgWzMs+eD1YzrnA==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   lightningcss-linux-x64-gnu@1.30.2:
     resolution: {integrity: sha512-Cfd46gdmj1vQ+lR6VRTTadNHu6ALuw2pKR9lYq4FnhvgBc4zWY1EtZcAc6EffShbb1MFrIPfLDXD6Xprbnni4w==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   lightningcss-linux-x64-musl@1.30.2:
     resolution: {integrity: sha512-XJaLUUFXb6/QG2lGIW6aIk6jKdtjtcffUT0NKvIqhSBY3hh9Ch+1LCeH80dR9q9LBjG3ewbDjnumefsLsP6aiA==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   lightningcss-win32-arm64-msvc@1.30.2:
     resolution: {integrity: sha512-FZn+vaj7zLv//D/192WFFVA0RgHawIcHqLX9xuWiQt7P0PtdFEVaxgF9rjM/IRYHQXNnk61/H/gb2Ei+kUQ4xQ==}
@@ -7036,7 +7024,7 @@ snapshots:
     dependencies:
       '@v-c/input': 1.0.1(vue@3.5.27(typescript@5.9.3))
       '@v-c/menu': 1.0.6(vue@3.5.27(typescript@5.9.3))
-      '@v-c/textarea': 1.0.1(vue@3.5.27(typescript@5.9.3))
+      '@v-c/textarea': 1.0.2(vue@3.5.27(typescript@5.9.3))
       '@v-c/trigger': 1.0.5(vue@3.5.27(typescript@5.9.3))
       '@v-c/util': 1.0.8(vue@3.5.27(typescript@5.9.3))
       vue: 3.5.27(typescript@5.9.3)
@@ -7146,7 +7134,7 @@ snapshots:
       '@v-c/util': 1.0.8(vue@3.5.27(typescript@5.9.3))
       vue: 3.5.27(typescript@5.9.3)
 
-  '@v-c/steps@0.0.1(vue@3.5.27(typescript@5.9.3))':
+  '@v-c/steps@0.0.2(vue@3.5.27(typescript@5.9.3))':
     dependencies:
       '@v-c/util': 1.0.8(vue@3.5.27(typescript@5.9.3))
       vue: 3.5.27(typescript@5.9.3)
@@ -7172,7 +7160,7 @@ snapshots:
       '@v-c/util': 1.0.8(vue@3.5.27(typescript@5.9.3))
       vue: 3.5.27(typescript@5.9.3)
 
-  '@v-c/textarea@1.0.1(vue@3.5.27(typescript@5.9.3))':
+  '@v-c/textarea@1.0.2(vue@3.5.27(typescript@5.9.3))':
     dependencies:
       '@v-c/input': 1.0.1(vue@3.5.27(typescript@5.9.3))
       '@v-c/resize-observer': 1.0.7(vue@3.5.27(typescript@5.9.3))
