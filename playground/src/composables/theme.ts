@@ -13,6 +13,20 @@ export function applyThemeToDOM(isDark: boolean) {
   html.classList.remove('dark', 'light')
   html.classList.add(theme)
   html.style.colorScheme = theme
+
+  // 通知所有 iframe 主题变化
+  notifyIframesThemeChange(isDark)
+}
+
+// 通知所有 iframe 主题变化
+function notifyIframesThemeChange(isDark: boolean) {
+  const iframes = document.querySelectorAll('iframe')
+  iframes.forEach((iframe) => {
+    try {
+      iframe.contentWindow?.postMessage({ type: 'theme-change', darkMode: isDark }, '*')
+    }
+    catch {}
+  })
 }
 
 function disableTransitions() {
