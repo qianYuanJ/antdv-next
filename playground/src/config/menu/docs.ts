@@ -110,9 +110,9 @@ export const docsMenus: Record<string, AntdvMenuItem[]> = {
   ],
   '/components': components,
   '/blog': [
-    {
-      key: '/blog/antdv-next-release',
-      label: 'Antdv Next Release v1',
-    },
+    // {
+    //   key: '/blog/antdv-next-release',
+    //   label: 'Antdv Next Release v1',
+    // },
   ],
 }
