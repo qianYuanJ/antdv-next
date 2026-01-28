@@ -1,18 +1,6 @@
-cleanupUnusedCatalogs: true
-
-shellEmulator: true
-
-trustPolicy: no-downgrade
 packages:
   - packages/*
   - playground
-
-overrides:
-  '@v-c/portal': catalog:vc
-  '@v-c/resize-observer': catalog:vc
-  '@v-c/trigger': catalog:vc
-  '@v-c/util': catalog:vc
-  vite: catalog:dev
 
 catalogs:
   dev:
@@ -114,46 +102,59 @@ catalogs:
     '@types/testing-library__jest-dom': ^6.0.0
     '@types/throttle-debounce': ^5.0.2
   vc:
-    '@v-c/async-validator': ^0.0.1
-    '@v-c/cascader': ^0.0.1
-    '@v-c/checkbox': ^0.0.2
-    '@v-c/collapse': ^0.0.5
-    '@v-c/color-picker': ^1.0.3
-    '@v-c/dialog': ^0.0.4
-    '@v-c/drawer': ^0.0.4
-    '@v-c/dropdown': ^1.0.1
-    '@v-c/image': ^1.0.0
-    '@v-c/input': ^1.0.1
-    '@v-c/input-number': ^1.0.0
-    '@v-c/mentions': ^0.0.1
-    '@v-c/menu': ^1.0.6
-    '@v-c/mutate-observer': ^1.0.0
-    '@v-c/notification': ^0.0.3
-    '@v-c/pagination': ^0.0.1
-    '@v-c/picker': ^0.0.7
-    '@v-c/portal': ^1.0.5
-    '@v-c/progress': ^0.0.2
-    '@v-c/qrcode': ^0.0.5
-    '@v-c/rate': ^0.0.2
-    '@v-c/resize-observer': ^1.0.7
-    '@v-c/segmented': ^0.0.8
-    '@v-c/select': ^1.0.8
-    '@v-c/slick': ^0.0.1
-    '@v-c/slider': ^1.0.9
-    '@v-c/steps': ^0.0.2
-    '@v-c/switch': ^0.0.1
-    '@v-c/table': ^0.0.4
-    '@v-c/tabs': ^0.0.3
-    '@v-c/textarea': ^1.0.2
-    '@v-c/tooltip': ^1.0.1
-    '@v-c/tour': ^1.0.2
-    '@v-c/tree': ^0.0.2
-    '@v-c/tree-select': ^0.0.1
-    '@v-c/trigger': ^1.0.5
-    '@v-c/upload': ^0.0.1
-    '@v-c/util': ^1.0.8
+    '@v-c/async-validator': ^1.0.0
+    '@v-c/cascader': ^1.0.0
+    '@v-c/checkbox': ^1.0.0
+    '@v-c/collapse': ^1.0.0
+    '@v-c/color-picker': ^1.0.4
+    '@v-c/dialog': ^1.0.0
+    '@v-c/drawer': ^1.0.0
+    '@v-c/dropdown': ^1.0.2
+    '@v-c/image': ^1.0.1
+    '@v-c/input': ^1.0.2
+    '@v-c/input-number': ^1.0.1
+    '@v-c/mentions': ^1.0.0
+    '@v-c/menu': ^1.0.7
+    '@v-c/mutate-observer': ^1.0.1
+    '@v-c/notification': ^1.0.0
+    '@v-c/pagination': ^1.0.0
+    '@v-c/picker': ^1.0.0
+    '@v-c/portal': ^1.0.6
+    '@v-c/progress': ^1.0.0
+    '@v-c/qrcode': ^1.0.0
+    '@v-c/rate': ^1.0.0
+    '@v-c/resize-observer': ^1.0.8
+    '@v-c/segmented': ^1.0.0
+    '@v-c/select': ^1.0.9
+    '@v-c/slick': ^1.0.0
+    '@v-c/slider': ^1.0.10
+    '@v-c/steps': ^1.0.0
+    '@v-c/switch': ^1.0.0
+    '@v-c/table': ^1.0.0
+    '@v-c/tabs': ^1.0.0
+    '@v-c/textarea': ^1.0.3
+    '@v-c/tooltip': ^1.0.2
+    '@v-c/tour': ^1.0.3
+    '@v-c/tree': ^1.0.0
+    '@v-c/tree-select': ^1.0.0
+    '@v-c/trigger': ^1.0.6
+    '@v-c/upload': ^1.0.0
+    '@v-c/util': ^1.0.9
     '@v-c/virtual-list': ^1.0.5
+
+cleanupUnusedCatalogs: true
 
 onlyBuiltDependencies:
   - esbuild
   - less
+
+overrides:
+  '@v-c/portal': catalog:vc
+  '@v-c/resize-observer': catalog:vc
+  '@v-c/trigger': catalog:vc
+  '@v-c/util': catalog:vc
+  vite: catalog:dev
+
+shellEmulator: true
+
+trustPolicy: no-downgrade
